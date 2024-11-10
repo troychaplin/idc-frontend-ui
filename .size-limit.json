@@ -1,0 +1,10 @@
+[
+  {
+    "path": "dist/ui-kit.mjs",
+    "limit": "120 kB"
+  },
+  {
+    "path": "dist/ui-kit.umd.js",
+    "limit": "120 kB"
+  }
+]

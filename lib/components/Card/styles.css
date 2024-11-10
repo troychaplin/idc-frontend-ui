@@ -1,0 +1,15 @@
+.ui-button {
+  @apply inline-block px-5 py-3 text-base font-semibold text-white rounded-md cursor-pointer bg-cyan-600;
+}
+
+.ui-button--outline {
+  @apply bg-transparent border-2 border-solid text-ui-black-700;
+}
+
+.ui-button--sm {
+  @apply px-3.5 py-2 text-sm;
+}
+
+.ui-button--lg {
+  @apply px-8 py-4 text-lg;
+}
