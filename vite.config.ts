@@ -18,7 +18,7 @@ export default defineConfig({
       entry: path.resolve(__dirname, 'lib/main.ts'),
       name: 'UI KIT',
       formats: ['es', 'umd'],
-      fileName: 'ui-kit',
+      fileName: 'idc-ui-kit',
     },
     rollupOptions: {
       external: ['react', 'react-dom', 'react/jsx-runtime', 'tailwindcss'],
