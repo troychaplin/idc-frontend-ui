@@ -1,51 +1,51 @@
-.ui-max-width-xs > :not(.ui-no-max-width) {
+.ui-max-w-xs {
   @apply max-w-xs mx-auto;
 }
 
-.ui-max-width-sm > :not(.ui-no-max-width) {
+.ui-max-w-sm {
   @apply max-w-sm mx-auto;
 }
 
-.ui-max-width-md > :not(.ui-no-max-width) {
+.ui-max-w-md {
   @apply max-w-md mx-auto;
 }
 
-.ui-max-width-lg > :not(.ui-no-max-width) {
+.ui-max-w-lg {
   @apply max-w-lg mx-auto;
 }
 
-.ui-max-width-xl > :not(.ui-no-max-width) {
+.ui-max-w-xl {
   @apply max-w-xl mx-auto;
 }
 
-.ui-max-width-2xl > :not(.ui-no-max-width) {
+.ui-max-w-2xl {
   @apply max-w-2xl mx-auto;
 }
 
-.ui-max-width-3xl > :not(.ui-no-max-width) {
+.ui-max-w-3xl {
   @apply max-w-3xl mx-auto;
 }
 
-.ui-max-width-4xl > :not(.ui-no-max-width) {
+.ui-max-w-4xl {
   @apply max-w-4xl mx-auto;
 }
 
-.ui-max-width-5xl > :not(.ui-no-max-width) {
+.ui-max-w-5xl {
   @apply max-w-5xl mx-auto;
 }
 
-.ui-max-width-6xl > :not(.ui-no-max-width) {
+.ui-max-w-6xl {
   @apply max-w-6xl mx-auto;
 }
 
-.ui-max-width-7xl > :not(.ui-no-max-width) {
+.ui-max-w-7xl {
   @apply mx-auto max-w-7xl;
 }
 
-.ui-max-width-max > :not(.ui-no-max-width) {
+.ui-max-w-max {
   @apply mx-auto max-w-max;
 }
 
-.ui-max-width-full > :not(.ui-no-max-width) {
+.ui-max-w-full {
   @apply max-w-full mx-auto;
 }

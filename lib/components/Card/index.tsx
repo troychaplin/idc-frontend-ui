@@ -1,4 +1,4 @@
-import { uiMaxWidth, uiRoundedCorners, uiDropShadow } from '../../utils/tailwindProps'
+import { uiMaxWidth, uiRoundedCorners, uiDropShadow } from '../../utils/propClasses'
 
 type MaxWidthKeys = keyof typeof uiMaxWidth
 type RoundedKeys = keyof typeof uiRoundedCorners

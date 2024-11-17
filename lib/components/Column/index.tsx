@@ -1,4 +1,4 @@
-import { uiMaxWidth, uiGridColumns } from '../../utils/tailwindProps'
+import { uiMaxWidth, uiGridColumns } from '../../utils/propClasses'
 import { ColumnContent } from './content'
 
 type MaxWidthKeys = keyof typeof uiMaxWidth
