@@ -1,11 +1,11 @@
 {
   "name": "@troychaplin79/idc-ui-kit",
-  "version": "0.0.1",
+  "author": "Troy Chaplin",
+  "version": "0.0.2",
+  "license": "MIT",
   "private": false,
   "description": "A library template built by Vite, React, Typescript, TailwindCSS and Storybook",
   "homepage": "https://github.com/troychaplin/idc-ui-kit#readme",
-  "author": "Troy Chaplin",
-  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/troychaplin/idc-ui-kit.git"
