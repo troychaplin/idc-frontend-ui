@@ -1,8 +1,0 @@
-/* Tailwind CSS */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
-/* Global Classes */
-@import './components/Button/styles.css';
-@import './styles/max-width.css';
