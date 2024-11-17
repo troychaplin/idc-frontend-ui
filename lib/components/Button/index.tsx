@@ -1,6 +1,11 @@
+import { idcBlueBg } from '../../utils/colorClasses'
+
+type BgColorKeys = keyof typeof idcBlueBg
+
 export interface ButtonProps {
-  color?: string
-  textColor?: string
+  color?: 'blue' | 'orange'
+  colorStrength?: BgColorKeys
+  textColor?: 'light' | 'dark'
   label: string
   type?: 'button' | 'submit' | 'reset'
   size?: 'sm' | 'md' | 'lg'
@@ -9,28 +14,25 @@ export interface ButtonProps {
 }
 
 export const Button = ({
-  color = '#3678B9',
-  textColor = '#ffffff',
+  color = 'blue',
+  colorStrength = 500,
+  textColor = 'light',
   label,
   type = 'button',
   size = 'md',
   isOutline = false,
   ...props
 }: ButtonProps) => {
-  const buttonStyle = isOutline ? 'idc-button--outline' : 'idc-button--solid'
+  const buttonStyles = isOutline
+    ? `idc-button--outline border-idc-${color}-${String(colorStrength)}`
+    : `idc-button--solid bg-idc-${color}-${String(colorStrength)}`
 
-  // Inline style object to handle both background and text color
-  const style = {
-    color: textColor,
-    backgroundColor: isOutline ? 'transparent' : color,
-    borderColor: isOutline ? color : 'transparent',
-  }
+  const textStyles = textColor === 'light' ? 'text-white' : 'text-black'
 
   return (
     <button
       type={type}
-      className={['idc-button', `idc-button--${size}`, buttonStyle].join(' ')}
-      style={style}
+      className={['idc-button', `idc-button--${size}`, buttonStyles, textStyles].join(' ')}
       {...props}
     >
       {label}

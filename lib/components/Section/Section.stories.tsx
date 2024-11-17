@@ -15,7 +15,7 @@ export const Primary: Story = {
   args: {
     children: <p>Section element</p>,
     as: 'section',
-    isGrey: false,
+    isBlue: false,
     maxWidth: '5xl',
   } as SectionProps,
   render: (args) => <Section {...args} />,

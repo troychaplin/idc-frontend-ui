@@ -14,8 +14,9 @@ type Story = StoryObj<typeof meta>
 export const Primary: Story = {
   args: {
     label: 'Button',
-    color: '#3678B9',
-    textColor: '#ffffff',
+    color: 'blue',
+    colorStrength: 500,
+    textColor: 'light',
     type: 'button',
     size: 'md',
     isOutline: false,
