@@ -1,5 +1,5 @@
 .idc-button {
-  @apply inline-block px-5 py-2.5 text-base font-semibold text-white rounded-md cursor-pointer bg-cyan-600;
+  @apply inline-block px-5 py-2.5 text-base font-semibold rounded-md cursor-pointer;
 }
 
 .idc-button--outline {
