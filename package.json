@@ -1,7 +1,7 @@
 {
   "name": "@troychaplin79/idc-ui-kit",
   "author": "Troy Chaplin",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "private": false,
   "description": "A library template built by Vite, React, Typescript, TailwindCSS and Storybook",
@@ -13,14 +13,14 @@
   "bugs": {
     "url": "https://github.com/troychaplin/idc-ui-kit/issues"
   },
-  "main": "dist/idc-ui.umd.js",
-  "module": "dist/idc-ui.mjs",
+  "main": "dist/idc-ui-kit.umd.js",
+  "module": "dist/idc-ui-kit.mjs",
   "types": "dist/main.d.ts",
   "exports": {
     ".": {
       "types": "./dist/main.d.ts",
-      "import": "./dist/idc-ui.mjs",
-      "require": "./dist/idc-ui.umd.js"
+      "import": "./dist/idc-ui-kit.mjs",
+      "require": "./dist/idc-ui-kit.umd.js"
     },
     "./dist/style.css": "./dist/style.css"
   },
