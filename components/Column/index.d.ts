@@ -7,8 +7,8 @@ export interface ColumnProps {
     cols?: ColumnKeys;
     gap?: number;
 }
-export declare const ColumnContainer: ({ children, maxWidth, cols, gap }: ColumnProps) => import("react/jsx-runtime").JSX.Element;
-export declare const Column: (({ children, maxWidth, cols, gap }: ColumnProps) => import("react/jsx-runtime").JSX.Element) & {
+export declare const ColumnContainer: ({ children, maxWidth, cols }: ColumnProps) => import("react/jsx-runtime").JSX.Element;
+export declare const Column: (({ children, maxWidth, cols }: ColumnProps) => import("react/jsx-runtime").JSX.Element) & {
     Content: {
         ({ children }: import('./content').ColumnContentProps): import("react/jsx-runtime").JSX.Element;
         displayName: string;

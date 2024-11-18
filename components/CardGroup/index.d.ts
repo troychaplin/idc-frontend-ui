@@ -3,7 +3,6 @@ type GridColumnsKeys = keyof typeof uiGridColumns;
 export interface CardGroupProps {
     children?: React.ReactNode;
     cols?: GridColumnsKeys;
-    gap?: number;
 }
-export declare const CardGroup: ({ children, cols, gap }: CardGroupProps) => import("react/jsx-runtime").JSX.Element;
+export declare const CardGroup: ({ children, cols }: CardGroupProps) => import("react/jsx-runtime").JSX.Element;
 export {};
