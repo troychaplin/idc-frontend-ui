@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Column, ColumnProps } from '.'
 
 const meta = {
-  title: 'Components/Column',
+  title: 'Layouts/Column',
   component: Column,
   tags: ['autodocs'],
 } satisfies Meta<typeof Column>
