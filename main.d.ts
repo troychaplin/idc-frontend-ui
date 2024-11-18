@@ -7,3 +7,5 @@ export { Column } from './components/Column';
 export { Main } from './components/Main';
 export { Placeholder } from './components/Placeholder';
 export { Section } from './components/Section';
+export * as colorClasses from './utils/colorClasses';
+export * as propClasses from './utils/propClasses';
