@@ -47,6 +47,9 @@ export default {
           950: "#461102",
         },
       },
+      margin: {
+        'offset-center': 'calc(-50vw + 50%)',
+      }
     },
   },
   plugins: [],
