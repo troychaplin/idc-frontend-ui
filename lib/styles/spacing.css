@@ -1,15 +1,71 @@
-/* Set top margin on consecutive sections */
-.ui-section + .ui-section,
-.ui-section + :not(.ui-section),
-:not(.ui-section) + .ui-section {
-  @apply mt-10;
+/*
+** Main Component
+*/
+
+.ui-main {
+  @apply pb-8 pt-[62px] md:px-8 md:pb-12 md:pt-[90px];
 }
 
-.ui-section.bg-idc-blue-100 + .ui-section.bg-idc-blue-100 {
+/* .ui-main >  */
+
+/* Set top margin on consecutive sections */
+.ui-section + .ui-section,
+.ui-section.from-white + .ui-section.bg-white,
+.ui-main > .ui-section > .ui-section.bg-white:first-child,
+.ui-section > .ui-layout + .ui-layout {
+  @apply mt-8 md:mt-16;
+}
+
+.ui-section + :not(.ui-section),
+:not(.ui-section) + .ui-section,
+.ui-section > .idc-component + .idc-component,
+.ui-section > div > .idc-component + .idc-component {
+  @apply mt-8 md:mt-12;
+}
+
+/*
+** Section Component
+*/
+
+.ui-section.bg-white + .ui-section.bg-white-blue-edge {
+  @apply mt-0;
+}
+
+.ui-section.bg-idc-blue-100 + .ui-section.bg-idc-blue-100,
+.ui-section.bg-white-blue-edge + .ui-section.bg-idc-blue-100 {
   @apply pt-0 mt-0;
 }
 
-/* Set top margin on consecutive components that are direct descendants of section */
-.ui-section > .ui-layout + .ui-layout {
-  @apply mt-10;
+/* Remove spacing when blues come up against each other */
+.ui-section.bg-gradient-to-t.from-idc-blue-100 + .ui-section.bg-idc-blue-100 {
+  @apply pt-0 mt-0;
+}
+
+/* Remove spacing when blues come up against a gradient */
+.ui-section.bg-idc-blue-100 + .ui-section.bg-gradient-to-t.from-idc-blue-100 {
+  @apply mt-0;
+}
+
+/* Remove spacing when white come up against each other */
+.ui-section.bg-idc-blue-100 + .ui-section.to-idc-blue-100 {
+  @apply pt-0 mt-0;
+}
+
+/* Adjust spacing for sections */
+.ui-main > .ui-section > * {
+  @apply px-5 md:px-0;
+}
+
+/*
+** Prose Classes
+*/
+
+.ui-prose-first-last > *:first-child,
+.ui-zero-first-last > *:first-child {
+  @apply !mt-0;
+}
+
+.ui-prose-first-last > *:last-child,
+.ui-zero-first-last > *:last-child {
+  @apply !mb-0;
 }

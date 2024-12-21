@@ -3,7 +3,7 @@
 }
 
 .idc-button--outline {
-  @apply bg-transparent border-2 border-solid text-ui-black-700;
+  @apply bg-transparent border-2 border-solid text-idc-black-700;
 }
 
 .idc-button--sm {

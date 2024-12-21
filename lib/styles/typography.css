@@ -1,0 +1,47 @@
+/* Headers */
+
+.ui-main h1,
+.ui-main h2,
+.ui-main h3,
+.ui-main h4,
+.ui-main h5,
+.ui-main h6 {
+  @apply font-bold text-idc-black-900;
+}
+
+.ui-main h1 a,
+.ui-main h2 a,
+.ui-main h3 a,
+.ui-main h4 a,
+.ui-main h5 a,
+.ui-main h6 a {
+  @apply text-idc-blue-600;
+}
+
+.ui-main h1 {
+  @apply text-5xl;
+}
+
+.ui-main h2 {
+  @apply text-4xl;
+}
+
+.ui-main h3 {
+  @apply text-3xl;
+}
+
+.ui-main h4 {
+  @apply text-2xl;
+}
+
+.ui-main h5 {
+  @apply text-xl;
+}
+
+.ui-main h6 {
+  @apply text-xl;
+}
+
+/* Content */
+
+/* Others */
