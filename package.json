@@ -1,26 +1,26 @@
 {
-  "name": "@troychaplin79/idc-ui-kit",
+  "name": "@troychaplin79/idc-frontend-ui",
   "author": "Troy Chaplin",
   "version": "0.0.7",
   "license": "MIT",
   "private": false,
   "description": "A library template built by Vite, React, Typescript, TailwindCSS and Storybook",
-  "homepage": "https://github.com/troychaplin/idc-ui-kit#readme",
+  "homepage": "https://github.com/troychaplin/idc-frontend-ui#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/troychaplin/idc-ui-kit.git"
+    "url": "git+https://github.com/troychaplin/idc-frontend-ui.git"
   },
   "bugs": {
-    "url": "https://github.com/troychaplin/idc-ui-kit/issues"
+    "url": "https://github.com/troychaplin/idc-frontend-ui/issues"
   },
-  "main": "dist/idc-ui-kit.umd.js",
-  "module": "dist/idc-ui-kit.mjs",
+  "main": "dist/idc-frontend-ui.umd.js",
+  "module": "dist/idc-frontend-ui.mjs",
   "types": "dist/main.d.ts",
   "exports": {
     ".": {
       "types": "./dist/main.d.ts",
-      "import": "./dist/idc-ui-kit.mjs",
-      "require": "./dist/idc-ui-kit.umd.js"
+      "import": "./dist/idc-frontend-ui.mjs",
+      "require": "./dist/idc-frontend-ui.umd.js"
     },
     "./dist/style.css": "./dist/style.css"
   },
