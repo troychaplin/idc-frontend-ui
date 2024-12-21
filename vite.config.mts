@@ -4,7 +4,6 @@ import react from '@vitejs/plugin-react'
 import dts from 'vite-plugin-dts'
 import tailwindcss from 'tailwindcss'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), dts({ include: ['lib'], insertTypesEntry: true })],
   css: {
@@ -18,7 +17,7 @@ export default defineConfig({
       entry: path.resolve(__dirname, 'lib/main.ts'),
       name: 'UI KIT',
       formats: ['es', 'umd'],
-      fileName: 'idc-ui-kit',
+      fileName: 'idc-frontend-ui',
     },
     rollupOptions: {
       external: ['react', 'react-dom', 'react/jsx-runtime', 'tailwindcss'],
