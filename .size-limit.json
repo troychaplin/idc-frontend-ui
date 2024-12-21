@@ -1,10 +1,10 @@
 [
   {
-    "path": "dist/idc-ui-kit.mjs",
+    "path": "dist/idc-frontend-ui.mjs",
     "limit": "120 kB"
   },
   {
-    "path": "dist/idc-ui-kit.umd.js",
+    "path": "dist/idc-frontend-ui.umd.js",
     "limit": "120 kB"
   }
 ]
