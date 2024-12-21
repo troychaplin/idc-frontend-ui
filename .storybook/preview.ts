@@ -3,7 +3,7 @@ import '../lib/styles.css'
 
 const preview: Preview = {
   parameters: {
-    actions: { argTypesRegex: '^on[A-Z].*' },
+    // actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -14,6 +14,8 @@ const preview: Preview = {
       storySort: {
         method: 'alphabetical',
         order: [
+          'Get Started',
+          ['Introduction', 'How to Use', 'Changelog'],
           'Components',
           'Layouts',
           ['Body', 'Main', 'Section', 'Article', 'Column', 'Aside'],
