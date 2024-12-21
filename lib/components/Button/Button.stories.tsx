@@ -14,12 +14,11 @@ type Story = StoryObj<typeof meta>
 export const Primary: Story = {
   args: {
     label: 'Button',
-    color: 'blue',
-    colorStrength: 500,
-    textColor: 'light',
+    color: 'dark-blue',
     type: 'button',
     size: 'md',
     isOutline: false,
+    noBg: false,
     onClick: () => console.log('Button clicked'),
   } as ButtonProps,
   render: (args) => <Button {...args} />,

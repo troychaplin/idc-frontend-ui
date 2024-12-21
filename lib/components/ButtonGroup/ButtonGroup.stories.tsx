@@ -21,8 +21,9 @@ export const Primary: Story = {
   render: (args) => (
     <ButtonGroup {...args}>
       <Button label="Button One" />
-      <Button label="Button Two" color="orange" colorStrength={100} textColor="dark" />
-      <Button label="Button Three" color="blue" colorStrength={300} textColor="dark" isOutline />
+      <Button label="Button Two" color="dark-orange" isOutline />
+      <Button label="Button Three" color="dark-blue" isOutline />
+      <Button label="Button Three" color="dark-blue" isOutline noBg />
     </ButtonGroup>
   ),
 }

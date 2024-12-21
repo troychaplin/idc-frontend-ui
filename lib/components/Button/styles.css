@@ -1,15 +1,73 @@
 .idc-button {
-  @apply inline-block px-5 py-2.5 text-base font-semibold rounded-md cursor-pointer;
+  @apply inline-block px-4 py-3 text-sm font-semibold rounded-md cursor-pointer whitespace-nowrap md:text-base;
 }
 
 .idc-button--outline {
-  @apply bg-transparent border-2 border-solid text-idc-black-700;
+  @apply bg-transparent border border-solid text-idc-black-700;
 }
 
+/* Button Sizes */
+
 .idc-button--sm {
-  @apply px-3.5 py-2 text-sm;
+  @apply text-sm;
+}
+
+.idc-button--xs {
+  @apply px-3 py-2 md:px-3 md:py-2 md:text-sm;
 }
 
 .idc-button--lg {
-  @apply px-7 py-3.5 text-lg;
+  @apply md:px-7 md:py-3.5 text-lg;
+}
+
+/* Blue Buttons */
+
+.idc-button--light-blue.idc-button--solid {
+  @apply bg-idc-blue-50 text-idc-blue-800 hover:bg-idc-blue-600 hover:text-white;
+}
+
+.idc-button--light-blue.idc-button--outline {
+  @apply bg-white/40 bg-idc-blue-50 border-idc-blue-200 text-idc-blue-800 hover:border-idc-blue-600 hover:bg-idc-blue-600 hover:text-white;
+}
+
+.idc-button--dark-blue.idc-button--solid {
+  @apply text-white bg-idc-blue-600 hover:bg-idc-orange-700 hover:text-white;
+}
+
+.idc-button--dark-blue.idc-button--outline {
+  @apply bg-white/40 bg-idc-blue-50 text-idc-blue-800 border-idc-blue-600 hover:border-idc-blue-600 hover:bg-idc-blue-600 hover:text-white;
+}
+
+/* Orange Buttons */
+
+.idc-button--light-orange.idc-button--outline {
+  @apply bg-idc-orange-50/50 border-idc-orange-200 text-idc-orange-800 hover:border-idc-orange-700 hover:bg-idc-orange-700 hover:text-white;
+}
+
+.idc-button--dark-orange.idc-button--outline {
+  @apply bg-idc-orange-50/50 text-idc-orange-800 border-idc-orange-700 hover:border-idc-orange-700 hover:bg-idc-orange-700 hover:text-white;
+}
+
+.idc-button--light-orange.idc-button--solid {
+  @apply bg-idc-orange-50 text-idc-orange-800 hover:bg-idc-orange-700 hover:text-white;
+}
+
+.idc-button--dark-orange.idc-button--solid {
+  @apply text-white bg-idc-orange-700 hover:bg-idc-blue-600 hover:text-white;
+}
+
+/* White Buttons */
+
+.idc-button--white.idc-button--outline {
+  @apply text-white border-white bg-white/40 hover:border-idc-black-600 hover:bg-idc-black-600 hover:text-white;
+}
+
+.idc-button--white.idc-button--solid {
+  @apply bg-white text-idc-black-800 hover:bg-idc-black-600 hover:text-white;
+}
+
+/* No Background */
+
+.idc-button--no-bg.idc-button--outline {
+  @apply bg-transparent;
 }
