@@ -5,6 +5,10 @@
 
 /* Global Classes */
 @import './components/Button/styles.css';
+@import './components/Card/styles.css';
+@import './components/CardGroup/styles.css';
+@import './components/Header/styles.css';
+@import './components/SiteHeader/styles.css';
 
 /* Other Styles */
 @import './styles/images.css';
