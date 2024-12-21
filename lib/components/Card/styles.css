@@ -1,15 +1,11 @@
-.ui-button {
-  @apply inline-block px-5 py-3 text-base font-semibold text-white rounded-md cursor-pointer bg-cyan-600;
+.idc-card-figure-img img {
+  @apply w-40 md:w-full;
 }
 
-.ui-button--outline {
-  @apply bg-transparent border-2 border-solid text-idc-black-700;
+.idc-card-figure-svg svg {
+  @apply w-8 h-8 md:w-10 md:h-10 fill-idc-blue-500;
 }
 
-.ui-button--sm {
-  @apply px-3.5 py-2 text-sm;
-}
-
-.ui-button--lg {
-  @apply px-8 py-4 text-lg;
+.idc-card-quote img {
+  @apply w-12 h-12 rounded-full lg:w-14 lg:h-14;
 }

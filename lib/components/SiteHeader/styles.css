@@ -1,0 +1,14 @@
+/* For flyout menu in mobile view */
+/* @media (max-width: 768px) {
+  .idc-navitem a {
+    @apply block w-full px-4 py-2 text-sm;
+  }
+} */
+
+.idc-navitem a {
+  @apply px-3.5 py-1.5 rounded text-sm;
+}
+
+.idc-navitem a:hover {
+  @apply bg-idc-blue-100;
+}

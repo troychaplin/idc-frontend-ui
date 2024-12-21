@@ -1,12 +1,12 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
-import { Column, ColumnProps } from '.'
+import { Columns, ColumnsProps } from '.'
 
 const meta = {
-  title: 'Layouts/Column',
-  component: Column,
+  title: 'Layouts/Columns',
+  component: Columns,
   tags: ['autodocs'],
-} satisfies Meta<typeof Column>
+} satisfies Meta<typeof Columns>
 
 export default meta
 type Story = StoryObj<typeof meta>
@@ -16,10 +16,10 @@ export const Primary: Story = {
     maxWidth: '5xl',
     cols: 2,
     gap: 20,
-  } as ColumnProps,
+  } as ColumnsProps,
   render: (args) => (
-    <Column {...args}>
-      <Column.Content>
+    <Columns {...args}>
+      <Columns.Content>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida orci elit, at consectetur lectus
           iaculis vel. Cras non fringilla velit, a posuere felis. Mauris faucibus dui ultricies ultrices luctus. Aliquam
@@ -33,8 +33,8 @@ export const Primary: Story = {
             finibus sed nunc ac volutpat. Maecenas lacinia justo a arcu tempor, ac tempor magna faucibus.
           </p>
         )}
-      </Column.Content>
-      <Column.Content>
+      </Columns.Content>
+      <Columns.Content>
         <p>
           Nam facilisis pulvinar ligula nec cursus. Mauris ut tempor enim. Nullam sodales eros ut velit ullamcorper
           fringilla. Fusce a sem est. Vivamus eleifend accumsan pellentesque. Pellentesque in ante urna. Nullam finibus
@@ -48,43 +48,43 @@ export const Primary: Story = {
             eleifend sem dui ut quam.
           </p>
         )}
-      </Column.Content>
+      </Columns.Content>
       {(args.cols === 3 || args.cols === 4 || args.cols === 6) && (
-        <Column.Content>
+        <Columns.Content>
           <p>
             Nam facilisis pulvinar ligula nec cursus. Mauris ut tempor enim. Nullam sodales eros ut velit ullamcorper
             fringilla. Fusce a sem est. Vivamus eleifend accumsan pellentesque. Pellentesque in ante urna. Nullam
             finibus sed nunc ac volutpat. Maecenas lacinia justo a arcu tempor, ac tempor magna faucibus.
           </p>
-        </Column.Content>
+        </Columns.Content>
       )}
       {(args.cols === 4 || args.cols === 6) && (
-        <Column.Content>
+        <Columns.Content>
           <p>
             Nam facilisis pulvinar ligula nec cursus. Mauris ut tempor enim. Nullam sodales eros ut velit ullamcorper
             fringilla. Fusce a sem est. Vivamus eleifend accumsan pellentesque. Pellentesque in ante urna. Nullam
             finibus sed nunc ac volutpat. Maecenas lacinia justo a arcu tempor, ac tempor magna faucibus.
           </p>
-        </Column.Content>
+        </Columns.Content>
       )}
       {args.cols === 6 && (
-        <Column.Content>
+        <Columns.Content>
           <p>
             Nam facilisis pulvinar ligula nec cursus. Mauris ut tempor enim. Nullam sodales eros ut velit ullamcorper
             fringilla. Fusce a sem est. Vivamus eleifend accumsan pellentesque. Pellentesque in ante urna. Nullam
             finibus sed nunc ac volutpat. Maecenas lacinia justo a arcu tempor, ac tempor magna faucibus.
           </p>
-        </Column.Content>
+        </Columns.Content>
       )}
       {args.cols === 6 && (
-        <Column.Content>
+        <Columns.Content>
           <p>
             Nam facilisis pulvinar ligula nec cursus. Mauris ut tempor enim. Nullam sodales eros ut velit ullamcorper
             fringilla. Fusce a sem est. Vivamus eleifend accumsan pellentesque. Pellentesque in ante urna. Nullam
             finibus sed nunc ac volutpat. Maecenas lacinia justo a arcu tempor, ac tempor magna faucibus.
           </p>
-        </Column.Content>
+        </Columns.Content>
       )}
-    </Column>
+    </Columns>
   ),
 }
