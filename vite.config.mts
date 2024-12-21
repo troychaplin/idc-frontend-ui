@@ -4,7 +4,6 @@ import react from '@vitejs/plugin-react'
 import dts from 'vite-plugin-dts'
 import tailwindcss from 'tailwindcss'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), dts({ include: ['lib'], insertTypesEntry: true })],
   css: {
