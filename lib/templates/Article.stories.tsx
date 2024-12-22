@@ -1,8 +1,8 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
-
 import { Main } from '../components/Main'
 import { Section } from '../components/Section'
+import { Footer } from '../components/Footer'
 import { Columns } from '../components/Columns'
 import { Hero } from '../components/Hero'
 import { Header } from '../components/Header'
@@ -20,7 +20,9 @@ const navItems = [
 
 const meta: Meta = {
   title: 'Templates/Article',
-  // tags: ['autodocs'],
+  parameters: {
+    layout: 'fullscreen',
+  },
 }
 
 export default meta
@@ -319,6 +321,8 @@ export const Article: Story = {
           </p>
         </Section>
       </Main>
+
+      <Footer />
     </>
   ),
 }
