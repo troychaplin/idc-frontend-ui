@@ -1,7 +1,4 @@
-import React from 'react'
 import { Columns } from '../Columns'
-import Link from 'next/link'
-import Image from 'next/image'
 
 export const Footer = () => {
   return (
@@ -22,20 +19,20 @@ export const Footer = () => {
             </p>
             <ul className="mt-5 space-y-1 font-light text-white/90">
               <li>
-                <Link href="mailto:info@idocscanada.ca" className="font-semibold text-white hover:underline">
+                <a href="mailto:info@idocscanada.ca" className="font-semibold text-white hover:underline">
                   info@idocscanada.ca
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="tel:613-701-0533" className="font-semibold text-white hover:underline">
+                <a href="tel:613-701-0533" className="font-semibold text-white hover:underline">
                   613-701-0533
-                </Link>
+                </a>
               </li>
               <li>
                 Toll-free at{' '}
-                <Link href="tel:" className="font-bold text-white hover:underline">
+                <a href="tel:" className="font-bold text-white hover:underline">
                   1-888-433-1011
-                </Link>
+                </a>
               </li>
             </ul>
           </Columns.Content>
@@ -77,7 +74,7 @@ export const Footer = () => {
                 className="w-[120px] h-[42px] grow-0 shrink-0"
                 target="_blank"
               >
-                <Image
+                <img
                   width="120"
                   height="42"
                   alt="Click for the BBB Business Review of this Legal Information Services in Ottawa ON"
@@ -92,50 +89,16 @@ export const Footer = () => {
               <p className="text-center md:text-right">
                 Copyright © 2020 International Documents Canada. All rights reserved.
                 <span className="block mt-2">
-                  <Link href="#" className="font-bold hover:underline">
+                  <a href="#" className="font-bold hover:underline">
                     About Us
-                  </Link>{' '}
+                  </a>{' '}
                   |{' '}
-                  <Link href="#" className="font-bold hover:underline">
+                  <a href="#" className="font-bold hover:underline">
                     Privacy Policy
-                  </Link>
+                  </a>
                 </span>
               </p>
             </div>
-
-            {/* <div className="flex gap-4">
-                <a
-                href="https://www.bbb.org/ca/on/ottawa/profile/legal-information-services/international-documents-canada-0117-50321#sealclick"
-                title="Click for the Business Review of International Documents Canada, a Legal Information Services in Ottawa ON"
-                className="w-[120px] h-[42px] flex-1"
-                target="_blank"
-              >
-                <Image
-                  width="120"
-                  height="42"
-                  alt="Click for the BBB Business Review of this Legal Information Services in Ottawa ON"
-                  style={{ border: 0 }}
-                  src="/assets/bbb-logo.png"
-                />
-              </a>
-              <p className="max-w-xs text-white">
-                Proudly recognized by with a Torch Award for Market Place Trust
-              </p>
-            </div>
-
-            <p className="w-full ml-auto text-right text-white">
-              Copyright © 2020 International Documents Canada. All rights
-              reserved.
-              <span className="block mt-2">
-                <Link href="#" className="font-bold hover:underline">
-                  About Us
-                </Link>{" "}
-                |{" "}
-                <Link href="#" className="font-bold hover:underline">
-                  Privacy Policy
-                </Link>
-              </span>
-            </p> */}
           </div>
         </div>
       </div>

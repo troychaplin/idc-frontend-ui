@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Open Sans', 'sans-serif'],
+        open: ['Open Sans', 'sans-serif'],
       },
       typography: (theme) => ({
         DEFAULT: {
@@ -31,22 +31,22 @@ module.exports = {
                 },
               },
               h1: {
-                fontWeight: '600',
+                fontWeight: '500',
               },
               h2: {
-                fontWeight: '600',
+                fontWeight: '500',
                 marginBottom: '1rem',
               },
               h3: {
-                fontWeight: '600',
+                fontWeight: '500',
                 marginBottom: '0.75rem',
               },
               h4: {
-                fontWeight: '600',
+                fontWeight: '500',
                 marginBottom: '0.5rem',
               },
               'h5, h6': {
-                fontWeight: '600',
+                fontWeight: '500',
               },
             },
           ],
