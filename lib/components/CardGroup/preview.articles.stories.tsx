@@ -15,9 +15,7 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Primary: Story = {
-  args: {
-    cols: 3,
-  } as CardGroupProps,
+  args: {} as CardGroupProps,
   render: (args) => (
     <CardGroup {...args}>
       {data.slice(0, 3).map(({ id, link, title, excerpt, image, alt, date }) => (

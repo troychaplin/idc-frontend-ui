@@ -2,7 +2,7 @@ import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { Main } from '../Main'
 import { Section } from '../Section'
-import { BlueColumns, BlueColumnsProps } from '../BlueColumns'
+import { BlueColumns, BlueColumnsProps } from '.'
 
 const meta = {
   title: 'Components/Blue Columns',
