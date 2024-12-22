@@ -5,7 +5,7 @@ import { Card } from '../Card'
 import { CardData as data } from '../Card/data'
 
 const meta = {
-  title: 'Components/Card Group',
+  title: 'Components/Card Group/Icon Cards',
   component: CardGroup,
   // subcomponents: { Card },
   tags: ['autodocs'],
@@ -20,9 +20,11 @@ export const Primary: Story = {
   } as CardGroupProps,
   render: (args) => (
     <CardGroup {...args}>
-      {data.slice(0, 3).map(({ id }) => (
+      {data.slice(0, 3).map(({ id, link, title, excerpt, iconName, alt, date }) => (
         <Card key={id} addFlex>
-          <p>Card Item</p>
+          <Card.Figure iconName={iconName} />
+          <Card.Header title={title} date={date} />
+          <Card.Content text={excerpt} link={link} isExcerpt hideMobile />
         </Card>
       ))}
     </CardGroup>

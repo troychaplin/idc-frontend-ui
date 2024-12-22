@@ -4,7 +4,7 @@ import { Card, CardProps } from '.'
 import { CardData as data } from './data'
 
 const meta = {
-  title: 'Components/Card',
+  title: 'Components/Card/Icon Card',
   component: Card,
   tags: ['autodocs'],
 } satisfies Meta<typeof Card>
@@ -23,7 +23,9 @@ export const Primary: Story = {
   } as CardProps,
   render: (args) => (
     <Card {...args}>
-      <p>Card Item</p>
+      <Card.Figure iconName={data[0].iconName} />
+      <Card.Header title={data[0].title} date={data[0].date} />
+      <Card.Content text={data[0].excerpt} link={data[0].link} isExcerpt hideMobile />
     </Card>
   ),
 }
