@@ -31,7 +31,7 @@ export const DefinitionAccordion = ({ title, children }: DefinitionAccordionProp
       </dt>
 
       <dd
-        className="p-0 mt-0 idc-accordion-content md:p-0 md:mt-3 md:mb-1.5 ui-prose-first-last"
+        className="p-0 mt-2 idc-accordion-content md:p-0 md:mt-4 md:mb-1.5 ui-prose-first-last"
         hidden={true}
         id={titleLabel}
       >

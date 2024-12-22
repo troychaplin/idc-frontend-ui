@@ -24,6 +24,7 @@ export const Primary: Story = {
           {data.slice(0, 8).map(({ id, title, content }) => (
             <Definition.Accordion key={id} title={title}>
               <p>{content}</p>
+              <p>{content}</p>
             </Definition.Accordion>
           ))}
         </Definition>
