@@ -1,5 +1,5 @@
 export { Article } from './components/Article';
-export { BlueColumns } from './components/BlueColumns';
+export { BluePanel } from './components/BluePanel';
 export { Button } from './components/Button';
 export { ButtonGroup } from './components/ButtonGroup';
 export { Card } from './components/Card';
