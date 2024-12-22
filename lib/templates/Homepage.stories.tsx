@@ -1,6 +1,5 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
-
 import { Main } from '../components/Main'
 import { Section } from '../components/Section'
 import { BlueColumns } from '../components/BlueColumns'
@@ -28,7 +27,9 @@ const navItems = [
 
 const meta: Meta = {
   title: 'Templates/Homepage',
-  // tags: ['autodocs'],
+  parameters: {
+    layout: 'fullscreen',
+  },
 }
 
 export default meta
