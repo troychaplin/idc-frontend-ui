@@ -1,4 +1,4 @@
-import{j as e}from"./jsx-runtime-D_zvdyIk.js";import{M as s}from"./index-BF2PEY_x.js";import{S as d}from"./index-X3MVAzRu.js";import"./propClasses-CNqKrcN7.js";const x={title:"Layouts/Main",component:s,tags:["autodocs"]},r={args:{noProse:!1},render:a=>e.jsx(s,{...a,children:e.jsx("p",{children:"Main element"})})},n={args:{...r.args,children:e.jsx(d,{children:e.jsx("p",{children:"Main element"})})},render:a=>e.jsx(s,{...a})};var o,t,i;r.parameters={...r.parameters,docs:{...(o=r.parameters)==null?void 0:o.docs,source:{originalSource:`{
+import{j as e}from"./jsx-runtime-D_zvdyIk.js";import{M as s}from"./index-BF2PEY_x.js";import{S as d}from"./index-DgDv1rta.js";import"./propClasses-CNqKrcN7.js";const x={title:"Layouts/Main",component:s,tags:["autodocs"]},r={args:{noProse:!1},render:a=>e.jsx(s,{...a,children:e.jsx("p",{children:"Main element"})})},n={args:{...r.args,children:e.jsx(d,{children:e.jsx("p",{children:"Main element"})})},render:a=>e.jsx(s,{...a})};var o,t,i;r.parameters={...r.parameters,docs:{...(o=r.parameters)==null?void 0:o.docs,source:{originalSource:`{
   args: {
     noProse: false
   } as MainProps,
