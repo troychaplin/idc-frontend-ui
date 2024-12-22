@@ -15,4 +15,5 @@ export { Placeholder } from './components/Placeholder';
 export { Section } from './components/Section';
 export { SiteHeader } from './components/SiteHeader';
 export * as colorClasses from './utils/colorClasses';
+export * as iconNames from './utils/iconList';
 export * as propClasses from './utils/propClasses';
