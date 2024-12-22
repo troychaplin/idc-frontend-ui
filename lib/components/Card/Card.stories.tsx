@@ -14,16 +14,9 @@ type Story = StoryObj<typeof meta>
 
 export const Primary: Story = {
   args: {
-    children: '',
+    children: 'Card Item',
     maxWidth: 'md',
-    rounded: 'base',
-    shadow: 'md',
-    borderWidth: 1,
-    borderColor: '#dfdfdf',
+    addFlex: false,
   } as CardProps,
-  render: (args) => (
-    <Card {...args}>
-      <p>Card Item</p>
-    </Card>
-  ),
+  render: (args) => <Card {...args} />,
 }

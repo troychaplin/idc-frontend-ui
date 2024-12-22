@@ -16,10 +16,7 @@ export const Primary: Story = {
   args: {
     children: '',
     maxWidth: 'md',
-    rounded: 'base',
-    shadow: 'md',
-    borderWidth: 1,
-    borderColor: '#dfdfdf',
+    addFlex: true,
   } as CardProps,
   render: (args) => (
     <Card {...args}>
