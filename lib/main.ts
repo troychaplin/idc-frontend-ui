@@ -19,7 +19,5 @@ export { SiteHeader } from './components/SiteHeader'
 
 // Utils
 export * as colorClasses from './utils/colorClasses'
+export * as iconNames from './utils/iconList'
 export * as propClasses from './utils/propClasses'
-
-// Javascript Files
-// export { iconNames } from '../public/assets/data/icon-list.js'
