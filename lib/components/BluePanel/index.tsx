@@ -1,16 +1,16 @@
 import { uiMaxWidth, uiGridColumns } from '../../utils/propClasses'
-import { BlueColumnsContent } from './content'
+import { BluePanelContent } from './content'
 
 type MaxWidthKeys = keyof typeof uiMaxWidth
 type ColumnKeys = keyof typeof uiGridColumns
 
-export interface BlueColumnsProps {
+export interface BluePanelProps {
   children?: React.ReactNode
   maxWidth?: MaxWidthKeys
   cols?: ColumnKeys
 }
 
-export const BlueColumnsContainer = ({ children, maxWidth = '7xl', cols = '60/40' }: BlueColumnsProps) => {
+export const BluePanelContainer = ({ children, maxWidth = '7xl', cols = '60/40' }: BluePanelProps) => {
   return (
     <div
       className={`idc-bluecolumns ${uiMaxWidth[maxWidth]} mx-auto grid ${uiGridColumns[cols]} rounded-xl overflow-hidden bg-idc-blue-50`}
@@ -20,6 +20,6 @@ export const BlueColumnsContainer = ({ children, maxWidth = '7xl', cols = '60/40
   )
 }
 
-export const BlueColumns = Object.assign(BlueColumnsContainer, {
-  Content: BlueColumnsContent,
+export const BluePanel = Object.assign(BluePanelContainer, {
+  Content: BluePanelContent,
 })

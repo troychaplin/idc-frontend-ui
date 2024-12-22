@@ -2,13 +2,13 @@ import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { Main } from '../Main'
 import { Section } from '../Section'
-import { BlueColumns, BlueColumnsProps } from '.'
+import { BluePanel, BluePanelProps } from '.'
 
 const meta = {
-  title: 'Components/Blue Columns',
-  component: BlueColumns,
+  title: 'Components/Blue Panel',
+  component: BluePanel,
   tags: ['autodocs'],
-} satisfies Meta<typeof BlueColumns>
+} satisfies Meta<typeof BluePanel>
 
 export default meta
 type Story = StoryObj<typeof meta>
@@ -17,18 +17,18 @@ export const Primary: Story = {
   args: {
     maxWidth: '7xl',
     cols: 2,
-  } as BlueColumnsProps,
+  } as BluePanelProps,
   render: (args) => (
     <Main>
       <Section>
-        <BlueColumns {...args}>
-          <BlueColumns.Content>
+        <BluePanel {...args}>
+          <BluePanel.Content>
             <p>Content goes here</p>
-          </BlueColumns.Content>
-          <BlueColumns.Content bgType="dark">
+          </BluePanel.Content>
+          <BluePanel.Content bgType="dark">
             <p>Form goes here</p>
-          </BlueColumns.Content>
-        </BlueColumns>
+          </BluePanel.Content>
+        </BluePanel>
       </Section>
     </Main>
   ),
