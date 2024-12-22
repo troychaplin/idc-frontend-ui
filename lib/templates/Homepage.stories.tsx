@@ -2,7 +2,7 @@ import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { Main } from '../components/Main'
 import { Section } from '../components/Section'
-import { BlueColumns } from '../components/BlueColumns'
+import { BluePanel } from '../components/BluePanel'
 import { Button } from '../components/Button'
 import { ButtonGroup } from '../components/ButtonGroup'
 import { Card } from '../components/Card'
@@ -16,14 +16,7 @@ import { SiteHeader } from '../components/SiteHeader'
 
 import { CardData } from '../components/Card/data'
 import { DefinitionData } from '../components/Definition/data'
-
-const navItems = [
-  { label: 'Services', href: '#' },
-  { label: 'Process', href: '#' },
-  { label: 'Documents', href: '#' },
-  { label: 'Embassies', href: '#' },
-  { label: 'Resources', href: '#' },
-]
+import { NavItems } from '../components/SiteHeader/data'
 
 const meta: Meta = {
   title: 'Templates/Homepage',
@@ -43,7 +36,7 @@ export const Homepage: Story = {
           <SiteHeader.SiteLogo />
         </a>
         <SiteHeader.Navigation>
-          {navItems.map((item, index) => (
+          {NavItems.map((item, index) => (
             <li key={index} className="idc-navitem">
               <a href={item.href}>{item.label}</a>
             </li>
@@ -99,8 +92,8 @@ export const Homepage: Story = {
           </Section>
 
           <Section as="div" maxWidth="6xl" bgType="edge">
-            <BlueColumns cols={2}>
-              <BlueColumns.Content>
+            <BluePanel cols={2}>
+              <BluePanel.Content>
                 <Header
                   title="Global Recognition, Local Expertise: Your Documents, Validated
           Everywhere"
@@ -118,11 +111,11 @@ export const Homepage: Story = {
                 <p>
                   View the <a href="#">document types</a> we handle.
                 </p>
-              </BlueColumns.Content>
-              <BlueColumns.Content bgType="dark">
+              </BluePanel.Content>
+              <BluePanel.Content bgType="dark">
                 <p>Form goes here</p>
-              </BlueColumns.Content>
-            </BlueColumns>
+              </BluePanel.Content>
+            </BluePanel>
           </Section>
 
           <Section as="div" bgType="blue">

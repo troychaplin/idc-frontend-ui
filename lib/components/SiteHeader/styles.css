@@ -6,9 +6,9 @@
 } */
 
 .idc-navitem a {
-  @apply px-3.5 py-1.5 rounded text-sm;
+  @apply px-3.5 pt-1.5 pb-[7px] rounded text-sm font-light border border-transparent;
 }
 
 .idc-navitem a:hover {
-  @apply bg-idc-blue-100;
+  @apply border border-solid bg-idc-blue-50/50 border-idc-blue-200;
 }
