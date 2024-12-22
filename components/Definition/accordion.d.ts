@@ -3,6 +3,6 @@ export interface DefinitionAccordionProps {
     children: React.ReactNode;
 }
 export declare const DefinitionAccordion: {
-    ({ title, children, }: DefinitionAccordionProps): import("react/jsx-runtime").JSX.Element;
+    ({ title, children }: DefinitionAccordionProps): import("react/jsx-runtime").JSX.Element;
     displayName: string;
 };

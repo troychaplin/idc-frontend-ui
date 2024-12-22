@@ -10,7 +10,7 @@ export declare const Definition: {
     displayName: string;
 } & {
     Accordion: {
-        ({ title, children, }: import('./accordion').DefinitionAccordionProps): import("react/jsx-runtime").JSX.Element;
+        ({ title, children }: import('./accordion').DefinitionAccordionProps): import("react/jsx-runtime").JSX.Element;
         displayName: string;
     };
 };
