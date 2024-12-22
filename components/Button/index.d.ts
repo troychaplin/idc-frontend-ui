@@ -1,14 +1,10 @@
-import { idcBlueBg } from '../../utils/colorClasses';
-type BgColorKeys = keyof typeof idcBlueBg;
 export interface ButtonProps {
-    color?: 'blue' | 'orange';
-    colorStrength?: BgColorKeys;
-    textColor?: 'light' | 'dark';
+    color?: "light-blue" | "dark-blue" | "light-orange" | "dark-orange" | "white";
     label: string;
-    type?: 'button' | 'submit' | 'reset';
-    size?: 'sm' | 'md' | 'lg';
+    type?: "button" | "submit" | "reset";
+    size?: "sm" | "md" | "lg";
     isOutline?: boolean;
+    noBg?: boolean;
     onClick?: () => void;
 }
-export declare const Button: ({ color, colorStrength, textColor, label, type, size, isOutline, ...props }: ButtonProps) => import("react/jsx-runtime").JSX.Element;
-export {};
+export declare const Button: ({ color, label, type, size, isOutline, noBg, onClick, ...props }: ButtonProps) => import("react/jsx-runtime").JSX.Element;
