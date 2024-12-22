@@ -3,7 +3,11 @@
 */
 
 .ui-main {
-  @apply pb-8 pt-[62px] md:px-8 md:pb-12 md:pt-[90px];
+  @apply py-8 md:px-8 md:py-8;
+}
+
+header + .ui-main {
+  @apply pt-0 md:pt-0;
 }
 
 /* .ui-main >  */
