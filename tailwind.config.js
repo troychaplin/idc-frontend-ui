@@ -12,7 +12,7 @@ module.exports = {
         DEFAULT: {
           css: [
             {
-              '--tw-prose-body': theme('colors.idc-black[900]'),
+              '--tw-prose-body': theme('colors.idc-black[700]'),
               '--tw-prose-headings': theme('colors.idc-black[800]'),
               '--tw-prose-links': theme('colors.idc-orange[700]'),
               '--tw-prose-bullets': theme('colors.idc-black[600]'),
