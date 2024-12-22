@@ -1,6 +1,7 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { Card, CardProps } from '.'
+import { CardData as data } from './data'
 
 const meta = {
   title: 'Components/Card',
@@ -13,16 +14,9 @@ type Story = StoryObj<typeof meta>
 
 export const Primary: Story = {
   args: {
-    children: 'Customize the card',
+    children: 'Card Item',
     maxWidth: 'md',
-    rounded: 'base',
-    shadow: 'md',
-    borderWidth: 1,
-    borderColor: '#dfdfdf',
+    addFlex: false,
   } as CardProps,
-  render: (args) => (
-    <Card {...args}>
-      <p className="py-4 px-5">Card component</p>
-    </Card>
-  ),
+  render: (args) => <Card {...args} />,
 }

@@ -1,3 +1,6 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 /* Tailwind CSS */
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
@@ -5,9 +8,14 @@
 
 /* Global Classes */
 @import './components/Button/styles.css';
+@import './components/Card/styles.css';
+@import './components/CardGroup/styles.css';
+@import './components/Header/styles.css';
+@import './components/SiteHeader/styles.css';
 
 /* Other Styles */
 @import './styles/images.css';
 @import './styles/max-width.css';
 @import './styles/max-width-child.css';
 @import './styles/spacing.css';
+@import './styles/typography.css';

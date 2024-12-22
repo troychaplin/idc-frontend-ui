@@ -3,7 +3,6 @@ import '../lib/styles.css'
 
 const preview: Preview = {
   parameters: {
-    // actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -19,6 +18,7 @@ const preview: Preview = {
           'Components',
           'Layouts',
           ['Body', 'Main', 'Section', 'Article', 'Column', 'Aside'],
+          'Templates',
         ],
       },
     },
