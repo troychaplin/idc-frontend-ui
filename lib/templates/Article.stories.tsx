@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 
 import { Main } from '../components/Main'
 import { Section } from '../components/Section'
+import { Columns } from '../components/Columns'
 import { Hero } from '../components/Hero'
 import { Header } from '../components/Header'
 import { Definition } from '../components/Definition'
@@ -101,6 +102,39 @@ export const Article: Story = {
             leo. Donec lacinia libero orci, id ultricies felis dapibus eu.
           </p>
           <h6>Header Six</h6>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat urna sed euismod lobortis. Aenean
+            iaculis, elit non ornare maximus, ligula mauris ultricies felis, sed vestibulum arcu ipsum vitae elit.
+            Nullam sit amet interdum massa. In hac habitasse platea dictumst. Phasellus pretium augue est, semper
+            fringilla lacus auctor in. Fusce eu lectus lacus. Quisque et magna nec eros commodo tristique sit amet a
+            leo. Donec lacinia libero orci, id ultricies felis dapibus eu.
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat urna sed euismod lobortis. Aenean
+            iaculis, elit non ornare maximus, ligula mauris ultricies felis, sed vestibulum arcu ipsum vitae elit.
+            Nullam sit amet interdum massa. In hac habitasse platea dictumst. Phasellus pretium augue est, semper
+            fringilla lacus auctor in. Fusce eu lectus lacus. Quisque et magna nec eros commodo tristique sit amet a
+            leo. Donec lacinia libero orci, id ultricies felis dapibus eu.
+          </p>
+          <Columns cols={2} maxWidth="5xl">
+            <Columns.Content>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida orci elit, at consectetur
+                lectus iaculis vel. Cras non fringilla velit, a posuere felis. Mauris faucibus dui ultricies ultrices
+                luctus. Aliquam erat volutpat. Vestibulum imperdiet, enim non elementum pulvinar, lacus quam vestibulum
+                eros, ut eleifend sem dui ut quam.
+              </p>
+            </Columns.Content>
+            <Columns.Content>
+              <p>
+                Nam facilisis pulvinar ligula nec cursus. Mauris ut tempor enim. Nullam sodales eros ut velit
+                ullamcorper fringilla. Fusce a sem est. Vivamus eleifend accumsan pellentesque. Pellentesque in ante
+                urna. Nullam finibus sed nunc ac volutpat. Maecenas lacinia justo a arcu tempor, ac tempor magna
+                faucibus.
+              </p>
+            </Columns.Content>
+          </Columns>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat urna sed euismod lobortis. Aenean
             iaculis, elit non ornare maximus, ligula mauris ultricies felis, sed vestibulum arcu ipsum vitae elit.

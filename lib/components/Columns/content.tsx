@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react'
 
 export interface ColumnsContentProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 export const ColumnsContent = ({ children }: ColumnsContentProps) => {
-  return <div>{children}</div>;
-};
+  return <div className="ui-prose-first-last">{children}</div>
+}
 
-ColumnsContent.displayName = "Columns.Content";
+ColumnsContent.displayName = 'Columns.Content'

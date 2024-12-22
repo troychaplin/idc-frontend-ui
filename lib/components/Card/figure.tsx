@@ -10,7 +10,7 @@ export interface CardFigureProps {
 
 export const CardFigure = ({ children, iconName }: CardFigureProps) => {
   const [svgContent, setSvgContent] = useState<string | null>(null)
-  const type = iconName ? 'svg' : 'image'
+  const type = iconName ? 'svg' : 'img'
 
   useEffect(() => {
     if (iconName && iconNames[iconName]) {

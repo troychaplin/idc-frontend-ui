@@ -9,17 +9,16 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
-    layout: 'fullscreen',
     options: {
       storySort: {
         method: 'alphabetical',
         order: [
           'Get Started',
           ['Introduction', 'How to Use', 'Changelog'],
-          'Templates',
           'Components',
           'Layouts',
           ['Body', 'Main', 'Section', 'Article', 'Column', 'Aside'],
+          'Templates',
         ],
       },
     },

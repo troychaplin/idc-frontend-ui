@@ -2,6 +2,7 @@ import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { CardGroup, CardGroupProps } from '.'
 import { Card } from '../Card'
+import { CardData as data } from '../Card/data'
 
 const meta = {
   title: 'Components/Card Group',
@@ -16,13 +17,12 @@ type Story = StoryObj<typeof meta>
 export const Primary: Story = {
   args: {
     cols: 3,
-    gap: 20,
   } as CardGroupProps,
   render: (args) => (
     <CardGroup {...args}>
-      {Array.from({ length: 8 }).map((_, index) => (
-        <Card rounded="base" borderWidth={1} borderColor="#dfdfdf">
-          <p className="py-4 px-5">Card #{index}</p>
+      {data.slice(0, 3).map(({ id }) => (
+        <Card key={id} addFlex>
+          <p>Card Item</p>
         </Card>
       ))}
     </CardGroup>
