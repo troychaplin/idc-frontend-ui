@@ -18,9 +18,15 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    /* Module Aliases */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["lib/*"]
+    }
   },
-  "include": ["lib"],
+  "include": ["lib", "types"],
   "exclude": ["./lib/**/*.stories.*"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

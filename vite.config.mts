@@ -3,6 +3,7 @@ import path from 'node:path'
 import react from '@vitejs/plugin-react'
 import dts from 'vite-plugin-dts'
 import tailwindcss from 'tailwindcss'
+import * as packageJson from './package.json'
 
 export default defineConfig({
   plugins: [react(), dts({ include: ['lib'], insertTypesEntry: true })],
@@ -12,15 +13,15 @@ export default defineConfig({
     },
   },
   build: {
-    copyPublicDir: false,
+    copyPublicDir: true,
     lib: {
       entry: path.resolve(__dirname, 'lib/main.ts'),
-      name: 'UI KIT',
-      formats: ['es', 'umd'],
-      fileName: 'idc-frontend-ui',
+      name: 'IDC Frontend UI',
+      formats: ['es', 'cjs', 'umd'],
+      fileName: (format) => `idc-frontend-ui.${format}.js`,
     },
     rollupOptions: {
-      external: ['react', 'react-dom', 'react/jsx-runtime', 'tailwindcss'],
+      external: [...Object.keys(packageJson.dependencies || {}), ...Object.keys(packageJson.peerDependencies || {})],
     },
   },
 })

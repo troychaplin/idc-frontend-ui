@@ -1,0 +1,47 @@
+/* Headers */
+
+.ui-section > h1,
+.ui-section > h2,
+.ui-section > h3,
+.ui-section > h4,
+.ui-section > h5,
+.ui-section > h6 {
+  @apply text-idc-black-800;
+}
+
+.ui-section > h1 a,
+.ui-section > h2 a,
+.ui-section > h3 a,
+.ui-section > h4 a,
+.ui-section > h5 a,
+.ui-section > h6 a {
+  @apply text-idc-blue-600;
+}
+
+.ui-section > h1 {
+  @apply text-5xl;
+}
+
+.ui-section > h2 {
+  @apply text-4xl;
+}
+
+.ui-section > h3 {
+  @apply text-3xl;
+}
+
+.ui-section > h4 {
+  @apply text-2xl;
+}
+
+.ui-section > h5 {
+  @apply text-xl;
+}
+
+.ui-section > h6 {
+  @apply text-xl;
+}
+
+/* Content */
+
+/* Others */

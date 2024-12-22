@@ -29,11 +29,12 @@
   ],
   "type": "module",
   "scripts": {
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --report-unused-disable-directives --max-warnings 0",
     "storybook": "storybook dev -p 6006",
     "build": "tsc && vite build",
     "build:storybook": "storybook build",
+    "icon-list": "node ./lib/helpers/createIconArray.mjs",
     "prettier": "prettier --write .",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --report-unused-disable-directives --max-warnings 0",
     "clean": "rm -rf node_modules ; rm package-lock.json ; npm install",
     "test": "echo \"No test specified\" && exit 0",
     "prepare": "husky"
@@ -61,6 +62,7 @@
     "@storybook/react": "^8.4.7",
     "@storybook/react-vite": "^8.4.7",
     "@storybook/test": "^8.4.7",
+    "@tailwindcss/typography": "^0.5.15",
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
     "@typescript-eslint/eslint-plugin": "^8.18.1",
