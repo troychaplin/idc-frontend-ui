@@ -184,13 +184,11 @@ export const Article: Story = {
           <ul>
             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat urna sed euismod lobortis.</li>
             <li>Aenean iaculis, elit non ornare maximus.</li>
-            <li>Quisque et magna nec eros commodo tristique sit amet a leo.</li>
             <li>
+              Quisque et magna nec eros commodo tristique sit amet a leo.
               <ul>
                 <li>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat urna sed euismod lobortis.
-                </li>
-                <li>
                   <ul>
                     <li>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat urna sed euismod lobortis.
@@ -227,13 +225,11 @@ export const Article: Story = {
           <ol>
             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat urna sed euismod lobortis.</li>
             <li>Aenean iaculis, elit non ornare maximus.</li>
-            <li>Quisque et magna nec eros commodo tristique sit amet a leo.</li>
             <li>
+              Quisque et magna nec eros commodo tristique sit amet a leo.
               <ol>
                 <li>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat urna sed euismod lobortis.
-                </li>
-                <li>
                   <ol>
                     <li>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat urna sed euismod lobortis.

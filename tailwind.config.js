@@ -15,7 +15,7 @@ module.exports = {
               '--tw-prose-body': theme('colors.idc-black[700]'),
               '--tw-prose-headings': theme('colors.idc-black[800]'),
               '--tw-prose-links': theme('colors.idc-orange[700]'),
-              '--tw-prose-bullets': theme('colors.idc-black[600]'),
+              '--tw-prose-bullets': theme('colors.idc-black[700]'),
               // "--tw-prose-quotes": theme("colors.pink[900]"),
               // "--tw-prose-quote-borders": theme("colors.pink[300]"),
               // "--tw-prose-captions": theme("colors.pink[700]"),
@@ -47,6 +47,18 @@ module.exports = {
               },
               'h5, h6': {
                 fontWeight: '500',
+              },
+              'ul, ol': {
+                'margin-left': '2rem',
+              },
+              'ul ul, ol ol': {
+                'margin-left': '0',
+              },
+              'ol li li': {
+                'list-style-type': 'lower-alpha',
+              },
+              'ol li li li': {
+                'list-style-type': 'lower-roman',
               },
             },
           ],
