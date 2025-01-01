@@ -14,12 +14,12 @@
     "url": "https://github.com/troychaplin/idc-frontend-ui/issues"
   },
   "main": "dist/idc-frontend-ui.umd.js",
-  "module": "dist/idc-frontend-ui.mjs",
+  "module": "dist/idc-frontend-ui.es.js",
   "types": "dist/main.d.ts",
   "exports": {
     ".": {
       "types": "./dist/main.d.ts",
-      "import": "./dist/idc-frontend-ui.mjs",
+      "import": "./dist/idc-frontend-ui.es.js",
       "require": "./dist/idc-frontend-ui.umd.js"
     },
     "./dist/style.css": "./dist/style.css"
@@ -27,7 +27,6 @@
   "files": [
     "dist"
   ],
-  "type": "module",
   "scripts": {
     "storybook": "storybook dev -p 6006",
     "build": "tsc && vite build",
