@@ -1,7 +1,7 @@
 {
   "name": "@troychaplin79/idc-frontend-ui",
   "author": "Troy Chaplin",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "license": "MIT",
   "private": false,
   "description": "A library template built by Vite, React, Typescript, TailwindCSS and Storybook",
