@@ -1,8 +1,8 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
-import { Main } from '../Main'
-import { Section } from '../Section'
-import { BluePanel, BluePanelProps } from '.'
+import { Main } from '../Main/Main'
+import { Section } from '../Section/Section'
+import { BluePanel, BluePanelProps } from './BluePanel'
 
 const meta = {
   title: 'Components/Blue Panel',

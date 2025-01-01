@@ -1,5 +1,5 @@
 import { uiMaxWidth, uiGridColumns } from '../../utils/propClasses'
-import { ColumnsContent } from './content'
+import { ColumnsContent } from './ColumnsContent'
 
 type MaxWidthKeys = keyof typeof uiMaxWidth
 type ColumnKeys = keyof typeof uiGridColumns

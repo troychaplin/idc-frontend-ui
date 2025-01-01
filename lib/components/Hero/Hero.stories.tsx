@@ -1,9 +1,9 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
-import { Main } from '../Main'
-import { Section } from '../Section'
-// import { Button } from '../Button'
-// import { ButtonGroup } from '../ButtonGroup'
+import { Main } from '../Main/Main'
+import { Section } from '../Section/Section'
+// import { Button } from '../Button/Button'
+// import { ButtonGroup } from '../ButtonGroup/ButtonGroup'
 import { Hero, HeroProps } from '.'
 
 const meta = {

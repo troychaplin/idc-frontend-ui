@@ -1,4 +1,4 @@
-import { Columns } from '../Columns'
+import { Columns } from '../Columns/Columns'
 
 export const Footer = () => {
   return (
