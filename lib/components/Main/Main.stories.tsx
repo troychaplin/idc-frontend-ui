@@ -1,7 +1,7 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
-import { Main, MainProps } from '.'
-import { Section } from '../Section'
+import { Main, MainProps } from './Main'
+import { Section } from '../Section/Section'
 
 const meta = {
   title: 'Layouts/Main',

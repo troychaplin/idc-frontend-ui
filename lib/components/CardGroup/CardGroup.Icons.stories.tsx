@@ -1,7 +1,7 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
-import { CardGroup, CardGroupProps } from '.'
-import { Card } from '../Card'
+import { CardGroup, CardGroupProps } from './CardGroup'
+import { Card } from '../Card/Card'
 import { CardData as data } from '../Card/data'
 
 const meta = {

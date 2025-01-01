@@ -1,8 +1,8 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
-import { Main } from '../Main'
-import { Section } from '../Section'
-import { LeadIn, LeadInProps } from '.'
+import { Main } from '../Main/Main'
+import { Section } from '../Section/Section'
+import { LeadIn, LeadInProps } from './LeadIn'
 
 const meta = {
   title: 'Components/LeadIn',
