@@ -1,6 +1,6 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
-import { Card, CardProps } from '.'
+import { Card, CardProps } from './Card'
 import { CardData as data } from './data'
 
 const meta = {

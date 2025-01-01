@@ -20,4 +20,4 @@ export const LeadIn = ({ headerTop, headerBottom, text }: LeadInProps) => {
   )
 }
 
-LeadIn.displayName = 'Hero.Intro'
+LeadIn.displayName = 'LeadIn'

@@ -1,6 +1,6 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
-import { Article, ArticleProps } from '.'
+import { Article, ArticleProps } from './Article'
 import { ArticleData } from './data'
 
 const meta = {

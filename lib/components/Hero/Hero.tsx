@@ -1,6 +1,6 @@
-import { HeroContent } from "./content";
-import { HeroMedia } from "./media";
-import { Section } from "../Section";
+import { HeroContent } from "./HeroContent";
+import { HeroMedia } from "./HeroMedia";
+import { Section } from "../Section/Section";
 import { uiMaxWidth, uiGridColumns, uiBgTypes } from "../../utils/propClasses";
 
 // Define the types for this component

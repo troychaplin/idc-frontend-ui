@@ -1,10 +1,10 @@
 import { uiMaxWidth } from "../../utils/propClasses";
-import { CardHeader } from "./header";
-import { CardFooter } from "./footer";
-import { CardContent } from "./content";
-import { CardQuote } from "./quote";
-import { CardCite } from "./cite";
-import { CardFigure } from "./figure";
+import { CardHeader } from "./CardHeader";
+import { CardFooter } from "./CardFooter";
+import { CardContent } from "./CardContent";
+import { CardQuote } from "./CardQuote";
+import { CardCite } from "./CardCite";
+import { CardFigure } from "./CardFigure";
 
 type MaxWidthKeys = keyof typeof uiMaxWidth;
 

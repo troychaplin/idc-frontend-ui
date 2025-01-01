@@ -1,4 +1,4 @@
-import { DefinitionAccordion } from "./accordion";
+import { DefinitionAccordion } from "./DefinitionAccordion";
 
 export interface DefinitionProps {
   children: React.ReactNode;
