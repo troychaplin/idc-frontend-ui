@@ -1,10 +1,10 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
-import { Main } from '../Main'
-import { Section } from '../Section'
-import { Button } from '../Button'
-import { ButtonGroup } from '../ButtonGroup'
-import { Header, HeaderProps } from '.'
+import { Main } from '../Main/Main'
+import { Section } from '../Section/Section'
+import { Button } from '../Button/Button'
+import { ButtonGroup } from '../ButtonGroup/ButtonGroup'
+import { Header, HeaderProps } from './Header'
 
 const meta = {
   title: 'Components/Header',

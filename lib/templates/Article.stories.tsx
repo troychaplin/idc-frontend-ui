@@ -1,14 +1,14 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
-import { Main } from '../components/Main'
-import { Section } from '../components/Section'
-import { Footer } from '../components/Footer'
-import { Columns } from '../components/Columns'
-import { Hero } from '../components/Hero'
-import { Header } from '../components/Header'
-import { Definition } from '../components/Definition'
+import { Main } from '../components/Main/Main'
+import { Section } from '../components/Section/Section'
+import { Footer } from '../components/Footer/Footer'
+import { Columns } from '../components/Columns/Columns'
+import { Hero } from '../components/Hero/Hero'
+import { Header } from '../components/Header/Header'
+import { Definition } from '../components/Definition/Definition'
 import { DefinitionData } from '../components/Definition/data'
-import { SiteHeader } from '../components/SiteHeader'
+import { SiteHeader } from '../components/SiteHeader/SiteHeader'
 
 const navItems = [
   { label: 'Services', href: '#' },

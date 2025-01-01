@@ -1,8 +1,8 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
-import { Main } from '../Main'
-import { Section } from '../Section'
-import { Definition, DefinitionProps } from '.'
+import { Main } from '../Main/Main'
+import { Section } from '../Section/Section'
+import { Definition, DefinitionProps } from './Definition'
 import { DefinitionData as data } from './data'
 
 const meta = {
