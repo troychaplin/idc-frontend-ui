@@ -1,3 +1,4 @@
+import React from 'react'
 import { DefinitionAccordion } from "./DefinitionAccordion";
 
 export interface DefinitionProps {

@@ -1,3 +1,4 @@
+import React from 'react'
 import { uiMaxWidth } from "../../utils/propClasses";
 import { CardHeader } from "./CardHeader";
 import { CardFooter } from "./CardFooter";

@@ -1,3 +1,4 @@
+import React from 'react'
 import { uiGridColumns, uiColumns } from "../../utils/propClasses";
 
 type GridColumnsKeys = keyof typeof uiGridColumns;
