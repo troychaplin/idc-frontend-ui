@@ -1,10 +1,10 @@
 {
   "name": "@troychaplin79/idc-frontend-ui",
-  "author": "Troy Chaplin",
   "version": "0.0.11",
-  "license": "MIT",
   "private": false,
   "description": "A library template built by Vite, React, Typescript, TailwindCSS and Storybook",
+  "author": "Troy Chaplin",
+  "license": "MIT",
   "homepage": "https://github.com/troychaplin/idc-frontend-ui#readme",
   "repository": {
     "type": "git",
@@ -13,14 +13,14 @@
   "bugs": {
     "url": "https://github.com/troychaplin/idc-frontend-ui/issues"
   },
-  "main": "dist/idc-frontend-ui.umd.js",
-  "module": "dist/idc-frontend-ui.es.js",
+  "main": "dist/idc.umd.js",
+  "module": "dist/idc.es.js",
   "types": "dist/main.d.ts",
   "exports": {
     ".": {
       "types": "./dist/main.d.ts",
-      "import": "./dist/idc-frontend-ui.es.js",
-      "require": "./dist/idc-frontend-ui.umd.js"
+      "import": "./dist/idc.es.js",
+      "require": "./dist/idc.umd.js"
     },
     "./dist/style.css": "./dist/style.css"
   },
@@ -42,12 +42,12 @@
     "lib": "lib"
   },
   "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "peerDependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.3",

@@ -1,8 +1,9 @@
+import React from 'react'
 import { toggleAccordion } from './script'
 
 export interface DefinitionAccordionProps {
-  title: string
   children: React.ReactNode
+  title: string
 }
 
 export const DefinitionAccordion = ({ title, children }: DefinitionAccordionProps) => {

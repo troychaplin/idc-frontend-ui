@@ -1,3 +1,4 @@
+import React from 'react'
 import { uiMaxWidth, uiGridColumns } from '../../utils/propClasses'
 import { ColumnsContent } from './ColumnsContent'
 
@@ -23,3 +24,5 @@ export const ColumnsContainer = ({ children, maxWidth = '5xl', cols = 2 }: Colum
 export const Columns = Object.assign(ColumnsContainer, {
   Content: ColumnsContent,
 })
+
+ColumnsContainer.displayName = 'Columns'

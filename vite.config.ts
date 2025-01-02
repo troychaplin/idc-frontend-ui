@@ -12,16 +12,27 @@ export default defineConfig({
       plugins: [tailwindcss],
     },
   },
+  optimizeDeps: {
+    esbuildOptions: {
+      target: 'esnext',
+    },
+  },
   build: {
     copyPublicDir: true,
     lib: {
       entry: path.resolve(__dirname, 'lib/main.ts'),
-      name: 'IDC Frontend UI',
+      name: 'idc',
       formats: ['es', 'cjs', 'umd'],
-      fileName: (format) => `idc-frontend-ui.${format}.js`,
+      fileName: (format) => `idc.${format}.js`,
     },
     rollupOptions: {
       external: [...Object.keys(packageJson.dependencies || {}), ...Object.keys(packageJson.peerDependencies || {})],
+      output: {
+        globals: {
+          react: 'React',
+          'react-dom': 'ReactDOM',
+        },
+      },
     },
   },
 })
