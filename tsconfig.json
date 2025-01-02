@@ -10,17 +10,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
+    "allowJs": true,
     "jsx": "react-jsx",
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["lib/*"]
-    }
   },
-  "include": ["lib", "types"],
-  "exclude": ["./lib/**/*.stories.*"],
+  "include": ["lib"],
+  "exclude": ["./lib/**/**/*.stories.*"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

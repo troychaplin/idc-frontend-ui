@@ -1,3 +1,4 @@
+import React from 'react'
 import { HeroContent } from "./HeroContent";
 import { HeroMedia } from "./HeroMedia";
 import { Section } from "../Section/Section";

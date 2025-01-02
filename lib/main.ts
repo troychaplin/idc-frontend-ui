@@ -1,4 +1,4 @@
-import './styles.css'
+import './style.css'
 
 export { Article } from './components/Article/Article'
 export { BluePanel } from './components/BluePanel/BluePanel'
