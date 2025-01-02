@@ -1,3 +1,4 @@
+import { default as React } from '../../../node_modules/react';
 import { uiMaxWidth, uiBgTypes } from '../../utils/propClasses';
 type MaxWidthKeys = keyof typeof uiMaxWidth;
 type BgTypeKeys = keyof typeof uiBgTypes;

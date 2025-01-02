@@ -1,3 +1,4 @@
+import { default as React } from '../../../node_modules/react';
 import { uiMaxWidth, uiGridColumns } from '../../utils/propClasses';
 type MaxWidthKeys = keyof typeof uiMaxWidth;
 type ColumnKeys = keyof typeof uiGridColumns;
