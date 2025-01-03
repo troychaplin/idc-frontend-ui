@@ -7,24 +7,14 @@ type BgTypeKeys = keyof typeof uiBgTypes
 
 export interface SectionProps {
   children?: React.ReactNode
-  as?: 'section' | 'div' | 'header'
   maxWidth?: MaxWidthKeys
   bgType?: BgTypeKeys
 }
 
-export const Section = ({ children, as = 'section', maxWidth = '5xl', bgType }: SectionProps) => {
-  const SectionComponent = as
-
-  const maxWidthClass = bgType ? `ui-max-w-child-${maxWidth}` : `ui-max-w-${maxWidth}`
-  const bgTypeClass = bgType ? `ui-section--${bgType} ${uiBgTypes[bgType]}` : 'ui-section--primary'
-
-  const mainWrapperClass = bgType
-    ? `ui-section ui-layout w-screen ml-offset-center ${bgTypeClass}`
-    : `ui-section ui-layout box-border relative w-full ${maxWidthClass} ${bgTypeClass}`
-
+export const Section = ({ children, maxWidth = '5xl', bgType = 'white' }: SectionProps) => {
   return (
-    <SectionComponent className={mainWrapperClass}>
-      {bgType ? <div className={`${maxWidthClass} px-0 md:px-8 ui-prose-first-last`}>{children}</div> : <>{children}</>}
-    </SectionComponent>
+    <section className={`ui-section ui-section--${bgType} ${uiBgTypes[bgType]} w-screen ml-offset-center`}>
+      <div className={`ui-max-w-child-${maxWidth} px-0 md:px-8 ui-prose-first-last`}>{children}</div>
+    </section>
   )
 }
