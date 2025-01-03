@@ -47,21 +47,23 @@ export const Article: Story = {
 
       <Main>
         <Section maxWidth="3xl">
-          <Hero maxWidth="3xl" bgType="gradient">
-            <Hero.Content
-              title="The document apostille process made simple"
-              date="2024-08-31 07:10:12"
-              datePrefix="Published on"
-              headerType="h1"
-              isCenter
-            >
-              <p>
-                We expertly manage all aspects of the document apostille &ndash; authentication & legalization &ndash;
-                attestation &ndash; process for our clients. If you need to present Canadian documents in a foreign
-                jurisdiction we can help!
-              </p>
-            </Hero.Content>
-          </Hero>
+          <Section maxWidth="3xl" bgType="gradient">
+            <Hero>
+              <Hero.Content
+                title="The document apostille process made simple"
+                date="2024-08-31 07:10:12"
+                datePrefix="Published on"
+                headerType="h1"
+                isCenter
+              >
+                <p>
+                  We expertly manage all aspects of the document apostille &ndash; authentication & legalization &ndash;
+                  attestation &ndash; process for our clients. If you need to present Canadian documents in a foreign
+                  jurisdiction we can help!
+                </p>
+              </Hero.Content>
+            </Hero>
+          </Section>
 
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat urna sed euismod lobortis. Aenean

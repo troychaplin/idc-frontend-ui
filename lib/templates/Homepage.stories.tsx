@@ -47,27 +47,29 @@ export const Homepage: Story = {
 
       <Main>
         <Section maxWidth="5xl">
-          <Hero maxWidth="6xl" bgType="gradient" cols={2}>
-            <Hero.Content title="The document apostille process made simple" headerType="h1">
-              <p>
-                We expertly manage all aspects of the document apostille &ndash; authentication & legalization &ndash;
-                attestation &ndash; process for our clients. If you need to present Canadian documents in a foreign
-                jurisdiction we can help!
-              </p>
-              <ButtonGroup>
-                <Button
-                  label="Get Started Now"
-                  color="dark-blue"
-                  onClick={() => {
-                    window.location.href = 'https://www.idocscanada.ca'
-                  }}
-                />
-              </ButtonGroup>
-            </Hero.Content>
-            <Hero.Media>
-              <p>Media</p>
-            </Hero.Media>
-          </Hero>
+          <Section maxWidth="6xl" bgType="gradient">
+            <Hero cols={2}>
+              <Hero.Content title="The document apostille process made simple" headerType="h1">
+                <p>
+                  We expertly manage all aspects of the document apostille &ndash; authentication & legalization &ndash;
+                  attestation &ndash; process for our clients. If you need to present Canadian documents in a foreign
+                  jurisdiction we can help!
+                </p>
+                <ButtonGroup>
+                  <Button
+                    label="Get Started Now"
+                    color="dark-blue"
+                    onClick={() => {
+                      window.location.href = 'https://www.idocscanada.ca'
+                    }}
+                  />
+                </ButtonGroup>
+              </Hero.Content>
+              <Hero.Media>
+                <p>Media</p>
+              </Hero.Media>
+            </Hero>
+          </Section>
 
           <Section as="div" bgType="white">
             <LeadIn
