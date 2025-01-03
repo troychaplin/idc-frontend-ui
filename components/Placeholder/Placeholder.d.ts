@@ -4,5 +4,5 @@ export interface PlaceholderProps {
     name?: string;
     maxWidth?: maxWidthKeys;
 }
-export declare const Placeholder: ({ name, maxWidth, }: PlaceholderProps) => import("react/jsx-runtime").JSX.Element;
+export declare const Placeholder: ({ name, maxWidth }: PlaceholderProps) => import("react/jsx-runtime").JSX.Element;
 export {};

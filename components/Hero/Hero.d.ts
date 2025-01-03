@@ -1,15 +1,10 @@
 import { default as React } from '../../../node_modules/react';
-import { uiMaxWidth, uiBgTypes } from '../../utils/propClasses';
-type MaxWidthKeys = keyof typeof uiMaxWidth;
-type BgTypeKeys = keyof typeof uiBgTypes;
 export interface HeroProps {
     children?: React.ReactNode;
-    maxWidth?: MaxWidthKeys;
-    cols?: 1 | 2 | "60/40";
-    bgType?: BgTypeKeys;
+    cols?: 1 | 2 | '60/40';
 }
-export declare const HeroContainer: ({ children, maxWidth, cols, bgType, }: HeroProps) => import("react/jsx-runtime").JSX.Element;
-export declare const Hero: (({ children, maxWidth, cols, bgType, }: HeroProps) => import("react/jsx-runtime").JSX.Element) & {
+export declare const HeroContainer: ({ children, cols }: HeroProps) => import("react/jsx-runtime").JSX.Element;
+export declare const Hero: (({ children, cols }: HeroProps) => import("react/jsx-runtime").JSX.Element) & {
     Content: {
         ({ children, title, date, datePrefix, headerType, isCenter, }: import('./HeroContent').HeroContentProps): import("react/jsx-runtime").JSX.Element;
         displayName: string;
@@ -19,4 +14,3 @@ export declare const Hero: (({ children, maxWidth, cols, bgType, }: HeroProps) =
         displayName: string;
     };
 };
-export {};

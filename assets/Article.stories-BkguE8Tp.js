@@ -1,4 +1,4 @@
-import{j as i}from"./jsx-runtime-BjgbQsUx.js";import"./index-D2MAbzvX.js";const s=({children:e,content:r})=>i.jsx("article",{className:"ui-layout",children:r?i.jsx("div",{dangerouslySetInnerHTML:{__html:r}}):e});try{s.displayName="Article",s.__docgenInfo={description:"",displayName:"Article",props:{content:{defaultValue:null,description:"",name:"content",required:!1,type:{name:"string"}}}}}catch{}const d=`
+import{j as i}from"./jsx-runtime-BjgbQsUx.js";import"./index-D2MAbzvX.js";const s=({children:e,content:r})=>i.jsx("article",{children:r?i.jsx("div",{dangerouslySetInnerHTML:{__html:r}}):e});try{s.displayName="Article",s.__docgenInfo={description:"",displayName:"Article",props:{content:{defaultValue:null,description:"",name:"content",required:!1,type:{name:"string"}}}}}catch{}const d=`
     <h2>H2 Heading</h2>
 
     <p>
