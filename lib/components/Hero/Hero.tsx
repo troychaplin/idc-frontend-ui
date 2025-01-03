@@ -1,34 +1,18 @@
 import React from 'react'
-import { HeroContent } from "./HeroContent";
-import { HeroMedia } from "./HeroMedia";
-import { Section } from "../Section/Section";
-import { uiMaxWidth, uiGridColumns, uiBgTypes } from "../../utils/propClasses";
-
-// Define the types for this component
-type MaxWidthKeys = keyof typeof uiMaxWidth;
-type BgTypeKeys = keyof typeof uiBgTypes;
+import { HeroContent } from './HeroContent'
+import { HeroMedia } from './HeroMedia'
+import { uiGridColumns } from '../../utils/propClasses'
 
 export interface HeroProps {
-  children?: React.ReactNode;
-  maxWidth?: MaxWidthKeys;
-  cols?: 1 | 2 | "60/40";
-  bgType?: BgTypeKeys;
+  children?: React.ReactNode
+  cols?: 1 | 2 | '60/40'
 }
 
-export const HeroContainer = ({
-  children,
-  maxWidth = "5xl",
-  cols = 1,
-  bgType = "white",
-}: HeroProps) => {
-  return (
-    <Section as="div" maxWidth={maxWidth} bgType={bgType}>
-      <div className={`grid ${uiGridColumns[cols]} gap-6`}>{children}</div>
-    </Section>
-  );
-};
+export const HeroContainer = ({ children, cols = 1 }: HeroProps) => {
+  return <div className={`grid ${uiGridColumns[cols]} gap-6`}>{children}</div>
+}
 
 export const Hero = Object.assign(HeroContainer, {
   Content: HeroContent,
   Media: HeroMedia,
-});
+})
