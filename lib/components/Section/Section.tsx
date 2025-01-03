@@ -12,25 +12,19 @@ export interface SectionProps {
   bgType?: BgTypeKeys
 }
 
-export const Section = ({ children, as = 'section', maxWidth = '5xl', bgType = 'none' }: SectionProps) => {
+export const Section = ({ children, as = 'section', maxWidth = '5xl', bgType }: SectionProps) => {
   const SectionComponent = as
 
-  // Set full width bg based on type
-  const fullWidthBg = bgType !== 'none' ? true : false
+  const maxWidthClass = bgType ? `ui-max-w-child-${maxWidth}` : `ui-max-w-${maxWidth}`
+  const bgTypeClass = bgType ? `ui-section--${bgType} ${uiBgTypes[bgType]}` : 'ui-section--primary'
 
-  const maxWidthClass = fullWidthBg ? `ui-max-w-child-${maxWidth}` : `ui-max-w-${maxWidth}`
-
-  const mainWrapperClass = fullWidthBg
-    ? `ui-section ui-layout w-screen ml-offset-center`
-    : `ui-section ui-layout box-border relative w-full ${maxWidthClass}`
+  const mainWrapperClass = bgType
+    ? `ui-section ui-layout w-screen ml-offset-center ${bgTypeClass}`
+    : `ui-section ui-layout box-border relative w-full ${maxWidthClass} ${bgTypeClass}`
 
   return (
-    <SectionComponent className={`${mainWrapperClass} ${uiBgTypes[bgType]}`}>
-      {fullWidthBg ? (
-        <div className={`${maxWidthClass} px-0 md:px-8 ui-prose-first-last`}>{children}</div>
-      ) : (
-        <>{children}</>
-      )}
+    <SectionComponent className={mainWrapperClass}>
+      {bgType ? <div className={`${maxWidthClass} px-0 md:px-8 ui-prose-first-last`}>{children}</div> : <>{children}</>}
     </SectionComponent>
   )
 }
