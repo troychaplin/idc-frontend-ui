@@ -7,6 +7,7 @@ export interface HeroContentProps {
   date?: string;
   datePrefix?: string;
   headerType?: "h1" | "h2" | "h3";
+  width?: number;
   isCenter?: boolean;
 }
 
@@ -15,6 +16,7 @@ export const HeroContent = ({
   title,
   date,
   datePrefix,
+  width = 50,
   headerType = "h2",
   isCenter,
 }: HeroContentProps) => {
@@ -37,16 +39,17 @@ export const HeroContent = ({
   const centerText = isCenter ? true : false;
 
   return (
-    <Header
-      as={headerType}
-      title={title}
-      date={date}
-      datePrefix={datePrefix}
-      size={headerSize}
-      isCenter={centerText}
-    >
+    <div style={{ flex: `0 0 ${width}%` }}>
+      <Header
+        as={headerType}
+        title={title}
+        date={date}
+        datePrefix={datePrefix}
+        size={headerSize}
+        isCenter={centerText}
+      />
       {children}
-    </Header>
+    </div>
   );
 };
 
