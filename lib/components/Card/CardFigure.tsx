@@ -1,13 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { iconNames } from '../../utils/iconList'
 
-// // Create a union type of all possible icon filenames
-// type IconFileNames = typeof iconNames[keyof typeof iconNames]
-// // Create a mapping type for display names to file names
-// type IconMapping = {
-//   [key: string]: IconFileNames;
-// }
-
 export interface CardFigureProps {
   children?: React.ReactNode
   iconName?: string
@@ -34,7 +27,8 @@ export const CardFigure = ({ children, iconName }: CardFigureProps) => {
       const fileName = getIconFileName(iconName)
       const fetchSVG = async () => {
         try {
-          const response = await fetch(`/assets/icons/${fileName}.svg`)
+          const baseUrl = window.location.origin
+          const response = await fetch(`${baseUrl}/assets/icons/${fileName}.svg`)
           if (response.ok) {
             const svgText = await response.text()
             setSvgContent(svgText)
