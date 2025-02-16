@@ -5,7 +5,7 @@ export interface HeroProps {
 export declare const HeroContainer: ({ children }: HeroProps) => import("react/jsx-runtime").JSX.Element;
 export declare const Hero: (({ children }: HeroProps) => import("react/jsx-runtime").JSX.Element) & {
     Content: {
-        ({ children, title, date, datePrefix, width, headerType, isCenter, }: import('./HeroContent').HeroContentProps): import("react/jsx-runtime").JSX.Element;
+        ({ children, title, date, datePrefix, width, headerType, isCenter, isItalic, }: import('./HeroContent').HeroContentProps): import("react/jsx-runtime").JSX.Element;
         displayName: string;
     };
     Media: {
