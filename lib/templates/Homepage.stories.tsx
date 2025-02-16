@@ -47,8 +47,8 @@ export const Homepage: Story = {
 
       <Main>
         <Section maxWidth="6xl" bgType="gradient">
-          <Hero cols={2}>
-            <Hero.Content title="The document apostille process made simple" headerType="h1">
+          <Hero>
+            <Hero.Content title="The document apostille process made simple" headerType="h1" isItalic>
               <p>
                 We expertly manage all aspects of the document apostille &ndash; authentication & legalization &ndash;
                 attestation &ndash; process for our clients. If you need to present Canadian documents in a foreign
@@ -65,7 +65,7 @@ export const Homepage: Story = {
               </ButtonGroup>
             </Hero.Content>
             <Hero.Media>
-              <p>Media</p>
+              <p className="flex items-center justify-center w-full h-full italic font-light rounded-lg bg-white/50 text-slate-400">Add Media</p>
             </Hero.Media>
           </Hero>
         </Section>
