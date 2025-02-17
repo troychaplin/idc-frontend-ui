@@ -7,7 +7,7 @@ export const NavigationMenu = ({ items }: NavigationMenuProps) => {
         <a
           key={item.href}
           href={item.href}
-          className="text-sm font-semibold leading-6 text-gray-900 transition-colors hover:text-gray-600"
+          className="px-3.5 py-1.5 text-sm font-light rounded-md text-idc-black-800 hover:bg-idc-blue-50"
         >
           {item.label}
         </a>

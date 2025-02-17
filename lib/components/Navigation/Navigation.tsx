@@ -4,17 +4,18 @@ import { NavigationMenu } from './NavigationMenu'
 import { NavigationMobile } from './NavigationMobile'
 
 const menuItems = [
-  { label: 'Features', href: '/features' },
-  { label: 'Reviews', href: '/reviews' },
-  { label: 'Pricing', href: '/pricing' },
-  { label: 'FAQs', href: '/faqs' },
+  { label: 'Services', href: '#' },
+  { label: 'Process', href: '#' },
+  { label: 'Documents', href: '#' },
+  { label: 'Embassies', href: '#' },
+  { label: 'Resources', href: '#' },
 ]
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full px-6 py-3 transition-opacity duration-500 bg-white opacity-100 idc-header ui-max-w-child-7xl md:px-8 md:py-5">
+    <header className="sticky top-0 z-50 w-full px-6 py-3 transition-opacity duration-500 bg-white opacity-100 idc-header ui-max-w-child-6xl md:px-8 md:py-5">
     {/* <header className="fixed inset-x-0 top-0 z-50 bg-slate-600"> */}
       
       <nav className="" aria-label="Main navigation">
@@ -26,7 +27,7 @@ export const Navigation = () => {
           <NavigationLogo />
 
           {/* Desktop Navigation */}
-          <div className="hidden 4xl:flex 4xl:gap-x-8">
+          <div className="hidden 4xl:flex 4xl:gap-x-2">
             <NavigationMenu items={menuItems} />
           </div>
 
