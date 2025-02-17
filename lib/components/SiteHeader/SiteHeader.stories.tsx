@@ -7,6 +7,9 @@ const meta: Meta<typeof SiteHeader> = {
   title: 'Components/Site Header',
   component: SiteHeader,
   tags: ['autodocs'],
+  parameters: {
+    layout: 'fullscreen',
+  },
 }
 
 export default meta

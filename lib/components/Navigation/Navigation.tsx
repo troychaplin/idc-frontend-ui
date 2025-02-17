@@ -14,9 +14,14 @@ export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 bg-white">
-      <nav className="px-6 mx-auto max-w-7xl lg:px-8" aria-label="Main navigation">
-        <div className="flex items-center justify-between h-16">
+    <header className="sticky top-0 z-50 w-full px-6 py-3 transition-opacity duration-500 bg-white opacity-100 idc-header ui-max-w-child-7xl md:px-8 md:py-5">
+    {/* <header className="fixed inset-x-0 top-0 z-50 bg-slate-600"> */}
+      
+      <nav className="" aria-label="Main navigation">
+      {/* <nav className="px-6 mx-auto max-w-7xl lg:px-8" aria-label="Main navigation"> */}
+        
+        <div className="flex items-center justify-between">
+        {/* <div className="flex items-center justify-between h-16"> */}
           
           {/* Logo */}
           <NavigationLogo src="/logo.svg" alt="Company Logo" />

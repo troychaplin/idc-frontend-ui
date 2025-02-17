@@ -17,13 +17,6 @@ const meta: Meta<typeof Navigation> = {
     layout: 'fullscreen',
   },
   tags: ['autodocs'],
-  decorators: [
-    (Story) => (
-      <div className="pb-16">
-        <Story />
-      </div>
-    ),
-  ],
 }
 
 export default meta
