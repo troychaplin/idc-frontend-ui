@@ -1,4 +1,3 @@
-import React from 'react'
 import { NavigationMobileProps } from './types'
 
 export const NavigationMobile = ({ isOpen, onClose, items }: NavigationMobileProps) => {
@@ -10,6 +9,7 @@ export const NavigationMobile = ({ isOpen, onClose, items }: NavigationMobilePro
     >
       <div className="relative z-[101] h-full overflow-y-auto bg-white">
         <div className="px-6 py-8">
+
           {/* Mobile menu items */}
           <div className="space-y-4">
             {items.map((item) => (
