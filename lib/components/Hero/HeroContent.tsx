@@ -9,6 +9,7 @@ export interface HeroContentProps {
   headerType?: "h1" | "h2" | "h3";
   width?: number;
   isCenter?: boolean;
+  isItalic?: boolean;
 }
 
 export const HeroContent = ({
@@ -19,6 +20,7 @@ export const HeroContent = ({
   width = 50,
   headerType = "h2",
   isCenter,
+  isItalic,
 }: HeroContentProps) => {
   let headerSize: "sm" | "md" | "lg" | "xl";
   switch (headerType) {
@@ -37,6 +39,7 @@ export const HeroContent = ({
   }
 
   const centerText = isCenter ? true : false;
+  const italicText = isItalic ? true : false;
 
   return (
     <div style={{ flex: `0 0 ${width}%` }}>
@@ -47,6 +50,7 @@ export const HeroContent = ({
         datePrefix={datePrefix}
         size={headerSize}
         isCenter={centerText}
+        isItalic={italicText}
       />
       {children}
     </div>
