@@ -1,7 +1,3 @@
-export interface NavigationProps {
-  children?: React.ReactNode
-}
-
 export interface NavigationLogoProps {
   src: string
   alt: string

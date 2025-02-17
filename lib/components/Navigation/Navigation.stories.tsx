@@ -33,19 +33,6 @@ export const Default: Story = {
   render: () => <Navigation />
 }
 
-// Example with custom logo
-// export const CustomLogo: Story = {
-//   render: () => (
-//     <Navigation>
-//       <img 
-//         src="https://via.placeholder.com/120x40" 
-//         alt="Custom Logo" 
-//         className="w-auto h-8"
-//       />
-//     </Navigation>
-//   ),
-// }
-
 // Example with custom menu items
 // export const CustomMenuItems: Story = {
 //   render: () => (
