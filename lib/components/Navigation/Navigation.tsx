@@ -23,8 +23,7 @@ export const Navigation = () => {
         <div className="flex items-center justify-between">
         {/* <div className="flex items-center justify-between h-16"> */}
           
-          {/* Logo */}
-          <NavigationLogo src="/logo.svg" alt="Company Logo" />
+          <NavigationLogo />
 
           {/* Desktop Navigation */}
           <div className="hidden 4xl:flex 4xl:gap-x-8">
