@@ -5,10 +5,11 @@ import type { NavigationProps } from './Navigation'
 
 // Navigation items data
 const navItems = [
-  { id: 1, label: 'Features', href: '/features' },
-  { id: 2, label: 'Reviews', href: '/reviews' },
-  { id: 3, label: 'Pricing', href: '/pricing' },
-  { id: 4, label: 'FAQs', href: '/faqs' },
+  { id: 1, label: 'Services', href: '#' },
+  { id: 2, label: 'Process', href: '#' },
+  { id: 3, label: 'Documents', href: '#' },
+  { id: 4, label: 'Embassies', href: '#' },
+  { id: 5, label: 'Resources', href: '#' },
 ]
 
 const meta: Meta<typeof Navigation> = {
@@ -27,13 +28,11 @@ export default meta
 type Story = StoryObj<typeof Navigation>
 
 export const Primary: Story = {
-  args: {
-    siteUrl: '/'
-  },
+  args: {},
   render: () => (
-    <Navigation siteUrl="/">
+    <Navigation>
       <Navigation.Desktop>
-        <Navigation.Logo />
+        <Navigation.Logo siteUrl="/" />
         <Navigation.Menu items={navItems} />
         <Navigation.Aside />
       </Navigation.Desktop>
@@ -43,9 +42,9 @@ export const Primary: Story = {
   ),
 }
 
-export const Default: Story = {
-  render: () => <Navigation siteUrl="/" />
-}
+// export const Default: Story = {
+//   render: () => <Navigation siteUrl="/" />
+// }
 
 // Example with custom menu items
 // export const CustomMenuItems: Story = {

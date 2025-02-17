@@ -21,10 +21,11 @@ import { NavItems } from '../components/SiteHeader/data'
 
 // Navigation items data
 const navItems = [
-  { id: 1, label: 'Features', href: '/features' },
-  { id: 2, label: 'Reviews', href: '/reviews' },
-  { id: 3, label: 'Pricing', href: '/pricing' },
-  { id: 4, label: 'FAQs', href: '/faqs' },
+  { id: 1, label: 'Services', href: '#' },
+  { id: 2, label: 'Process', href: '#' },
+  { id: 3, label: 'Documents', href: '#' },
+  { id: 4, label: 'Embassies', href: '#' },
+  { id: 5, label: 'Resources', href: '#' },
 ]
 
 const meta: Meta = {
@@ -40,9 +41,9 @@ type Story = StoryObj
 export const Homepage: Story = {
   render: () => (
     <>
-      <Navigation siteUrl="/">
+      <Navigation>
       <Navigation.Desktop>
-        <Navigation.Logo />
+        <Navigation.Logo siteUrl="/" />
         <Navigation.Menu items={navItems} />
         <Navigation.Aside />
       </Navigation.Desktop>

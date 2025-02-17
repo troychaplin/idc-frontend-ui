@@ -8,10 +8,9 @@ import { NavigationContext } from './context'
 
 interface NavigationProps {
   children?: React.ReactNode
-  siteUrl?: string
 }
 
-const NavigationContainer = ({ children, siteUrl = '/' }: NavigationProps) => {
+const NavigationContainer = ({ children }: NavigationProps) => {
   const [isOpen, setIsOpen] = useState(false)
   const [visible, setVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
@@ -33,21 +32,10 @@ const NavigationContainer = ({ children, siteUrl = '/' }: NavigationProps) => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [handleScroll])
 
-  const handleToggle = () => {
-    setIsOpen(!isOpen)
-    // Prevent scroll when menu is open
-    document.body.style.overflow = !isOpen ? 'hidden' : ''
-  }
-
-  const handleClose = () => {
-    setIsOpen(false)
-    document.body.style.overflow = ''
-  }
-
   return (
-    <NavigationContext.Provider value={{ isOpen, setIsOpen, siteUrl }}>
+    <NavigationContext.Provider value={{ isOpen, setIsOpen }}>
       <header 
-        className={`sticky top-0 z-[50] w-full bg-white idc-header ui-max-w-child-6xl
+        className={`sticky top-0 z-[50] w-full px-6 py-3 md:px-8 md:py-5 h-[62px] 4xl:h-[90px] bg-white idc-header ui-max-w-child-6xl
           transform transition-all duration-300 ease-in-out ${
             visible ? 'translate-y-0 opacity-100' : '-translate-y-4 opacity-0'
           }`}
