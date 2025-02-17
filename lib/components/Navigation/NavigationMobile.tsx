@@ -8,7 +8,7 @@ export const NavigationMobile = ({ isOpen, onClose, items }: NavigationMobilePro
       }`}
     >
       <div className="absolute w-full bg-idc-blue-50 h-[calc(100vh-62px)] md:h-[calc(100vh-90px)]">
-        <div className="px-6 py-8">
+        <div className="flex flex-col justify-between h-full gap-4 px-6 py-8">
 
           {/* Mobile menu items */}
           <div className="space-y-4">
@@ -25,14 +25,13 @@ export const NavigationMobile = ({ isOpen, onClose, items }: NavigationMobilePro
           </div>
 
           {/* FR Button in mobile menu */}
-          <div className="pt-8 mt-8 border-t border-gray-200">
-            <a
-              href="/fr"
-              className="block w-full px-4 py-2 text-sm font-semibold text-center text-white bg-gray-900 rounded-lg shadow-sm hover:bg-gray-700"
-              onClick={onClose}
+          <div>
+            <button
+              className="w-full idc-button idc-button--xs idc-button--dark-orange idc-button--solid"
+              aria-label="Switch to French"
             >
               FR
-            </a>
+            </button>
           </div>
         </div>
       </div>
