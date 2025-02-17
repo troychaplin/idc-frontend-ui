@@ -19,4 +19,9 @@ export interface NavigationMobileProps {
     label: string
     href: string
   }[]
+}
+
+export interface NavigationAsideProps {
+  isOpen: boolean
+  onToggle: () => void
 } 

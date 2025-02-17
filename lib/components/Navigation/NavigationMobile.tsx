@@ -3,8 +3,8 @@ import { NavigationMobileProps } from './types'
 export const NavigationMobile = ({ isOpen, onClose, items }: NavigationMobileProps) => {
   return (
     <div
-      className={`absolute left-0 right-0 top-full transform transition-transform duration-300 ease-in-out 4xl:hidden ${
-        isOpen ? 'translate-y-0' : '-translate-y-full'
+      className={`absolute left-0 right-0 top-full transform transition-all duration-300 ease-in-out 4xl:hidden ${
+        isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
       }`}
     >
       <div className="absolute w-full shadow-lg bg-idc-blue-50">
@@ -28,7 +28,7 @@ export const NavigationMobile = ({ isOpen, onClose, items }: NavigationMobilePro
           <div className="pt-8 mt-8 border-t border-gray-200">
             <a
               href="/fr"
-              className="block w-full px-4 py-2 text-sm font-semibold text-center text-white bg-gray-900 rounded-lg shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
+              className="block w-full px-4 py-2 text-sm font-semibold text-center text-white bg-gray-900 rounded-lg shadow-sm hover:bg-gray-700"
               onClick={onClose}
             >
               FR
@@ -38,8 +38,10 @@ export const NavigationMobile = ({ isOpen, onClose, items }: NavigationMobilePro
       </div>
 
       {/* Backdrop */}
-      <div 
-        className="fixed inset-0 top-0 bg-black/50"
+      <div
+        className={`fixed inset-0 top-0 bg-black/50 transition-opacity duration-300 ${
+          isOpen ? 'opacity-50 visible' : 'opacity-0 invisible'
+        }`}
         onClick={onClose}
         aria-hidden="true"
       />

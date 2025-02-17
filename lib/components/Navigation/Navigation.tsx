@@ -34,6 +34,17 @@ export const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [handleScroll])
 
+  const handleToggle = () => {
+    setIsOpen(!isOpen)
+    // Prevent scroll when menu is open
+    document.body.style.overflow = !isOpen ? 'hidden' : ''
+  }
+
+  const handleClose = () => {
+    setIsOpen(false)
+    document.body.style.overflow = ''
+  }
+
   return (
     <header 
       className={`sticky top-0 z-[50] w-full bg-white idc-header ui-max-w-child-6xl
@@ -45,10 +56,10 @@ export const Navigation = () => {
         <div className="flex items-center justify-between">
           <NavigationLogo />
           <NavigationMenu items={menuItems} />
-          <NavigationAside />
+          <NavigationAside isOpen={isOpen} onToggle={handleToggle} />
         </div>
       </nav>
-      <NavigationMobile isOpen={isOpen} onClose={() => setIsOpen(false)} items={menuItems} />
+      <NavigationMobile isOpen={isOpen} onClose={handleClose} items={menuItems} />
     </header>
   )
 }

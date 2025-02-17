@@ -1,25 +1,23 @@
-import { useState } from 'react'
+import { NavigationAsideProps } from './types'
 
-export const NavigationAside = () => {
-  const [isOpen, setIsOpen] = useState(false)
-
+export const NavigationAside = ({ isOpen, onToggle }: NavigationAsideProps) => {
   return (
     <div className="flex items-center">
       <button
         type="button"
-        className="4xl:hidden"
-        onClick={() => setIsOpen(!isOpen)}
+        className="block 4xl:hidden"
+        onClick={onToggle}
         aria-expanded={isOpen}
         aria-controls="mobile-menu"
         aria-label="Toggle menu"
       >
         <span className="sr-only">Open menu</span>
         {isOpen ? (
-          <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+          <svg className="w-6 h-6 transition-transform duration-200" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
           </svg>
         ) : (
-          <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+          <svg className="w-6 h-6 transition-transform duration-200" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
         )}
