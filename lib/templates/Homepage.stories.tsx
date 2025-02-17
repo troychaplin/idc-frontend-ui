@@ -12,11 +12,10 @@ import { Footer } from '../components/Footer/Footer'
 import { Hero } from '../components/Hero/Hero'
 import { Header } from '../components/Header/Header'
 import { LeadIn } from '../components/LeadIn/LeadIn'
-import { SiteHeader } from '../components/SiteHeader/SiteHeader'
-
+import { Navigation } from '../components/Navigation/Navigation'
 import { CardData } from '../components/Card/data'
 import { DefinitionData } from '../components/Definition/data'
-import { NavItems } from '../components/SiteHeader/data'
+import { navItems } from '../data/navigation'
 
 const meta: Meta = {
   title: 'Templates/Homepage',
@@ -31,19 +30,14 @@ type Story = StoryObj
 export const Homepage: Story = {
   render: () => (
     <>
-      <SiteHeader>
-        <a href="/" aria-label="Go to homepage">
-          <SiteHeader.SiteLogo />
-        </a>
-        <SiteHeader.Navigation>
-          {NavItems.map((item, index) => (
-            <li key={index} className="idc-navitem">
-              <a href={item.href}>{item.label}</a>
-            </li>
-          ))}
-        </SiteHeader.Navigation>
-        <SiteHeader.Aside />
-      </SiteHeader>
+      <Navigation>
+        <Navigation.Desktop>
+          <Navigation.Logo siteUrl="/" />
+          <Navigation.Menu items={navItems} />
+          <Navigation.Aside />
+        </Navigation.Desktop>
+        <Navigation.Mobile items={navItems} />
+      </Navigation>
 
       <Main>
         <Section maxWidth="6xl" bgType="gradient">
