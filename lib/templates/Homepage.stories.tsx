@@ -13,7 +13,7 @@ import { Hero } from '../components/Hero/Hero'
 import { Header } from '../components/Header/Header'
 import { LeadIn } from '../components/LeadIn/LeadIn'
 import { Navigation } from '../components/Navigation/Navigation'
-import { SiteHeader } from '../components/SiteHeader/SiteHeader'
+// import { SiteHeader } from '../components/SiteHeader/SiteHeader'
 
 import { CardData } from '../components/Card/data'
 import { DefinitionData } from '../components/Definition/data'
@@ -33,6 +33,7 @@ export const Homepage: Story = {
   render: () => (
     <>
       <Navigation />
+
       {/* <SiteHeader>
         <a href="/" aria-label="Go to homepage">
           <SiteHeader.SiteLogo />

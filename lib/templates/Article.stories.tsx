@@ -8,7 +8,8 @@ import { Hero } from '../components/Hero/Hero'
 import { Header } from '../components/Header/Header'
 import { Definition } from '../components/Definition/Definition'
 import { DefinitionData } from '../components/Definition/data'
-import { SiteHeader } from '../components/SiteHeader/SiteHeader'
+import { Navigation } from '../components/Navigation/Navigation'
+// import { SiteHeader } from '../components/SiteHeader/SiteHeader'
 
 const navItems = [
   { label: 'Services', href: '#' },
@@ -31,7 +32,9 @@ type Story = StoryObj
 export const Article: Story = {
   render: () => (
     <>
-      <SiteHeader>
+      <Navigation />
+
+      {/* <SiteHeader>
         <a href="/" aria-label="Go to homepage">
           <SiteHeader.SiteLogo />
         </a>
@@ -43,7 +46,7 @@ export const Article: Story = {
           ))}
         </SiteHeader.Navigation>
         <SiteHeader.Aside />
-      </SiteHeader>
+      </SiteHeader> */}
 
       <Main>
         <Section maxWidth="3xl" bgType="gradient">
