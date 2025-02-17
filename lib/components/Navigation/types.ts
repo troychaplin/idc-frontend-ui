@@ -1,26 +1,29 @@
+import { ReactNode } from 'react'
+
+export interface NavigationProps {
+  children?: ReactNode
+}
+
 export interface NavigationLogoProps {
-  siteUrl: string
+  siteUrl?: string
+}
+
+export interface NavigationItem {
+  id: number
+  label: string
+  href: string
 }
 
 export interface NavigationMenuProps {
-  items: {
-    id: number
-    label: string
-    href: string
-  }[]
+  items: NavigationItem[]
 }
 
 export interface NavigationMobileProps {
-  isOpen: boolean
-  onClose: () => void
-  items: {
-    id: number
-    label: string
-    href: string
-  }[]
+  items: NavigationItem[]
 }
 
-export interface NavigationAsideProps {
-  isOpen: boolean
-  onToggle: () => void
-} 
+export interface NavigationDesktopProps {
+  children?: ReactNode
+}
+
+export interface NavigationAsideProps {} 

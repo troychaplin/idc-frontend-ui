@@ -5,10 +5,7 @@ import { NavigationLogo } from './NavigationLogo'
 import { NavigationMenu } from './NavigationMenu'
 import { NavigationAside } from './NavigationAside'
 import { NavigationContext } from './context'
-
-interface NavigationProps {
-  children?: React.ReactNode
-}
+import type { NavigationProps } from './types'
 
 const NavigationContainer = ({ children }: NavigationProps) => {
   const [isOpen, setIsOpen] = useState(false)

@@ -1,6 +1,4 @@
-interface NavigationLogoProps {
-  siteUrl?: string
-}
+import { NavigationLogoProps } from './types'
 
 export const NavigationLogo = ({ siteUrl = '/' }: NavigationLogoProps) => {
   return (

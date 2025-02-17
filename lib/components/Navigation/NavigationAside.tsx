@@ -1,4 +1,3 @@
-import { NavigationAsideProps } from './types'
 import { useNavigation } from './context'
 
 export const NavigationAside = () => {
