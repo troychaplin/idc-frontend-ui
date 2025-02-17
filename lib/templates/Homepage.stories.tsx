@@ -13,20 +13,9 @@ import { Hero } from '../components/Hero/Hero'
 import { Header } from '../components/Header/Header'
 import { LeadIn } from '../components/LeadIn/LeadIn'
 import { Navigation } from '../components/Navigation/Navigation'
-// import { SiteHeader } from '../components/SiteHeader/SiteHeader'
-
 import { CardData } from '../components/Card/data'
 import { DefinitionData } from '../components/Definition/data'
-import { NavItems } from '../components/SiteHeader/data'
-
-// Navigation items data
-const navItems = [
-  { id: 1, label: 'Services', href: '#' },
-  { id: 2, label: 'Process', href: '#' },
-  { id: 3, label: 'Documents', href: '#' },
-  { id: 4, label: 'Embassies', href: '#' },
-  { id: 5, label: 'Resources', href: '#' },
-]
+import { navItems } from '../data/navigation'
 
 const meta: Meta = {
   title: 'Templates/Homepage',
