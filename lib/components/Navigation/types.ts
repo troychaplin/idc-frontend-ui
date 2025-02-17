@@ -15,6 +15,7 @@ export interface NavigationMobileProps {
   isOpen: boolean
   onClose: () => void
   items: {
+    id: number
     label: string
     href: string
   }[]
