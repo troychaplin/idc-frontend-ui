@@ -2,7 +2,7 @@ import { NavigationAsideProps } from './types'
 
 export const NavigationAside = ({ isOpen, onToggle }: NavigationAsideProps) => {
   return (
-    <div className="flex items-center gap-2.5 4xl:gap-5">
+    <div className="flex items-center gap-3 4xl:gap-5">
       <button
         type="button"
         className="block 4xl:hidden"
@@ -13,12 +13,12 @@ export const NavigationAside = ({ isOpen, onToggle }: NavigationAsideProps) => {
       >
         <span className="sr-only">Open menu</span>
         {isOpen ? (
-          <svg className="w-6 h-6 transition-transform duration-200" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-          </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" className="w-4 h-4 transition-transform duration-200 fill-idc-blue-600">
+              <path d="M345 137c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-119 119L73 103c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l119 119L39 375c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l119-119L311 409c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-119-119L345 137z"/>
+            </svg>
         ) : (
-          <svg className="w-6 h-6 transition-transform duration-200" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-4 h-4 transition-transform duration-200 fill-idc-blue-600">
+            <path d="M0 88C0 74.7 10.7 64 24 64l400 0c13.3 0 24 10.7 24 24s-10.7 24-24 24L24 112C10.7 112 0 101.3 0 88zM0 248c0-13.3 10.7-24 24-24l400 0c13.3 0 24 10.7 24 24s-10.7 24-24 24L24 272c-13.3 0-24-10.7-24-24zM448 408c0 13.3-10.7 24-24 24L24 432c-13.3 0-24-10.7-24-24s10.7-24 24-24l400 0c13.3 0 24 10.7 24 24z"/>
           </svg>
         )}
       </button>
