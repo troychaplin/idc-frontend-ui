@@ -1,6 +1,5 @@
 export interface NavigationLogoProps {
-  src: string
-  alt: string
+  siteUrl: string
 }
 
 export interface NavigationMenuProps {

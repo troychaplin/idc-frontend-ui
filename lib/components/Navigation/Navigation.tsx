@@ -12,7 +12,11 @@ const menuItems = [
   { id: 5, label: 'Resources', href: '#' },
 ]
 
-export const Navigation = () => {
+interface NavigationProps {
+  siteUrl?: string
+}
+
+export const Navigation = ({ siteUrl = '/' }: NavigationProps) => {
   const [isOpen, setIsOpen] = useState(false)
   const [visible, setVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
@@ -54,7 +58,7 @@ export const Navigation = () => {
     >
       <nav className="relative px-6 py-3 md:px-8 md:py-5 h-[62px] 4xl:h-[90px]" aria-label="Main navigation">        
         <div className="flex items-center justify-between">
-          <NavigationLogo />
+          <NavigationLogo siteUrl={siteUrl} />
           <NavigationMenu items={menuItems} />
           <NavigationAside isOpen={isOpen} onToggle={handleToggle} />
         </div>
