@@ -7,7 +7,7 @@ export const NavigationMobile = ({ isOpen, onClose, items }: NavigationMobilePro
         isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
       }`}
     >
-      <div className="absolute w-full shadow-lg bg-idc-blue-50">
+      <div className="absolute w-full bg-idc-blue-50 h-[calc(100vh-62px)] md:h-[calc(100vh-90px)]">
         <div className="px-6 py-8">
 
           {/* Mobile menu items */}
@@ -36,15 +36,6 @@ export const NavigationMobile = ({ isOpen, onClose, items }: NavigationMobilePro
           </div>
         </div>
       </div>
-
-      {/* Backdrop */}
-      <div
-        className={`fixed inset-0 top-0 bg-black/50 transition-opacity duration-300 ${
-          isOpen ? 'opacity-50 visible' : 'opacity-0 invisible'
-        }`}
-        onClick={onClose}
-        aria-hidden="true"
-      />
     </div>
   )
 } 
