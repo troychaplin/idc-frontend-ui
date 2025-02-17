@@ -5,11 +5,11 @@ import { NavigationMobile } from './NavigationMobile'
 import { NavigationAside } from './NavigationAside'
 
 const menuItems = [
-  { label: 'Services', href: '#' },
-  { label: 'Process', href: '#' },
-  { label: 'Documents', href: '#' },
-  { label: 'Embassies', href: '#' },
-  { label: 'Resources', href: '#' },
+  { id: 1, label: 'Services', href: '#' },
+  { id: 2, label: 'Process', href: '#' },
+  { id: 3, label: 'Documents', href: '#' },
+  { id: 4, label: 'Embassies', href: '#' },
+  { id: 5, label: 'Resources', href: '#' },
 ]
 
 export const Navigation = () => {

@@ -5,6 +5,7 @@ export interface NavigationLogoProps {
 
 export interface NavigationMenuProps {
   items: {
+    id: number
     label: string
     href: string
   }[]

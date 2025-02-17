@@ -14,7 +14,7 @@ export const NavigationMobile = ({ isOpen, onClose, items }: NavigationMobilePro
           <div className="space-y-4">
             {items.map((item) => (
               <a
-                key={item.href}
+                key={item.id}
                 href={item.href}
                 className="block text-base font-semibold leading-7 text-gray-900"
                 onClick={onClose}
