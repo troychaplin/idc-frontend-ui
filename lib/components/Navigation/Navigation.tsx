@@ -36,12 +36,12 @@ export const Navigation = () => {
 
   return (
     <header 
-      className={`sticky top-0 z-50 w-full px-6 py-3 bg-white idc-header ui-max-w-child-6xl md:px-8 md:py-5 
+      className={`sticky top-0 z-[50] w-full bg-white idc-header ui-max-w-child-6xl
         transform transition-all duration-300 ease-in-out ${
           visible ? 'translate-y-0 opacity-100' : '-translate-y-4 opacity-0'
         }`}
     >
-      <nav className="" aria-label="Main navigation">        
+      <nav className="relative px-6 py-3 md:px-8 md:py-5" aria-label="Main navigation">        
         <div className="flex items-center justify-between">
           <NavigationLogo />
           <NavigationMenu items={menuItems} />

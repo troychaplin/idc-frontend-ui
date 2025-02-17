@@ -3,11 +3,11 @@ import { NavigationMobileProps } from './types'
 export const NavigationMobile = ({ isOpen, onClose, items }: NavigationMobileProps) => {
   return (
     <div
-      className={`fixed inset-0 z-10 transform transition-transform duration-300 ease-in-out 4xl:hidden ${
+      className={`absolute left-0 right-0 top-full transform transition-transform duration-300 ease-in-out 4xl:hidden ${
         isOpen ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
-      <div className="relative z-20 h-full overflow-y-auto bg-white">
+      <div className="absolute w-full shadow-lg bg-idc-blue-50">
         <div className="px-6 py-8">
 
           {/* Mobile menu items */}
@@ -39,7 +39,7 @@ export const NavigationMobile = ({ isOpen, onClose, items }: NavigationMobilePro
 
       {/* Backdrop */}
       <div 
-        className="fixed inset-0 z-[99] bg-black/50" 
+        className="fixed inset-0 top-0 bg-black/50"
         onClick={onClose}
         aria-hidden="true"
       />
