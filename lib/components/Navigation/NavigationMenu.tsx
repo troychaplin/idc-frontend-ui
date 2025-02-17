@@ -2,7 +2,7 @@ import { NavigationMenuProps } from './types'
 
 export const NavigationMenu = ({ items }: NavigationMenuProps) => {
   return (
-    <>
+    <div className="hidden 4xl:flex 4xl:gap-x-2">
       {items.map((item) => (
         <a
           key={item.href}
@@ -12,6 +12,6 @@ export const NavigationMenu = ({ items }: NavigationMenuProps) => {
           {item.label}
         </a>
       ))}
-    </>
+    </div>
   )
 } 

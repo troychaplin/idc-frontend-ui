@@ -12,6 +12,7 @@ import { Footer } from '../components/Footer/Footer'
 import { Hero } from '../components/Hero/Hero'
 import { Header } from '../components/Header/Header'
 import { LeadIn } from '../components/LeadIn/LeadIn'
+import { Navigation } from '../components/Navigation/Navigation'
 import { SiteHeader } from '../components/SiteHeader/SiteHeader'
 
 import { CardData } from '../components/Card/data'
@@ -31,7 +32,8 @@ type Story = StoryObj
 export const Homepage: Story = {
   render: () => (
     <>
-      <SiteHeader>
+      <Navigation />
+      {/* <SiteHeader>
         <a href="/" aria-label="Go to homepage">
           <SiteHeader.SiteLogo />
         </a>
@@ -43,7 +45,7 @@ export const Homepage: Story = {
           ))}
         </SiteHeader.Navigation>
         <SiteHeader.Aside />
-      </SiteHeader>
+      </SiteHeader> */}
 
       <Main>
         <Section maxWidth="6xl" bgType="gradient">
