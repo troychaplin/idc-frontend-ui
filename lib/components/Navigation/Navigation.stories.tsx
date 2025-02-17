@@ -18,9 +18,7 @@ const meta: Meta<typeof Navigation> = {
   parameters: {
     layout: 'fullscreen',
   },
-  args: {
-    siteUrl: '/'
-  },
+  args: {},
   tags: ['autodocs'],
 }
 
