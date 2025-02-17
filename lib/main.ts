@@ -16,7 +16,6 @@ export { Main } from './components/Main/Main'
 export { Navigation } from './components/Navigation/Navigation'
 export { Placeholder } from './components/Placeholder/Placeholder'
 export { Section } from './components/Section/Section'
-export { SiteHeader } from './components/SiteHeader/SiteHeader'
 
 // Utils
 export * as colorClasses from './utils/colorClasses'

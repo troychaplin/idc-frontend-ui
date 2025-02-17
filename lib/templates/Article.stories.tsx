@@ -9,15 +9,7 @@ import { Header } from '../components/Header/Header'
 import { Definition } from '../components/Definition/Definition'
 import { DefinitionData } from '../components/Definition/data'
 import { Navigation } from '../components/Navigation/Navigation'
-// import { SiteHeader } from '../components/SiteHeader/SiteHeader'
-
-const navItems = [
-  { label: 'Services', href: '#' },
-  { label: 'Process', href: '#' },
-  { label: 'Documents', href: '#' },
-  { label: 'Embassies', href: '#' },
-  { label: 'Resources', href: '#' },
-]
+import { navItems } from '../data/navigation'
 
 const meta: Meta = {
   title: 'Templates/Article',
@@ -32,21 +24,14 @@ type Story = StoryObj
 export const Article: Story = {
   render: () => (
     <>
-      <Navigation />
-
-      {/* <SiteHeader>
-        <a href="/" aria-label="Go to homepage">
-          <SiteHeader.SiteLogo />
-        </a>
-        <SiteHeader.Navigation>
-          {navItems.map((item, index) => (
-            <li key={index} className="idc-navitem">
-              <a href={item.href}>{item.label}</a>
-            </li>
-          ))}
-        </SiteHeader.Navigation>
-        <SiteHeader.Aside />
-      </SiteHeader> */}
+      <Navigation>
+        <Navigation.Desktop>
+          <Navigation.Logo siteUrl="/" />
+          <Navigation.Menu items={navItems} />
+          <Navigation.Aside />
+        </Navigation.Desktop>
+        <Navigation.Mobile items={navItems} />
+      </Navigation>
 
       <Main>
         <Section maxWidth="3xl" bgType="gradient">

@@ -31,13 +31,13 @@ export const Homepage: Story = {
   render: () => (
     <>
       <Navigation>
-      <Navigation.Desktop>
-        <Navigation.Logo siteUrl="/" />
-        <Navigation.Menu items={navItems} />
-        <Navigation.Aside />
-      </Navigation.Desktop>
-      <Navigation.Mobile items={navItems} />
-    </Navigation>
+        <Navigation.Desktop>
+          <Navigation.Logo siteUrl="/" />
+          <Navigation.Menu items={navItems} />
+          <Navigation.Aside />
+        </Navigation.Desktop>
+        <Navigation.Mobile items={navItems} />
+      </Navigation>
 
       <Main>
         <Section maxWidth="6xl" bgType="gradient">
