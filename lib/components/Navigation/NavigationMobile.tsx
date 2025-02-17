@@ -16,15 +16,15 @@ export const NavigationMobile = ({ items }: Omit<NavigationMobileProps, 'isOpen'
       }`}
     >
       <div className="absolute w-full bg-idc-blue-50 h-[calc(100vh-62px)] md:h-[calc(100vh-90px)]">
-        <div className="flex flex-col justify-between h-full gap-4 px-6 py-8">
+        <div className="flex flex-col justify-between h-full gap-4 px-6 pt-6 pb-8">
 
           {/* Mobile menu items */}
-          <div className="space-y-4">
+          <div className="flex flex-col gap-4">
             {items.map((item) => (
               <a
                 key={item.id}
                 href={item.href}
-                className="block text-base font-semibold leading-7 text-gray-900"
+                className="block pb-4 text-sm font-light border-b text-idc-black-800 border-idc-black-100"
                 onClick={handleClose}
               >
                 {item.label}
@@ -32,15 +32,14 @@ export const NavigationMobile = ({ items }: Omit<NavigationMobileProps, 'isOpen'
             ))}
           </div>
 
-          {/* FR Button in mobile menu */}
-          <div>
+          {/* <div>
             <button
               className="w-full idc-button idc-button--xs idc-button--dark-orange idc-button--solid"
               aria-label="Switch to French"
             >
               FR
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
