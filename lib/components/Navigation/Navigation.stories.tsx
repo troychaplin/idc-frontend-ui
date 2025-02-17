@@ -1,6 +1,6 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
-import { Navigation } from './Navigation'
+import { Navigation, NavigationProps } from './Navigation'
 
 // Navigation items data
 const navItems = [
@@ -21,6 +21,21 @@ const meta: Meta<typeof Navigation> = {
 
 export default meta
 type Story = StoryObj<typeof Navigation>
+
+export const Primary: Story = {
+  args: {} as NavigationProps,
+  render: () => (
+    <Navigation>
+      <Navigation.Desktop>
+          <Navigation.Logo siteUrl={siteUrl} />
+          <Navigation.Menu items={menuItems} />
+          <Navigation.Aside isOpen={isOpen} onToggle={handleToggle} />
+      </Navigation.Desktop>
+
+      <Navigation.Mobile isOpen={isOpen} onClose={handleClose} items={menuItems} />
+    </Navigation>
+  ),
+}
 
 export const Default: Story = {
   render: () => <Navigation />

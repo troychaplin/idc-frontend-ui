@@ -32,7 +32,14 @@ type Story = StoryObj
 export const Homepage: Story = {
   render: () => (
     <>
-      <Navigation />
+      <Navigation>
+        <Navigation.Desktop>
+            <Navigation.Logo siteUrl={siteUrl} />
+            <Navigation.Menu items={menuItems} />
+            <Navigation.Aside isOpen={isOpen} onToggle={handleToggle} />
+        </Navigation.Desktop>
+        <Navigation.Mobile isOpen={isOpen} onClose={handleClose} items={menuItems} />
+      </Navigation>
 
       {/* <SiteHeader>
         <a href="/" aria-label="Go to homepage">

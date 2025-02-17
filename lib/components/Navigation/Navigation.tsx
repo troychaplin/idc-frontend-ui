@@ -1,7 +1,8 @@
 import { useState, useEffect, useCallback } from 'react'
+import { NavigationMobile } from './NavigationMobile'
+import { NavigationDesktop } from './NavigationDesktop'
 import { NavigationLogo } from './NavigationLogo'
 import { NavigationMenu } from './NavigationMenu'
-import { NavigationMobile } from './NavigationMobile'
 import { NavigationAside } from './NavigationAside'
 
 const menuItems = [
@@ -13,10 +14,11 @@ const menuItems = [
 ]
 
 interface NavigationProps {
+  children?: React.ReactNode
   siteUrl?: string
 }
 
-export const Navigation = ({ siteUrl = '/' }: NavigationProps) => {
+export const NavigationContainer = ({ children, siteUrl = '/' }: NavigationProps) => {
   const [isOpen, setIsOpen] = useState(false)
   const [visible, setVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
@@ -56,14 +58,23 @@ export const Navigation = ({ siteUrl = '/' }: NavigationProps) => {
           visible ? 'translate-y-0 opacity-100' : '-translate-y-4 opacity-0'
         }`}
     >
-      <nav className="relative px-6 py-3 md:px-8 md:py-5 h-[62px] 4xl:h-[90px]" aria-label="Main navigation">        
-        <div className="flex items-center justify-between">
+
+      {children}
+
+      {/* <NavigationDesktop>
           <NavigationLogo siteUrl={siteUrl} />
           <NavigationMenu items={menuItems} />
           <NavigationAside isOpen={isOpen} onToggle={handleToggle} />
-        </div>
-      </nav>
-      <NavigationMobile isOpen={isOpen} onClose={handleClose} items={menuItems} />
+      </NavigationDesktop>
+      <NavigationMobile isOpen={isOpen} onClose={handleClose} items={menuItems} /> */}
     </header>
   )
 }
+
+export const Navigation = Object.assign(NavigationContainer, {
+  Desktop: NavigationDesktop,
+  Mobile: NavigationMobile,
+  Logo: NavigationLogo,
+  Menu: NavigationMenu,
+  Aside: NavigationAside,
+})
