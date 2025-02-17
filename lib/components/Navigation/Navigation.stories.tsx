@@ -1,13 +1,14 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
-import { Navigation, NavigationProps } from './Navigation'
+import { Navigation } from './Navigation'
+import type { NavigationProps } from './Navigation'
 
 // Navigation items data
 const navItems = [
-  { label: 'Features', href: '/features' },
-  { label: 'Reviews', href: '/reviews' },
-  { label: 'Pricing', href: '/pricing' },
-  { label: 'FAQs', href: '/faqs' },
+  { id: 1, label: 'Features', href: '/features' },
+  { id: 2, label: 'Reviews', href: '/reviews' },
+  { id: 3, label: 'Pricing', href: '/pricing' },
+  { id: 4, label: 'FAQs', href: '/faqs' },
 ]
 
 const meta: Meta<typeof Navigation> = {
@@ -16,6 +17,9 @@ const meta: Meta<typeof Navigation> = {
   parameters: {
     layout: 'fullscreen',
   },
+  args: {
+    siteUrl: '/'
+  },
   tags: ['autodocs'],
 }
 
@@ -23,22 +27,24 @@ export default meta
 type Story = StoryObj<typeof Navigation>
 
 export const Primary: Story = {
-  args: {} as NavigationProps,
+  args: {
+    siteUrl: '/'
+  },
   render: () => (
-    <Navigation>
+    <Navigation siteUrl="/">
       <Navigation.Desktop>
-          <Navigation.Logo siteUrl={siteUrl} />
-          <Navigation.Menu items={menuItems} />
-          <Navigation.Aside isOpen={isOpen} onToggle={handleToggle} />
+        <Navigation.Logo />
+        <Navigation.Menu items={navItems} />
+        <Navigation.Aside />
       </Navigation.Desktop>
 
-      <Navigation.Mobile isOpen={isOpen} onClose={handleClose} items={menuItems} />
+      <Navigation.Mobile items={navItems} />
     </Navigation>
   ),
 }
 
 export const Default: Story = {
-  render: () => <Navigation />
+  render: () => <Navigation siteUrl="/" />
 }
 
 // Example with custom menu items

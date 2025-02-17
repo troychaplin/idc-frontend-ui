@@ -19,6 +19,14 @@ import { CardData } from '../components/Card/data'
 import { DefinitionData } from '../components/Definition/data'
 import { NavItems } from '../components/SiteHeader/data'
 
+// Navigation items data
+const navItems = [
+  { id: 1, label: 'Features', href: '/features' },
+  { id: 2, label: 'Reviews', href: '/reviews' },
+  { id: 3, label: 'Pricing', href: '/pricing' },
+  { id: 4, label: 'FAQs', href: '/faqs' },
+]
+
 const meta: Meta = {
   title: 'Templates/Homepage',
   parameters: {
@@ -32,28 +40,14 @@ type Story = StoryObj
 export const Homepage: Story = {
   render: () => (
     <>
-      <Navigation>
-        <Navigation.Desktop>
-            <Navigation.Logo siteUrl={siteUrl} />
-            <Navigation.Menu items={menuItems} />
-            <Navigation.Aside isOpen={isOpen} onToggle={handleToggle} />
-        </Navigation.Desktop>
-        <Navigation.Mobile isOpen={isOpen} onClose={handleClose} items={menuItems} />
-      </Navigation>
-
-      {/* <SiteHeader>
-        <a href="/" aria-label="Go to homepage">
-          <SiteHeader.SiteLogo />
-        </a>
-        <SiteHeader.Navigation>
-          {NavItems.map((item, index) => (
-            <li key={index} className="idc-navitem">
-              <a href={item.href}>{item.label}</a>
-            </li>
-          ))}
-        </SiteHeader.Navigation>
-        <SiteHeader.Aside />
-      </SiteHeader> */}
+      <Navigation siteUrl="/">
+      <Navigation.Desktop>
+        <Navigation.Logo />
+        <Navigation.Menu items={navItems} />
+        <Navigation.Aside />
+      </Navigation.Desktop>
+      <Navigation.Mobile items={navItems} />
+    </Navigation>
 
       <Main>
         <Section maxWidth="6xl" bgType="gradient">

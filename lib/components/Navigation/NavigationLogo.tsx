@@ -1,6 +1,8 @@
-import { NavigationLogoProps } from './types'
+import { useNavigation } from './context'
 
-export const NavigationLogo = ({ siteUrl }: NavigationLogoProps) => {
+export const NavigationLogo = () => {
+  const { siteUrl = '/' } = useNavigation()
+
   return (
     <a href={siteUrl} className="flex items-center">
       <svg xmlns="http://www.w3.org/2000/svg" className="idc-logo flex-none w-[118px] md:w-[155px] h-[38px] md:h-[50px] fill-idc-blue-500" fill="none" viewBox="0 0 155 50">

@@ -1,12 +1,21 @@
 import { NavigationAsideProps } from './types'
+import { useNavigation } from './context'
 
-export const NavigationAside = ({ isOpen, onToggle }: NavigationAsideProps) => {
+export const NavigationAside = () => {
+  const { isOpen, setIsOpen } = useNavigation()
+  
+  const handleToggle = () => {
+    setIsOpen(!isOpen)
+    document.body.style.overflow = !isOpen ? 'hidden' : ''
+  }
+
   return (
     <div className="flex items-center gap-3 4xl:gap-5">
       <button
         type="button"
         className="block 4xl:hidden"
-        onClick={onToggle}
+        onClick={handleToggle}
+        data-nav-toggle
         aria-expanded={isOpen}
         aria-controls="mobile-menu"
         aria-label="Toggle menu"

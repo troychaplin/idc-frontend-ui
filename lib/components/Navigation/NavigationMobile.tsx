@@ -1,6 +1,14 @@
 import { NavigationMobileProps } from './types'
+import { useNavigation } from './context'
 
-export const NavigationMobile = ({ isOpen, onClose, items }: NavigationMobileProps) => {
+export const NavigationMobile = ({ items }: Omit<NavigationMobileProps, 'isOpen' | 'onClose'>) => {
+  const { isOpen, setIsOpen } = useNavigation()
+
+  const handleClose = () => {
+    setIsOpen(false)
+    document.body.style.overflow = ''
+  }
+
   return (
     <div
       className={`absolute left-0 right-0 top-full transform transition-all duration-300 ease-in-out 4xl:hidden ${
@@ -17,7 +25,7 @@ export const NavigationMobile = ({ isOpen, onClose, items }: NavigationMobilePro
                 key={item.id}
                 href={item.href}
                 className="block text-base font-semibold leading-7 text-gray-900"
-                onClick={onClose}
+                onClick={handleClose}
               >
                 {item.label}
               </a>
