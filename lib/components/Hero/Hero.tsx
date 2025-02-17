@@ -7,7 +7,7 @@ export interface HeroProps {
 }
 
 export const HeroContainer = ({ children }: HeroProps) => {
-  return <div className={`md:flex gap-6 md:gap-10`}>{children}</div>
+  return <div className={`flex flex-col md:flex-row gap-6 md:gap-10`}>{children}</div>
 }
 
 export const Hero = Object.assign(HeroContainer, {

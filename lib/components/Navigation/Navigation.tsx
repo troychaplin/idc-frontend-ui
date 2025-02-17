@@ -52,7 +52,7 @@ export const Navigation = () => {
           visible ? 'translate-y-0 opacity-100' : '-translate-y-4 opacity-0'
         }`}
     >
-      <nav className="relative px-6 py-3 md:px-8 md:py-5" aria-label="Main navigation">        
+      <nav className="relative px-6 py-3 md:px-8 md:py-5 h-[62px] 4xl:h-[90px]" aria-label="Main navigation">        
         <div className="flex items-center justify-between">
           <NavigationLogo />
           <NavigationMenu items={menuItems} />
