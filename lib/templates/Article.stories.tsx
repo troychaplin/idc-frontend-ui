@@ -4,7 +4,6 @@ import { Main } from '../components/Main/Main'
 import { Section } from '../components/Section/Section'
 import { Footer } from '../components/Footer/Footer'
 import { Columns } from '../components/Columns/Columns'
-import { Hero } from '../components/Hero/Hero'
 import { Header } from '../components/Header/Header'
 import { Definition } from '../components/Definition/Definition'
 import { DefinitionData } from '../components/Definition/data'
@@ -35,21 +34,22 @@ export const Article: Story = {
 
       <Main>
         <Section maxWidth="3xl" bgType="gradient">
-          <Hero>
-            <Hero.Content
-              title="The document apostille process made simple"
-              date="2024-08-31 07:10:12"
-              datePrefix="Published on"
-              headerType="h1"
-              isCenter
-            >
-              <p>
+          <Header
+            as="h1"
+            date="2024-08-31 07:10:12"
+            datePrefix="Published on"
+            isCenter
+            isItalic
+            size="xl"
+            title="Global Recognition, Local Expertise: Your Documents, Validated Everywhere"
+            weight="semibold"
+          >
+            <p>
                 We expertly manage all aspects of the document apostille &ndash; authentication & legalization &ndash;
                 attestation &ndash; process for our clients. If you need to present Canadian documents in a foreign
                 jurisdiction we can help!
               </p>
-            </Hero.Content>
-          </Hero>
+          </Header>
         </Section>
 
         <p>

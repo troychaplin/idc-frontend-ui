@@ -6,7 +6,7 @@ import { CardContent } from "./CardContent";
 import { CardQuote } from "./CardQuote";
 import { CardCite } from "./CardCite";
 import { CardFigure } from "./CardFigure";
-
+import { CardIcon } from "./CardIcon";
 type MaxWidthKeys = keyof typeof uiMaxWidth;
 
 export interface CardProps {
@@ -31,9 +31,10 @@ export const CardContainer = ({
 };
 
 export const Card = Object.assign(CardContainer, {
-  Figure: CardFigure,
   Header: CardHeader,
   Footer: CardFooter,
+  Figure: CardFigure,
+  Icon: CardIcon,
   Content: CardContent,
   Quote: CardQuote,
   Cite: CardCite,
