@@ -20,7 +20,7 @@ export const Primary: Story = {
   } as CardProps,
   render: (args) => (
     <Card {...args}>
-      <Card.Figure iconName={data[0].iconName} />
+      <Card.Icon iconName={data[0].iconName} />
       <Card.Header title={data[0].title} date={data[0].date} />
       <Card.Content text={data[0].excerpt} link={data[0].link} isExcerpt hideMobile />
     </Card>
