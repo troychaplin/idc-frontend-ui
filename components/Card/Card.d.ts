@@ -8,16 +8,20 @@ export interface CardProps {
 }
 export declare const CardContainer: ({ children, maxWidth, addFlex, }: CardProps) => import("react/jsx-runtime").JSX.Element;
 export declare const Card: (({ children, maxWidth, addFlex, }: CardProps) => import("react/jsx-runtime").JSX.Element) & {
-    Figure: {
-        ({ children, iconName }: import('./CardFigure').CardFigureProps): import("react/jsx-runtime").JSX.Element;
-        displayName: string;
-    };
     Header: {
         ({ title, as, date, datePrefix }: import('./CardHeader').CardHeaderProps): import("react/jsx-runtime").JSX.Element;
         displayName: string;
     };
     Footer: {
         ({ children }: import('./CardFooter').CardFooterProps): import("react/jsx-runtime").JSX.Element;
+        displayName: string;
+    };
+    Figure: {
+        ({ children }: import('./CardFigure').CardFigureProps): import("react/jsx-runtime").JSX.Element;
+        displayName: string;
+    };
+    Icon: {
+        ({ iconName, iconPath }: import('./CardIcon').CardIconProps): import("react/jsx-runtime").JSX.Element;
         displayName: string;
     };
     Content: {
