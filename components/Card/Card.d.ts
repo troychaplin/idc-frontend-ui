@@ -21,7 +21,7 @@ export declare const Card: (({ children, maxWidth, addFlex, }: CardProps) => imp
         displayName: string;
     };
     Icon: {
-        ({ iconName }: import('./CardIcon').CardIconProps): import("react/jsx-runtime").JSX.Element;
+        ({ iconName, basePath }: import('./CardIcon').CardIconProps): import("react/jsx-runtime").JSX.Element;
         displayName: string;
     };
     Content: {
