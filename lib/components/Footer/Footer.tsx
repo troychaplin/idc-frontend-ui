@@ -1,5 +1,10 @@
 import { Columns } from '../Columns/Columns'
 
+// Create a config file or environment variable
+const BASE_PATH = process.env.NODE_ENV === 'production' 
+  ? '/idc-frontend-ui'
+  : ''
+  
 export const Footer = () => {
   return (
     <footer className="idc-footer bg-idc-blue-700">
@@ -79,7 +84,7 @@ export const Footer = () => {
                   height="42"
                   alt="Click for the BBB Business Review of this Legal Information Services in Ottawa ON"
                   style={{ border: 0 }}
-                  src="/assets/logos/bbb-logo.png"
+                  src={`${BASE_PATH}/assets/logos/bbb-logo.png`}
                 />
               </a>
               <p className="md:max-w-64">Proudly recognized by with a Torch Award for Market Place Trust</p>

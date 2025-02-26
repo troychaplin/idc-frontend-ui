@@ -1,10 +1,10 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
-import { Card, CardProps } from './Card'
-import { CardData as data } from './data'
+import { Card } from './Card'
+import { iconNames } from '../../utils/iconList'
 
 const meta = {
-  title: 'Components/Card/Icon Card',
+  title: 'Components/Card/Icon',
   component: Card,
   tags: ['autodocs'],
 } satisfies Meta<typeof Card>
@@ -14,15 +14,21 @@ type Story = StoryObj<typeof meta>
 
 export const Primary: Story = {
   args: {
-    children: '',
     maxWidth: 'md',
-    addFlex: false,
-  } as CardProps,
+  },
   render: (args) => (
     <Card {...args}>
-      <Card.Icon iconName={data[0].iconName} />
-      <Card.Header title={data[0].title} date={data[0].date} />
-      <Card.Content text={data[0].excerpt} link={data[0].link} isExcerpt hideMobile />
+      <Card.Icon iconName="phone-volume-solid" />
+      <Card.Header 
+        title="Contact our support team" 
+        date="2024-03-20" 
+      />
+      <Card.Content 
+        text="Get in touch with our support team for assistance with your documentation needs." 
+        link="#" 
+        isExcerpt 
+        hideMobile 
+      />
     </Card>
   ),
 }
