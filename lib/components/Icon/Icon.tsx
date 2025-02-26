@@ -5,6 +5,7 @@ export interface IconProps {
   color?: string
   size?: 'sm' | 'md' | 'lg' | 'xl'
   align?: 'none' | 'left' | 'center' | 'right'
+  basePath?: string
 }
 
 const sizeMap = {
@@ -25,14 +26,16 @@ export const Icon = ({
   name, 
   color = 'currentColor',
   size = 'md',
-  align = 'none'
+  align = 'none',
+  basePath = ''
 }: IconProps) => {
   const [svgContent, setSvgContent] = useState<string>('')
   
   useEffect(() => {
     const fetchSvg = async () => {
       try {
-        const response = await fetch(`/assets/icons/${name}.svg`)
+        const iconPath = `${basePath}/assets/icons/${name}.svg`
+        const response = await fetch(iconPath)
         const svgText = await response.text()
         
         // Create a temporary div to parse the SVG
@@ -60,7 +63,7 @@ export const Icon = ({
     }
 
     fetchSvg()
-  }, [name, size, color])
+  }, [name, size, color, align, basePath])
 
   // Use dangerouslySetInnerHTML to render the SVG
   return <span dangerouslySetInnerHTML={{ __html: svgContent }} />
