@@ -5,7 +5,7 @@ import { ButtonGroup } from '../ButtonGroup/ButtonGroup'
 import { CardData as data } from './data'
 
 const meta = {
-  title: 'Components/Card/Article Card',
+  title: 'Components/Card/Page Card',
   component: Card,
   tags: ['autodocs'],
 } satisfies Meta<typeof Card>
@@ -20,10 +20,7 @@ export const Primary: Story = {
   } as CardProps,
   render: (args) => (
     <Card {...args}>
-      <Card.Figure>
-        <img className="rounded-md" src={data[0].image} alt={data[0].alt} />
-      </Card.Figure>
-      <Card.Header title={data[0].title} date={data[0].date} />
+      <Card.Header title={data[0].title} />
       <Card.Content text={data[0].excerpt} isExcerpt />
       <Card.Footer>
         <a href={data[0].link} className="idc-button idc-button--light-blue idc-button--xs idc-button--outline">

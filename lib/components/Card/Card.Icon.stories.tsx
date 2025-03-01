@@ -1,7 +1,7 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { Card } from './Card'
-import { iconNames } from '../../utils/iconList'
+import { ButtonGroup } from '../ButtonGroup/ButtonGroup'
 
 const meta = {
   title: 'Components/Card/Icon',
@@ -21,14 +21,16 @@ export const Primary: Story = {
       <Card.Icon iconName="phone-volume-solid" />
       <Card.Header 
         title="Contact our support team" 
-        date="2024-03-20" 
       />
       <Card.Content 
         text="Get in touch with our support team for assistance with your documentation needs." 
-        link="#" 
-        isExcerpt 
-        hideMobile 
+        isExcerpt
       />
+      <Card.Footer>
+        <a href="#" className="idc-button idc-button--light-blue idc-button--xs idc-button--outline">
+          Learn more
+        </a>
+      </Card.Footer>
     </Card>
   ),
 }
