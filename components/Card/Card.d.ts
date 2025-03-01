@@ -25,7 +25,7 @@ export declare const Card: (({ children, maxWidth, addFlex, }: CardProps) => imp
         displayName: string;
     };
     Content: {
-        ({ text, link, isExcerpt, hideMobile }: import('./CardContent').CardContentProps): import("react/jsx-runtime").JSX.Element;
+        ({ text, isExcerpt, hideMobile }: import('./CardContent').CardContentProps): import("react/jsx-runtime").JSX.Element;
         displayName: string;
     };
     Quote: {
