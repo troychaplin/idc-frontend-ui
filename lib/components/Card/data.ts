@@ -8,7 +8,7 @@ export const CardData = [
     link: '#',
     image: 'https://picsum.photos/id/40/600/400',
     alt: 'Cell fire someone loss news.',
-    iconName: 'Phone Volume',
+    iconName: 'handshake-solid',
     tags: {
       category: [
         {
@@ -36,7 +36,7 @@ export const CardData = [
     link: '#',
     image: 'https://picsum.photos/id/76/600/400',
     alt: 'Recent which game fine.',
-    iconName: 'File Circle Check',
+    iconName: 'folder-open-solid',
     tags: {
       category: [
         {
@@ -64,7 +64,7 @@ export const CardData = [
     link: '#',
     image: 'https://picsum.photos/id/46/600/400',
     alt: 'Boy check single magazine next.',
-    iconName: 'Truck Fast',
+    iconName: 'truck-fast-solid',
     tags: {
       category: [
         {
@@ -92,7 +92,7 @@ export const CardData = [
     link: '#',
     image: 'https://picsum.photos/id/100/600/400',
     alt: 'Fire cost consumer organization carry government.',
-    iconName: 'Lightbulb',
+    iconName: 'thumbtrack-solid',
     tags: {
       category: [
         {
@@ -119,7 +119,7 @@ export const CardData = [
     link: '#',
     image: 'https://picsum.photos/id/70/600/400',
     alt: 'Yeah wind necessary bit dog factor student also.',
-    iconName: 'Lightbulb',
+    iconName: 'users-solid',
     tags: {
       category: [
         {
@@ -147,7 +147,7 @@ export const CardData = [
     link: '#',
     image: 'https://picsum.photos/id/98/600/400',
     alt: 'Decide win laugh now federal.',
-    iconName: 'Lightbulb',
+    iconName: 'key-solid',
     tags: {
       category: [
         {
@@ -174,7 +174,7 @@ export const CardData = [
     link: '#',
     image: 'https://picsum.photos/id/96/600/400',
     alt: 'Ten heavy lawyer position.',
-    iconName: 'Lightbulb',
+    iconName: 'comment-solid',
     tags: {
       category: [
         {
@@ -202,7 +202,7 @@ export const CardData = [
     link: '#',
     image: 'https://picsum.photos/id/1/600/400',
     alt: 'Have you buy body too.',
-    iconName: 'Lightbulb',
+    iconName: 'cc-visa-brans-solid',
     tags: {
       category: [
         {
@@ -228,7 +228,7 @@ export const CardData = [
     link: '#',
     image: 'https://picsum.photos/id/17/600/400',
     alt: 'Seat team loss notice.',
-    iconName: 'Lightbulb',
+    iconName: 'circle-check-solid',
     tags: {
       category: [
         {
@@ -255,7 +255,7 @@ export const CardData = [
     link: '#',
     image: 'https://picsum.photos/id/46/600/400',
     alt: 'Write carry movie laugh.',
-    iconName: 'Lightbulb',
+    iconName: 'folder-open-solid',
     tags: {
       category: [
         {
@@ -282,7 +282,7 @@ export const CardData = [
     link: '#',
     image: 'https://picsum.photos/id/92/600/400',
     alt: 'Series nation provide thank difference.',
-    iconName: 'Lightbulb',
+    iconName: 'folder-open-solid',
     tags: {
       category: [
         {
@@ -309,7 +309,7 @@ export const CardData = [
     link: '#',
     image: 'https://picsum.photos/id/94/600/400',
     alt: 'Which you certain executive recognize.',
-    iconName: 'Lightbulb',
+    iconName: 'folder-open-solid',
     tags: {
       category: [
         {
@@ -336,7 +336,7 @@ export const CardData = [
     link: '#',
     image: 'https://picsum.photos/id/70/600/400',
     alt: 'Once several concern imagine movement.',
-    iconName: 'Lightbulb',
+    iconName: 'folder-open-solid',
     tags: {
       category: [
         {
@@ -363,7 +363,7 @@ export const CardData = [
     link: '#',
     image: 'https://picsum.photos/id/19/600/400',
     alt: 'Tv every simply take usually.',
-    iconName: 'Lightbulb',
+    iconName: 'folder-open-solid',
     tags: {
       category: [
         {
@@ -390,7 +390,7 @@ export const CardData = [
     link: '#',
     image: 'https://picsum.photos/id/81/600/400',
     alt: 'All since deep ten.',
-    iconName: 'Lightbulb',
+    iconName: 'folder-open-solid',
     tags: {
       category: [
         {
@@ -417,7 +417,7 @@ export const CardData = [
     link: '#',
     image: 'https://picsum.photos/id/12/600/400',
     alt: 'Reflect tell dog suffer young for animal.',
-    iconName: 'Lightbulb',
+    iconName: 'folder-open-solid',
     tags: {
       category: [
         {
@@ -443,7 +443,7 @@ export const CardData = [
     link: '#',
     image: 'https://picsum.photos/id/65/600/400',
     alt: 'Side real onto owner sure.',
-    iconName: 'Lightbulb',
+    iconName: 'folder-open-solid',
     tags: {
       category: [
         {
@@ -470,7 +470,7 @@ export const CardData = [
     link: '#',
     image: 'https://picsum.photos/id/28/600/400',
     alt: 'Among wait team a.',
-    iconName: 'Lightbulb',
+    iconName: 'folder-open-solid',
     tags: {
       category: [
         {
@@ -497,7 +497,7 @@ export const CardData = [
     link: '#',
     image: 'https://picsum.photos/id/92/600/400',
     alt: 'Production figure reason.',
-    iconName: 'Lightbulb',
+    iconName: 'folder-open-solid',
     tags: {
       category: [
         {
@@ -524,7 +524,7 @@ export const CardData = [
     link: '#',
     image: 'https://picsum.photos/id/7/600/400',
     alt: 'East low similar.',
-    iconName: 'Lightbulb',
+    iconName: 'folder-open-solid',
     tags: {
       category: [
         {

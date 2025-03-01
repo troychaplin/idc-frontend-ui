@@ -8,12 +8,12 @@
 
 /* Button Sizes */
 
-.idc-button--sm {
-  @apply text-sm;
-}
-
 .idc-button--xs {
   @apply px-2.5 py-1.5 text-xs md:px-3 md:py-2 md:text-sm;
+}
+
+.idc-button--sm {
+  @apply text-sm;
 }
 
 .idc-button--lg {
