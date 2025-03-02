@@ -9,7 +9,7 @@ export declare const Hero: (({ children }: HeroProps) => import("react/jsx-runti
         displayName: string;
     };
     Media: {
-        ({ children }: import('./HeroMedia').HeroMediaProps): import("react/jsx-runtime").JSX.Element;
+        ({ imageUrl, imageZoom, focalPointX, focalPointY, }: import('./HeroMedia').HeroMediaProps): import("react/jsx-runtime").JSX.Element;
         displayName: string;
     };
 };
