@@ -17,7 +17,7 @@ export const Primary: Story = {
   args: {
     headerTop: 'Our Process',
     headerBottom: 'As simple as A-B-C',
-    text: 'We take the anxiety and uncertainty out of the document apostille process in these three simple steps!',
+    text: 'We take the anxiety and uncertainty out of the document apostille process in these three simple steps! We take the anxiety and uncertainty out of the document apostille process in these three simple steps!',
   } as LeadInProps,
   render: (args) => (
     <Main>
