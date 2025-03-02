@@ -27,13 +27,6 @@ export const Primary: Story = {
             Aliquam erat volutpat. Vestibulum imperdiet, enim non elementum pulvinar, lacus quam vestibulum eros, ut
             eleifend sem dui ut quam.
           </p>
-          {args.cols === '2/3' && (
-            <p>
-              Nam facilisis pulvinar ligula nec cursus. Mauris ut tempor enim. Nullam sodales eros ut velit ullamcorper
-              fringilla. Fusce a sem est. Vivamus eleifend accumsan pellentesque. Pellentesque in ante urna. Nullam
-              finibus sed nunc ac volutpat. Maecenas lacinia justo a arcu tempor, ac tempor magna faucibus.
-            </p>
-          )}
         </Columns.Content>
         <Columns.Content>
           <p>
@@ -41,16 +34,7 @@ export const Primary: Story = {
             fringilla. Fusce a sem est. Vivamus eleifend accumsan pellentesque. Pellentesque in ante urna. Nullam
             finibus sed nunc ac volutpat. Maecenas lacinia justo a arcu tempor, ac tempor magna faucibus.
           </p>
-          {args.cols === '1/3' && (
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida orci elit, at consectetur lectus
-              iaculis vel. Cras non fringilla velit, a posuere felis. Mauris faucibus dui ultricies ultrices luctus.
-              Aliquam erat volutpat. Vestibulum imperdiet, enim non elementum pulvinar, lacus quam vestibulum eros, ut
-              eleifend sem dui ut quam.
-            </p>
-          )}
         </Columns.Content>
-        {(args.cols === 3 || args.cols === 4 || args.cols === 6) && (
           <Columns.Content>
             <p>
               Nam facilisis pulvinar ligula nec cursus. Mauris ut tempor enim. Nullam sodales eros ut velit ullamcorper
@@ -58,8 +42,6 @@ export const Primary: Story = {
               finibus sed nunc ac volutpat. Maecenas lacinia justo a arcu tempor, ac tempor magna faucibus.
             </p>
           </Columns.Content>
-        )}
-        {(args.cols === 4 || args.cols === 6) && (
           <Columns.Content>
             <p>
               Nam facilisis pulvinar ligula nec cursus. Mauris ut tempor enim. Nullam sodales eros ut velit ullamcorper
@@ -67,8 +49,6 @@ export const Primary: Story = {
               finibus sed nunc ac volutpat. Maecenas lacinia justo a arcu tempor, ac tempor magna faucibus.
             </p>
           </Columns.Content>
-        )}
-        {args.cols === 6 && (
           <Columns.Content>
             <p>
               Nam facilisis pulvinar ligula nec cursus. Mauris ut tempor enim. Nullam sodales eros ut velit ullamcorper
@@ -76,8 +56,6 @@ export const Primary: Story = {
               finibus sed nunc ac volutpat. Maecenas lacinia justo a arcu tempor, ac tempor magna faucibus.
             </p>
           </Columns.Content>
-        )}
-        {args.cols === 6 && (
           <Columns.Content>
             <p>
               Nam facilisis pulvinar ligula nec cursus. Mauris ut tempor enim. Nullam sodales eros ut velit ullamcorper
@@ -85,7 +63,6 @@ export const Primary: Story = {
               finibus sed nunc ac volutpat. Maecenas lacinia justo a arcu tempor, ac tempor magna faucibus.
             </p>
           </Columns.Content>
-        )}
       </Columns>
     </Main>
   ),
