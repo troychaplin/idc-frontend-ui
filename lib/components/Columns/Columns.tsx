@@ -14,7 +14,7 @@ export interface ColumnsProps {
 export const ColumnsContainer = ({ children, maxWidth = '5xl', cols = 2 }: ColumnsProps) => {
   return (
     <div
-      className={`ui-column ui-no-max-width ${uiMaxWidth[maxWidth]} mx-auto grid ${uiGridColumns[cols]} gap-4 md:gap-10`}
+      className={`ui-column ui-no-max-width ${uiMaxWidth[maxWidth]} mx-auto grid ${uiGridColumns[cols]} gap-4 md:gap-8`}
     >
       {children}
     </div>
