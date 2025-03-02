@@ -6,7 +6,7 @@ export interface LeadInProps {
 
 export const LeadIn = ({ headerTop, headerBottom, text }: LeadInProps) => {
   return (
-    <div className="not-prose idc-leadin idc-component grid md:grid-cols-3 md:[&>*:last-child]:col-span-2 gap-4 md:gap-10 items-center">
+    <div className="grid items-center gap-4 not-prose idc-leadin idc-component md:grid-cols-3 md:gap-10">
       <div>
         {headerTop && <h2 className="block text-base italic not-prose md:text-lg text-idc-black-500">{headerTop}</h2>}
         {headerBottom && (
@@ -15,7 +15,7 @@ export const LeadIn = ({ headerTop, headerBottom, text }: LeadInProps) => {
           </h3>
         )}
       </div>
-      <div className="md:border-l md:border-solid md:border-idc-black-100 md:pl-8">{text && <p className="text-base md:text-lg">{text}</p>}</div>
+      <div className="md:col-span-2 md:border-l md:border-solid md:border-idc-black-100 md:pl-8">{text && <p className="text-base md:text-lg">{text}</p>}</div>
     </div>
   )
 }
