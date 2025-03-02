@@ -16,15 +16,10 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Primary: Story = {
-  args: {
-    maxWidth: '6xl',
-    cols: '60/40',
-    bgType: 'gradient',
-  } as HeroProps,
-  render: (args) => (
+  render: () => (
     <Main>
-      <Section>
-        <Hero {...args}>
+      <Section bgType='blue'>
+        <Hero>
           <Hero.Content title="The document apostille process made simple" headerType="h1">
             <p>
               We expertly manage all aspects of the document apostille &ndash; authentication & legalization &ndash;
@@ -41,9 +36,7 @@ export const Primary: Story = {
               />
             </ButtonGroup>
           </Hero.Content>
-          <Hero.Media>
-            <p>Media</p>
-          </Hero.Media>
+          <Hero.Media imageUrl='https://picsum.photos/seed/picsum/1280/800' />
         </Hero>
       </Section>
     </Main>
