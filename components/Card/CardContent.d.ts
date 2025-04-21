@@ -1,4 +1,5 @@
 export interface CardContentProps {
+    children?: React.ReactNode;
     text?: string;
     link?: string;
     linkText?: string;
@@ -6,6 +7,6 @@ export interface CardContentProps {
     hideMobile?: boolean;
 }
 export declare const CardContent: {
-    ({ text, link, linkText, isExcerpt, hideMobile }: CardContentProps): import("react/jsx-runtime").JSX.Element;
+    ({ text, link, linkText, isExcerpt, hideMobile, children }: CardContentProps): import("react/jsx-runtime").JSX.Element;
     displayName: string;
 };

@@ -21,7 +21,7 @@ export declare const Card: (({ children, maxWidth, hasBorder, }: CardProps) => i
         displayName: string;
     };
     Content: {
-        ({ text, link, linkText, isExcerpt, hideMobile }: import('./CardContent').CardContentProps): import("react/jsx-runtime").JSX.Element;
+        ({ text, link, linkText, isExcerpt, hideMobile, children }: import('./CardContent').CardContentProps): import("react/jsx-runtime").JSX.Element;
         displayName: string;
     };
     Quote: {
