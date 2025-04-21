@@ -1,10 +1,12 @@
 export interface CardContentProps {
   text?: string
+  link?: string
+  linkText?: string
   isExcerpt?: boolean
   hideMobile?: boolean
 }
 
-export const CardContent = ({ text, isExcerpt = false, hideMobile = false }: CardContentProps) => {
+export const CardContent = ({ text, link, linkText, isExcerpt = false, hideMobile = false }: CardContentProps) => {
   const hideMobileClass = hideMobile ? 'hidden md:block' : ''
 
   return (
@@ -15,6 +17,9 @@ export const CardContent = ({ text, isExcerpt = false, hideMobile = false }: Car
         </>
       ) : (
         text
+      )}
+      {link && (
+        <a href={link} className="ml-1.5 p-0.5 font-semibold text-idc-orange-700 bg-idc-orange-50 hover:text-idc-blue-900 hover:bg-idc-blue-100">{linkText ? linkText : "Read full post"}</a>
       )}
     </p>
   )

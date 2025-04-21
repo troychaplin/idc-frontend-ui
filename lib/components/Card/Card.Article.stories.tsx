@@ -1,7 +1,6 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { Card, CardProps } from './Card'
-import { ButtonGroup } from '../ButtonGroup/ButtonGroup'
 import { CardData as data } from './data'
 
 const meta = {
@@ -24,12 +23,7 @@ export const Primary: Story = {
         <img className="rounded-md" src={data[0].image} alt={data[0].alt} />
       </Card.Figure>
       <Card.Header title={data[0].title} date={data[0].date} />
-      <Card.Content text={data[0].excerpt} isExcerpt />
-      <Card.Footer>
-        <a href={data[0].link} className="idc-button idc-button--light-blue idc-button--xs idc-button--outline">
-          Learn more
-        </a>
-      </Card.Footer>
+      <Card.Content text={data[0].excerpt} link={data[0].link} isExcerpt />
     </Card>
   ),
 }

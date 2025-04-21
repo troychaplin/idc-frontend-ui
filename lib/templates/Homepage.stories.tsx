@@ -78,12 +78,7 @@ export const Homepage: Story = {
               <Card key={id}>
                 <Card.Icon iconName={iconName} />
                 <Card.Header title={title} />
-                <Card.Content text={excerpt} />
-                <Card.Footer>
-                  <a href={link} className="idc-button idc-button--light-blue idc-button--xs idc-button--outline">
-                    Learn more
-                  </a>
-                </Card.Footer>
+                <Card.Content text={excerpt} link={link} />
               </Card>
             ))}
           </CardGroup>
@@ -181,8 +176,8 @@ export const Homepage: Story = {
           <ButtonGroup isCenter>
             <Button
               label="View More News"
-              color="light-orange"
-              isOutline
+              color="dark-blue"
+              size="sm" 
               onClick={() => {
                 window.location.href = 'https://www.idocscanada.ca'
               }}
