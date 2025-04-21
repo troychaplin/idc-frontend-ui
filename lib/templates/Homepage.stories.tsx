@@ -58,9 +58,7 @@ export const Homepage: Story = {
                 />
               </ButtonGroup>
             </Hero.Content>
-            <Hero.Media>
-              <p className="flex items-center justify-center w-full h-full italic font-light rounded-lg bg-white/50 text-slate-400">Add Media</p>
-            </Hero.Media>
+            <Hero.Media imageUrl='https://picsum.photos/seed/picsum/1280/800' />
           </Hero>
         </Section>
 
@@ -163,12 +161,12 @@ export const Homepage: Story = {
 
           <CardGroup cols={3}>
             {CardData.slice(0, 3).map(({ id, link, title, excerpt, image, alt, date }) => (
-              <Card key={id} addFlex>
+              <Card key={id}>
                 <Card.Figure>
                   <img className="rounded-md" src={image} alt={alt} width="400" height="300" />
                 </Card.Figure>
                 <Card.Header title={title} date={date} />
-                <Card.Content text={excerpt} link={link} isExcerpt hideMobile />
+                <Card.Content text={excerpt} link={link} isExcerpt />
               </Card>
             ))}
           </CardGroup>
