@@ -4,16 +4,12 @@ type MaxWidthKeys = keyof typeof uiMaxWidth;
 export interface CardProps {
     children?: React.ReactNode;
     maxWidth?: MaxWidthKeys;
-    addFlex?: boolean;
+    hasBorder?: boolean;
 }
-export declare const CardContainer: ({ children, maxWidth, addFlex, }: CardProps) => import("react/jsx-runtime").JSX.Element;
-export declare const Card: (({ children, maxWidth, addFlex, }: CardProps) => import("react/jsx-runtime").JSX.Element) & {
+export declare const CardContainer: ({ children, maxWidth, hasBorder, }: CardProps) => import("react/jsx-runtime").JSX.Element;
+export declare const Card: (({ children, maxWidth, hasBorder, }: CardProps) => import("react/jsx-runtime").JSX.Element) & {
     Header: {
         ({ title, as, date, datePrefix }: import('./CardHeader').CardHeaderProps): import("react/jsx-runtime").JSX.Element;
-        displayName: string;
-    };
-    Footer: {
-        ({ children }: import('./CardFooter').CardFooterProps): import("react/jsx-runtime").JSX.Element;
         displayName: string;
     };
     Figure: {
@@ -25,7 +21,7 @@ export declare const Card: (({ children, maxWidth, addFlex, }: CardProps) => imp
         displayName: string;
     };
     Content: {
-        ({ text, isExcerpt, hideMobile }: import('./CardContent').CardContentProps): import("react/jsx-runtime").JSX.Element;
+        ({ text, link, linkText, isExcerpt, hideMobile }: import('./CardContent').CardContentProps): import("react/jsx-runtime").JSX.Element;
         displayName: string;
     };
     Quote: {
