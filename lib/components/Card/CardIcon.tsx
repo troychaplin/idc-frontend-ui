@@ -10,7 +10,7 @@ export const CardIcon = ({ iconName, basePath = '' }: CardIconProps) => {
     <figure className="mb-4 md:mb-6">
       <Icon 
         name={iconName}
-        size="lg"
+        size="xl"
         color="rgb(40 98 161)"
         align="left"
         basePath={basePath}
