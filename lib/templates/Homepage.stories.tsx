@@ -40,7 +40,7 @@ export const Homepage: Story = {
       </Navigation>
 
       <Main>
-        <Section maxWidth="6xl" bgType="gradient">
+        <Section maxWidth="6xl" bgType="blue">
           <Hero>
             <Hero.Content title="The document apostille process made simple" headerType="h1" isItalic>
               <p>
@@ -58,7 +58,7 @@ export const Homepage: Story = {
                 />
               </ButtonGroup>
             </Hero.Content>
-            <Hero.Media imageUrl='https://picsum.photos/seed/picsum/1280/800' />
+            <Hero.Media imageUrl='https://picsum.photos/seed/picsum/1280/800' imageShape="oval" />
           </Hero>
         </Section>
 
