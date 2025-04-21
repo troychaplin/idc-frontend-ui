@@ -19,10 +19,14 @@ export const Primary: Story = {
   render: (args) => (
     <Section>
       <CardGroup {...args}>
-        {data.slice(0, 3).map(({ id, link, title, excerpt, iconName, alt, date }) => (
-          <Card key={id} addFlex hasBorder>
-            <Card.Header title={title} date={date} />
-            <Card.Content text={excerpt} />
+        {data.slice(0, 3).map(({ id }) => (
+          <Card key={id} hasBorder>
+            <Card.Header title="Standard Apostille" />
+              <Card.Content>
+                <p><strong>IDC walk-in:</strong> $150 for the first document, $50 each additional document.</p>
+                <p><strong>Agent walk-in:</strong> $200 for the first document, $50 each additional document.</p>
+                <p><strong>Mail-in:</strong> $100 for the first document, $25 each additional document.</p>
+              </Card.Content>
           </Card>
         ))}
       </CardGroup>

@@ -4,7 +4,7 @@ import { Card } from './Card'
 import { CardData as data } from './data'
 
 const meta = {
-  title: 'Components/Card/Icon',
+  title: 'Components/Card/Icon Card',
   component: Card,
   tags: ['autodocs'],
 } satisfies Meta<typeof Card>
