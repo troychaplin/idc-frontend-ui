@@ -1,7 +1,6 @@
 import React from 'react'
 import { uiMaxWidth } from "../../utils/propClasses";
 import { CardHeader } from "./CardHeader";
-import { CardFooter } from "./CardFooter";
 import { CardContent } from "./CardContent";
 import { CardQuote } from "./CardQuote";
 import { CardCite } from "./CardCite";
@@ -12,19 +11,19 @@ type MaxWidthKeys = keyof typeof uiMaxWidth;
 export interface CardProps {
   children?: React.ReactNode;
   maxWidth?: MaxWidthKeys;
-  addFlex?: boolean;
+  hasBorder?: boolean;
 }
 
 export const CardContainer = ({
   children,
   maxWidth,
-  addFlex = false,
+  hasBorder = false,
 }: CardProps) => {
   const cardWidth = maxWidth ? uiMaxWidth[maxWidth] : "";
-  const flexClass = addFlex ? "flex gap-4 md:block" : "";
+  const borderClasses = hasBorder ? "border border-solid border-idc-black-200 bg-white px-4 py-3 md:px-6 md:py-5" : "";
 
   return (
-    <div className={`not-prose idc-card rounded-md ${cardWidth} ${flexClass}`}>
+    <div className={`not-prose idc-card rounded-md ${cardWidth} ${borderClasses}`}>
       {children}
     </div>
   );
@@ -32,7 +31,6 @@ export const CardContainer = ({
 
 export const Card = Object.assign(CardContainer, {
   Header: CardHeader,
-  Footer: CardFooter,
   Figure: CardFigure,
   Icon: CardIcon,
   Content: CardContent,

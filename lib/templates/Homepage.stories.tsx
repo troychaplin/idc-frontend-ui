@@ -58,9 +58,7 @@ export const Homepage: Story = {
                 />
               </ButtonGroup>
             </Hero.Content>
-            <Hero.Media>
-              <p className="flex items-center justify-center w-full h-full italic font-light rounded-lg bg-white/50 text-slate-400">Add Media</p>
-            </Hero.Media>
+            <Hero.Media imageUrl='https://picsum.photos/seed/picsum/1280/800' />
           </Hero>
         </Section>
 
@@ -78,12 +76,7 @@ export const Homepage: Story = {
               <Card key={id}>
                 <Card.Icon iconName={iconName} />
                 <Card.Header title={title} />
-                <Card.Content text={excerpt} />
-                <Card.Footer>
-                  <a href={link} className="idc-button idc-button--light-blue idc-button--xs idc-button--outline">
-                    Learn more
-                  </a>
-                </Card.Footer>
+                <Card.Content text={excerpt} link={link} />
               </Card>
             ))}
           </CardGroup>
@@ -168,12 +161,12 @@ export const Homepage: Story = {
 
           <CardGroup cols={3}>
             {CardData.slice(0, 3).map(({ id, link, title, excerpt, image, alt, date }) => (
-              <Card key={id} addFlex>
+              <Card key={id}>
                 <Card.Figure>
                   <img className="rounded-md" src={image} alt={alt} width="400" height="300" />
                 </Card.Figure>
                 <Card.Header title={title} date={date} />
-                <Card.Content text={excerpt} link={link} isExcerpt hideMobile />
+                <Card.Content text={excerpt} link={link} isExcerpt />
               </Card>
             ))}
           </CardGroup>
@@ -181,8 +174,8 @@ export const Homepage: Story = {
           <ButtonGroup isCenter>
             <Button
               label="View More News"
-              color="light-orange"
-              isOutline
+              color="dark-blue"
+              size="sm" 
               onClick={() => {
                 window.location.href = 'https://www.idocscanada.ca'
               }}
