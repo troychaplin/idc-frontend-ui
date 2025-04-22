@@ -17,12 +17,12 @@ export const HeroMedia = ({
   const getMaskSvg = (shape: string) => {
     switch (shape) {
       case 'oval':
-        return `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='470' height='386' fill='none'%3E%3Cellipse cx='234.886' cy='193.008' fill='%23E6EDF8' rx='241' ry='185.044' transform='rotate(-20.724 234.886 193.008)'/%3E%3C/svg%3E`;
+        return `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='767' height='512' fill='none'%3E%3Cellipse cx='383.375' cy='256.082' fill='%23E6EDF8' rx='389.514' ry='244.958' transform='rotate(-13.672 383.375 256.082)'/%3E%3C/svg%3E`;
       case 'slanted-lines':
-        return `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='472' height='392' fill='none'%3E%3Cpath fill='%23E6EDF8' d='M464 0a8 8 0 0 1 8 8v286.622L108.584 392H8a8 8 0 0 1-8-8V118.945L443.913 0H464Zm8 352.623L325.042 392h-23.276L472 346.386v6.237ZM472 384a8 8 0 0 1-8 8H363.679L472 362.976V384ZM188.817 0 0 50.593V8a8 8 0 0 1 8-8h180.817ZM0 108.593v-6.237L382 0h23.275L0 108.593Z'/%3E%3C/svg%3E`;
+        return `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='768' height='512' fill='none'%3E%3Cpath fill='%23000' d='M221.181 0 0 59.548V8a8 8 0 0 1 8-8h213.181ZM768 459.432 573.897 512h-30.743L768 451.104v8.328ZM768 504a8 8 0 0 1-8 8H624.93L768 473.252V504ZM474.74 0 0 127.815v-7.34L447.475 0h27.265ZM760 0a8 8 0 0 1 8 8v374L288 512H8a8 8 0 0 1-8-8V140L520 0h240Z'/%3E%3C/svg%3E`;
       case 'rectangle':
       default:
-        return null; // No mask for rectangle
+        return null;
     }
   };
 
