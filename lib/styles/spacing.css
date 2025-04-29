@@ -36,7 +36,7 @@ header + .ui-main {
 */
 
 .ui-section--white + .ui-section--white {
-  @apply mt-6 md:mt-10;
+  @apply mt-8 md:mt-16;
 }
 
 .ui-section--white + .ui-section--blue {

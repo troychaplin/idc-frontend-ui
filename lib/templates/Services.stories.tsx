@@ -18,7 +18,7 @@ import { DefinitionData } from '../components/Definition/data'
 import { navItems } from '../data/navigation'
 
 const meta: Meta = {
-  title: 'Page Templates/Homepage',
+  title: 'Page Templates/Landing Page/Services',
   parameters: {
     layout: 'fullscreen',
   },
@@ -27,7 +27,7 @@ const meta: Meta = {
 export default meta
 type Story = StoryObj
 
-export const Homepage: Story = {
+export const Services: Story = {
   render: () => (
     <>
       <Navigation>
@@ -40,34 +40,17 @@ export const Homepage: Story = {
       </Navigation>
 
       <Main>
-        <Section maxWidth="6xl" bgType="blue">
+        <Section maxWidth="5xl" bgType="blue">
           <Hero>
-            <Hero.Content title="The document apostille process made simple" headerType="h1" isItalic>
+            <Hero.Content title="Canadian Document Apostille" headerType="h1" width={100} isItalic>
               <p>
-                We expertly manage all aspects of the document apostille &ndash; authentication & legalization &ndash;
-                attestation &ndash; process for our clients. If you need to present Canadian documents in a foreign
-                jurisdiction we can help!
+                Canadian document apostille, also known as document authentication and legalization, is a specific
+                process used to ensure your documents will be recognized abroad. If your documents will be used in
+                another country that is an apostille signatory country, you will need an apostille on your document.
+                Click on each topic below for more information.
               </p>
-              <ButtonGroup>
-                <Button
-                  label="Get Started Now"
-                  color="dark-blue"
-                  onClick={() => {
-                    window.location.href = 'https://www.idocscanada.ca'
-                  }}
-                />
-              </ButtonGroup>
             </Hero.Content>
-            <Hero.Media imageUrl="https://picsum.photos/1280/800" imageShape="slanted-lines" />
           </Hero>
-        </Section>
-
-        <Section bgType="white">
-          <LeadIn
-            headerTop="Our Process"
-            headerBottom="As simple as A-B-C"
-            text="We take the anxiety and uncertainty out of the document apostille process in these three simple steps!"
-          />
         </Section>
 
         <Section bgType="white">
@@ -80,6 +63,24 @@ export const Homepage: Story = {
               </Card>
             ))}
           </CardGroup>
+        </Section>
+
+        <Section maxWidth="3xl" bgType="white">
+          <Header title="Got questions? Let us help you!" size="md" weight="bold" isItalic isCenter>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat urna sed euismod lobortis. Aenean
+              iaculis, elit non ornare maximus, ligula mauris ultricies felis, sed vestibulum arcu ipsum vitae elit.
+              Nullam sit amet interdum massa reprehenderit ducimus.
+            </p>
+          </Header>
+
+          <Definition>
+            {DefinitionData.slice(0, 5).map(({ id, title, content }) => (
+              <Definition.Accordion key={id} title={title}>
+                <p>{content}</p>
+              </Definition.Accordion>
+            ))}
+          </Definition>
         </Section>
 
         <Section maxWidth="6xl" bgType="edge">
@@ -107,29 +108,6 @@ export const Homepage: Story = {
               <p>Form goes here</p>
             </BluePanel.Content>
           </BluePanel>
-        </Section>
-
-        <Section bgType="blue">
-          <Header title="What our Clients are Saying" size="md" weight="bold" isItalic isCenter>
-            <p>
-              Discover why clients trust us for their document needs. Here's what they have to say about our expertise,
-              efficiency, and commitment to seamless service.
-            </p>
-          </Header>
-
-          <CardGroup cols={3} layout="masonry">
-            {CardData.slice(0, 9).map(({ id, quote, author, image }) => (
-              <Card key={id}>
-                <Card.Quote cite={author}>
-                  {quote}
-                  <Card.Cite>
-                    <img src={image} alt="Person's Name" />
-                    {author}
-                  </Card.Cite>
-                </Card.Quote>
-              </Card>
-            ))}
-          </CardGroup>
         </Section>
 
         <Section maxWidth="3xl" bgType="white">
