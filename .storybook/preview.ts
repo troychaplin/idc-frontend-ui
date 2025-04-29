@@ -18,6 +18,7 @@ const preview: Preview = {
           'Components',
           'Layouts',
           ['Body', 'Main', 'Section', 'Article', 'Column', 'Aside'],
+          'Resources',
           'Templates',
         ],
       },
