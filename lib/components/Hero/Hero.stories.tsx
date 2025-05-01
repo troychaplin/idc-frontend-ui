@@ -23,7 +23,7 @@ export const Primary: Story = {
   } as HeroProps,
   render: (args) => (
     <Main>
-      <Section bgType='blue'>
+      <Section bgType="blue">
         <Hero {...args}>
           <Hero.Content title="The document apostille process made simple" headerType="h1">
             <p>
@@ -41,7 +41,7 @@ export const Primary: Story = {
               />
             </ButtonGroup>
           </Hero.Content>
-          <Hero.Media imageUrl='https://picsum.photos/seed/picsum/1280/800' imageShape='slanted-lines' />
+          <Hero.Media imageUrl="https://picsum.photos/seed/picsum/1280/800" imageShape="fade" />
         </Hero>
       </Section>
     </Main>
