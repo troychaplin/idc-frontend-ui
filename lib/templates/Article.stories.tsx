@@ -11,7 +11,7 @@ import { Navigation } from '../components/Navigation/Navigation'
 import { navItems } from '../data/navigation'
 
 const meta: Meta = {
-  title: 'Templates/Article',
+  title: 'Page Templates/Article',
   parameters: {
     layout: 'fullscreen',
   },
@@ -45,10 +45,10 @@ export const Article: Story = {
             weight="semibold"
           >
             <p>
-                We expertly manage all aspects of the document apostille &ndash; authentication & legalization &ndash;
-                attestation &ndash; process for our clients. If you need to present Canadian documents in a foreign
-                jurisdiction we can help!
-              </p>
+              We expertly manage all aspects of the document apostille &ndash; authentication & legalization &ndash;
+              attestation &ndash; process for our clients. If you need to present Canadian documents in a foreign
+              jurisdiction we can help!
+            </p>
           </Header>
         </Section>
 
