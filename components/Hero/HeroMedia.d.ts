@@ -1,6 +1,6 @@
 export interface HeroMediaProps {
     imageUrl: string;
-    imageShape?: 'rectangle' | 'oval' | 'slanted-lines';
+    imageShape?: 'rectangle' | 'fade' | 'slanted-lines' | 'oval';
     imageZoom?: number;
     focalPointX?: number;
     focalPointY?: number;
