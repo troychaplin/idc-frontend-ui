@@ -1,8 +1,8 @@
 export interface ButtonProps {
-    color?: "light-blue" | "dark-blue" | "light-orange" | "dark-orange" | "white";
+    color?: 'light-blue' | 'dark-blue' | 'light-orange' | 'dark-orange' | 'white';
     label: string;
-    type?: "button" | "submit" | "reset";
-    size?: "sm" | "md" | "lg";
+    type?: 'button' | 'submit' | 'reset';
+    size?: 'xs' | 'sm' | 'md' | 'lg';
     isOutline?: boolean;
     noBg?: boolean;
     onClick?: () => void;
