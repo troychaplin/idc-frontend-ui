@@ -1,6 +1,8 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { Card } from './Card'
+import { ButtonGroup } from '../ButtonGroup/ButtonGroup'
+import { Button } from '../Button/Button'
 import { CardData as data } from './data'
 
 const meta = {
@@ -20,7 +22,12 @@ export const Primary: Story = {
     <Card {...args}>
       <Card.Icon iconName={data[0].iconName} />
       <Card.Header title={data[0].title} />
-      <Card.Content text={data[0].excerpt} link={data[0].link} isExcerpt />
+      <Card.Content>
+        <p>{data[0].excerpt}</p>
+        <ButtonGroup>
+          <Button color="light-blue" label="Get more info" onClick={() => {}} size="xs" type="button" isOutline />
+        </ButtonGroup>
+      </Card.Content>
     </Card>
   ),
 }

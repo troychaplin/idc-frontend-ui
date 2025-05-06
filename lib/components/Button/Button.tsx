@@ -1,25 +1,25 @@
 export interface ButtonProps {
-  color?: "light-blue" | "dark-blue" | "light-orange" | "dark-orange" | "white";
-  label: string;
-  type?: "button" | "submit" | "reset";
-  size?: "sm" | "md" | "lg";
-  isOutline?: boolean;
-  noBg?: boolean;
-  onClick?: () => void;
+  color?: 'light-blue' | 'dark-blue' | 'light-orange' | 'dark-orange' | 'white'
+  label: string
+  type?: 'button' | 'submit' | 'reset'
+  size?: 'xs' | 'sm' | 'md' | 'lg'
+  isOutline?: boolean
+  noBg?: boolean
+  onClick?: () => void
 }
 
 export const Button = ({
-  color = "dark-blue",
+  color = 'dark-blue',
   label,
-  type = "button",
-  size = "md",
+  type = 'button',
+  size = 'md',
   isOutline = false,
   noBg = false,
   onClick,
   ...props
 }: ButtonProps) => {
-  const buttonStyles = isOutline ? `idc-button--outline` : `idc-button--solid`;
-  const noBgColor = noBg && isOutline ? `idc-button--no-bg` : "";
+  const buttonStyles = isOutline ? `idc-button--outline` : `idc-button--solid`
+  const noBgColor = noBg && isOutline ? `idc-button--no-bg` : ''
 
   return (
     <button
@@ -30,5 +30,5 @@ export const Button = ({
     >
       {label}
     </button>
-  );
-};
+  )
+}
