@@ -6,7 +6,7 @@ export const FooterDisclaimer = () => {
     <div className="p-8 idc-footer-disclaimer bg-idc-blue-900">
       <div className="flex flex-col items-center max-w-6xl gap-4 mx-auto text-sm font-light text-white md:flex-row">
         <div className="w-full md:flex-auto">
-          <div className="flex flex-col justify-center w-full gap-4 mx-auto md:flex-row">
+          <div className="flex flex-col w-full gap-4 mx-auto md:flex-row">
             <a
               href="https://www.bbb.org/ca/on/ottawa/profile/legal-information-services/international-documents-canada-0117-50321#sealclick"
               title="Click for the Business Review of International Documents Canada, a Legal Information Services in Ottawa ON"

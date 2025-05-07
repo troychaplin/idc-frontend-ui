@@ -18,7 +18,7 @@ type Story = StoryObj<typeof meta>
 export const Primary: Story = {
   render: () => (
     <Footer>
-      {/* <Footer.Contact /> */}
+      <Footer.Contact />
       <Footer.Disclaimer />
     </Footer>
   ),
