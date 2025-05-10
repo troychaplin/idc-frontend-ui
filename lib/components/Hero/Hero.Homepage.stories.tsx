@@ -10,6 +10,9 @@ const meta = {
   title: 'Components/Hero/Homepage',
   component: Hero,
   tags: ['autodocs'],
+  parameters: {
+    layout: 'fullscreen',
+  },
 } satisfies Meta<typeof Hero>
 
 export default meta
@@ -18,7 +21,7 @@ type Story = StoryObj<typeof meta>
 export const Primary: Story = {
   render: () => (
     <Main>
-      <Section bgType='blue'>
+      <Section bgType="blue">
         <Hero>
           <Hero.Content title="The document apostille process made simple" headerType="h1">
             <p>
@@ -36,7 +39,7 @@ export const Primary: Story = {
               />
             </ButtonGroup>
           </Hero.Content>
-          <Hero.Media imageUrl='https://picsum.photos/seed/picsum/1280/800' />
+          <Hero.Media imageUrl="https://picsum.photos/seed/picsum/1280/800" />
         </Hero>
       </Section>
     </Main>
