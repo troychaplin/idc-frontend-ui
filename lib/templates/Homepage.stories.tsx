@@ -58,7 +58,7 @@ export const Homepage: Story = {
                 />
               </ButtonGroup>
             </Hero.Content>
-            <Hero.Media imageUrl="https://picsum.photos/1280/800" imageShape="slanted-lines" />
+            <Hero.Media imageUrl="https://picsum.photos/1280/800" imageShape="oval-edges" />
           </Hero>
         </Section>
 

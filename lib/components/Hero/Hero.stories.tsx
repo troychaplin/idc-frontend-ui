@@ -10,6 +10,9 @@ const meta = {
   title: 'Components/Hero',
   component: Hero,
   tags: ['autodocs'],
+  parameters: {
+    layout: 'fullscreen',
+  },
 } satisfies Meta<typeof Hero>
 
 export default meta
@@ -34,14 +37,14 @@ export const Primary: Story = {
             <ButtonGroup>
               <Button
                 label="Get Started Now"
-                color="dark-blue"
+                color="dark-orange"
                 onClick={() => {
                   window.location.href = 'https://www.idocscanada.ca'
                 }}
               />
             </ButtonGroup>
           </Hero.Content>
-          <Hero.Media imageUrl="https://picsum.photos/seed/picsum/1280/800" imageShape="fade" />
+          <Hero.Media imageUrl="https://picsum.photos/seed/picsum/1280/800" imageShape="oval-edges" />
         </Hero>
       </Section>
     </Main>
