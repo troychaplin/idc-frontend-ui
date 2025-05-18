@@ -1,10 +1,11 @@
-import React from 'react'
-import type { Meta, StoryObj } from '@storybook/react'
-import { Main } from '../Main/Main'
-import { Section } from '../Section/Section'
-import { Button } from '../Button/Button'
-import { ButtonGroup } from '../ButtonGroup/ButtonGroup'
-import { Hero, HeroProps } from './Hero'
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { Main } from '../Main/Main';
+import { Section } from '../Section/Section';
+import { Button } from '../Button/Button';
+import { ButtonGroup } from '../ButtonGroup/ButtonGroup';
+import { Hero, HeroProps } from './Hero';
+import { fn } from '@storybook/test';
 
 const meta = {
   title: 'Components/Hero/Homepage',
@@ -13,10 +14,10 @@ const meta = {
   parameters: {
     layout: 'fullscreen',
   },
-} satisfies Meta<typeof Hero>
+} satisfies Meta<typeof Hero>;
 
-export default meta
-type Story = StoryObj<typeof meta>
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   render: () => (
@@ -25,16 +26,16 @@ export const Primary: Story = {
         <Hero>
           <Hero.Content title="The document apostille process made simple" headerType="h1">
             <p>
-              We expertly manage all aspects of the document apostille &ndash; authentication & legalization &ndash;
-              attestation &ndash; process for our clients. If you need to present Canadian documents in a foreign
-              jurisdiction we can help!
+              We expertly manage all aspects of the document apostille &ndash; authentication &
+              legalization &ndash; attestation &ndash; process for our clients. If you need to
+              present Canadian documents in a foreign jurisdiction we can help!
             </p>
             <ButtonGroup>
               <Button
                 label="Get Started Now"
                 color="dark-blue"
                 onClick={() => {
-                  window.location.href = 'https://www.idocscanada.ca'
+                  window.location.href = 'https://www.idocscanada.ca';
                 }}
               />
             </ButtonGroup>
@@ -44,4 +45,8 @@ export const Primary: Story = {
       </Section>
     </Main>
   ),
-}
+};
+
+export const Default: Story = {
+  args: {},
+};
