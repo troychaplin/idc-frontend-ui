@@ -44,7 +44,7 @@ export const Primary: Story = {
               />
             </ButtonGroup>
           </Hero.Content>
-          <Hero.Media imageUrl="https://picsum.photos/seed/picsum/1280/800" imageShape="oval-edges" />
+          <Hero.Media imageUrl="https://picsum.photos/seed/picsum/1280/800" imageShape="radial-fade" />
         </Hero>
       </Section>
     </Main>
