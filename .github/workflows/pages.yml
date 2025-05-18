@@ -20,10 +20,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '21.x'
+          node-version: '20.x'
 
       - name: 📦 Install
-        run: npm install
+        run: npm install --legacy-peer-deps
 
       - name: 🔧 Build
         run: npm run build:storybook
