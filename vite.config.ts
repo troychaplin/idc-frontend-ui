@@ -5,23 +5,37 @@ import dts from 'vite-plugin-dts';
 import tailwindcss from 'tailwindcss';
 import { visualizer } from 'rollup-plugin-visualizer';
 import * as packageJson from './package.json';
+import type { PluginOption } from 'vite';
 
-export default defineConfig({
-  plugins: [
-    react(),
+// Only include DTS plugin when building the library
+const plugins: PluginOption[] = [react()];
+
+// Add DTS plugin only when not in Storybook mode
+if (process.env.STORYBOOK !== 'true') {
+  plugins.push(
     dts({
       include: ['lib'],
       insertTypesEntry: true,
       rollupTypes: true,
-    }),
+    })
+  );
+}
+
+// Add visualizer only in analyze mode
+if (process.env.ANALYZE === 'true') {
+  plugins.push(
     visualizer({
       filename: 'dist/stats.html',
       open: true,
       gzipSize: true,
       brotliSize: true,
       template: 'treemap',
-    }),
-  ],
+    })
+  );
+}
+
+export default defineConfig({
+  plugins,
   css: {
     postcss: {
       plugins: [tailwindcss],

@@ -15,10 +15,10 @@ jobs:
 
     steps:
       - name: 🛎️ Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '21.x'
 
@@ -29,6 +29,7 @@ jobs:
         run: npm run build:storybook
         env:
           NODE_OPTIONS: --max_old_space_size=4096
+          STORYBOOK: 'true'
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
