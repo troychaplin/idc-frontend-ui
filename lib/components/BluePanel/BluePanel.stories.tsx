@@ -1,24 +1,24 @@
-import React from 'react'
-import type { Meta, StoryObj } from '@storybook/react'
-import { Main } from '../Main/Main'
-import { Section } from '../Section/Section'
-import { BluePanel, BluePanelProps } from './BluePanel'
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { Main } from '../Main/Main';
+import { Section } from '../Section/Section';
+import { BluePanel, BluePanelProps } from './BluePanel';
 
 const meta = {
   title: 'Components/Blue Panel',
   component: BluePanel,
   tags: ['autodocs'],
-} satisfies Meta<typeof BluePanel>
+} satisfies Meta<typeof BluePanel>;
 
-export default meta
-type Story = StoryObj<typeof meta>
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
     maxWidth: '7xl',
     cols: 2,
   } as BluePanelProps,
-  render: (args) => (
+  render: args => (
     <Main>
       <Section>
         <BluePanel {...args}>
@@ -32,4 +32,4 @@ export const Primary: Story = {
       </Section>
     </Main>
   ),
-}
+};

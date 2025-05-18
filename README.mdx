@@ -1,30 +1,112 @@
-# React + TypeScript + Vite
+# IDC Frontend UI Library
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A comprehensive React component library built with TypeScript, Vite, Tailwind CSS, and Storybook. This library provides a collection of reusable components and templates for building consistent user interfaces.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎨 Modern component library with Tailwind CSS
+- 📚 Comprehensive Storybook documentation
+- 🚀 Built with Vite for fast development
+- 📦 TypeScript support
+- 🎯 Accessibility-first components
+- 📱 Responsive design patterns
+- 🧪 Component testing setup
+- 📝 Conventional commits and automated versioning
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Prerequisites
 
-- Configure the top-level `parserOptions` property like this:
+- Node.js (v18 or higher)
+- npm (v7 or higher)
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/troychaplin/idc-frontend-ui.git
+
+# Navigate to the project directory
+cd idc-frontend-ui
+
+# Install dependencies
+npm install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Development
+
+```bash
+# Start Storybook
+npm run storybook
+
+# Build the library
+npm run build
+
+# Run linting
+npm run lint
+
+# Format code
+npm run prettier
+```
+
+### Project Structure
+
+```
+lib/
+├── components/     # Reusable UI components
+├── templates/      # Page templates and layouts
+├── utils/         # Utility functions
+└── style.css      # Global styles
+```
+
+### Available Scripts
+
+- `npm run storybook` - Start Storybook development server
+- `npm run build` - Build the library
+- `npm run lint` - Run ESLint
+- `npm run prettier` - Format code with Prettier
+- `npm run size` - Check bundle size
+- `npm run analyze` - Analyze bundle size and dependencies
+
+### Version Management
+
+The project uses conventional commits and standard-version for version management:
+
+```bash
+# Prepare a new release (dry run)
+npm run release:prepare
+
+# Create a new patch version
+npm run release:patch
+
+# Create a new minor version
+npm run release:minor
+
+# Create a new major version
+npm run release:major
+```
+
+### Git Flow Workflow
+
+1. Create a feature branch from `develop`
+2. Make your changes
+3. Create a pull request to `develop`
+4. After review and approval, merge to `develop`
+5. When ready for release:
+   - Create a release branch from `develop`
+   - Run the appropriate release script
+   - Create a pull request to `main`
+   - After review and approval, merge to `main`
+   - Create a pull request back to `develop`
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- [Vite](https://vitejs.dev/)
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Storybook](https://storybook.js.org/)
