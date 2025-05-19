@@ -173,7 +173,10 @@ const ServicesWithModal = () => {
         </Section>
       </Main>
 
-      <Footer />
+      <Footer>
+        <Footer.Contact />
+        <Footer.Disclaimer />
+      </Footer>
 
       <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)} title="Search">
         <p>

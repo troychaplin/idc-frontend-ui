@@ -62,7 +62,7 @@ const HomepageWithModal = () => {
               <ButtonGroup>
                 <Button
                   label="Get Started Now"
-                  color="dark-blue"
+                  color="dark-orange"
                   onClick={() => {
                     window.location.href = 'https://www.idocscanada.ca';
                   }}
@@ -197,7 +197,10 @@ const HomepageWithModal = () => {
         </Section>
       </Main>
 
-      <Footer />
+      <Footer>
+        <Footer.Contact />
+        <Footer.Disclaimer />
+      </Footer>
 
       <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)} title="Search">
         <p>
