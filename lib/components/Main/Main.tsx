@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { uiMaxWidth } from '../../utils/propClasses';
 
 // Define the types for this component

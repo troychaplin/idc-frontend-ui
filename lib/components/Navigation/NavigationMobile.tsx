@@ -1,5 +1,5 @@
-import { NavigationMobileProps } from './types';
 import { useNavigation } from './context';
+import { NavigationMobileProps } from './types';
 
 export const NavigationMobile = ({ items }: Omit<NavigationMobileProps, 'isOpen' | 'onClose'>) => {
   const { isOpen, setIsOpen } = useNavigation();

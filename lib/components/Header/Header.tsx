@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { headerSizeClasses, fontWeightClasses } from '../../utils/propClasses';
 
 type headerSizeKeys = keyof typeof headerSizeClasses;

@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { uiMaxWidth, uiGridColumns } from '../../utils/propClasses';
+
 import { ColumnsContent } from './ColumnsContent';
 
 type MaxWidthKeys = keyof typeof uiMaxWidth;

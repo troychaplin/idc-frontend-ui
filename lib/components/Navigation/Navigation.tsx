@@ -1,10 +1,11 @@
 import { useState, useEffect, useCallback } from 'react';
-import { NavigationMobile } from './NavigationMobile';
+
+import { NavigationContext } from './context';
+import { NavigationAside } from './NavigationAside';
 import { NavigationDesktop } from './NavigationDesktop';
 import { NavigationLogo } from './NavigationLogo';
 import { NavigationMenu } from './NavigationMenu';
-import { NavigationAside } from './NavigationAside';
-import { NavigationContext } from './context';
+import { NavigationMobile } from './NavigationMobile';
 import type { NavigationProps } from './types';
 
 const NavigationContainer = ({ children }: NavigationProps) => {

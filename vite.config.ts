@@ -1,11 +1,13 @@
-import { defineConfig } from 'vite';
 import path from 'node:path';
+
 import react from '@vitejs/plugin-react-swc';
-import dts from 'vite-plugin-dts';
-import tailwindcss from 'tailwindcss';
 import { visualizer } from 'rollup-plugin-visualizer';
-import * as packageJson from './package.json';
+import tailwindcss from 'tailwindcss';
+import { defineConfig } from 'vite';
 import type { PluginOption } from 'vite';
+import dts from 'vite-plugin-dts';
+
+import * as packageJson from './package.json';
 
 // Only include DTS plugin when building the library
 const plugins: PluginOption[] = [react()];

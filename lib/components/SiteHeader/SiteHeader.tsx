@@ -1,8 +1,9 @@
 'use client';
 import React, { useState, useEffect, useCallback } from 'react';
+
+import { Aside } from './SiteHeaderAside';
 import { SiteLogo } from './SiteHeaderLogo';
 import { Navigation } from './SiteHeaderNav';
-import { Aside } from './SiteHeaderAside';
 
 export interface SiteHeaderProps {
   children?: React.ReactNode;

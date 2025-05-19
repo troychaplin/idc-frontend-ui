@@ -1,11 +1,13 @@
 import React from 'react';
+
 import { uiMaxWidth } from '../../utils/propClasses';
-import { CardHeader } from './CardHeader';
-import { CardContent } from './CardContent';
-import { CardQuote } from './CardQuote';
+
 import { CardCite } from './CardCite';
+import { CardContent } from './CardContent';
 import { CardFigure } from './CardFigure';
+import { CardHeader } from './CardHeader';
 import { CardIcon } from './CardIcon';
+import { CardQuote } from './CardQuote';
 type MaxWidthKeys = keyof typeof uiMaxWidth;
 
 export interface CardProps {
