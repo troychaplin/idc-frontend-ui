@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Main } from '../components/Main/Main';
 import { Section } from '../components/Section/Section';
@@ -142,7 +142,7 @@ export const Article: Story = {
           orci, id ultricies felis dapibus eu.
         </p>
 
-        <Section as="div" maxWidth="3xl" bgType="white">
+        <Section maxWidth="3xl" bgType="white">
           <Header title="Got questions? Let us help you!" size="md" weight="bold" isItalic isCenter>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat urna sed euismod

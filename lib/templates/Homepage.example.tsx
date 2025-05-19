@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Main } from '../components/Main/Main';
 import { Section } from '../components/Section/Section';
