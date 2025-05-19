@@ -1,19 +1,20 @@
 // import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Main } from '../components/Main/Main';
-import { Section } from '../components/Section/Section';
+
 import { BluePanel } from '../components/BluePanel/BluePanel';
 import { Button } from '../components/Button/Button';
 import { ButtonGroup } from '../components/ButtonGroup/ButtonGroup';
 import { Card } from '../components/Card/Card';
+import { CardData } from '../components/Card/data';
 import { CardGroup } from '../components/CardGroup/CardGroup';
+import { DefinitionData } from '../components/Definition/data';
 import { Definition } from '../components/Definition/Definition';
 import { Footer } from '../components/Footer/Footer';
-import { Hero } from '../components/Hero/Hero';
 import { Header } from '../components/Header/Header';
+import { Hero } from '../components/Hero/Hero';
+import { Main } from '../components/Main/Main';
 import { Navigation } from '../components/Navigation/Navigation';
-import { CardData } from '../components/Card/data';
-import { DefinitionData } from '../components/Definition/data';
+import { Section } from '../components/Section/Section';
 import { navItems } from '../data/navigation';
 
 const meta = {

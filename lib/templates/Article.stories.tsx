@@ -1,13 +1,14 @@
 // import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Main } from '../components/Main/Main';
-import { Section } from '../components/Section/Section';
-import { Footer } from '../components/Footer/Footer';
+
 import { Columns } from '../components/Columns/Columns';
-import { Header } from '../components/Header/Header';
-import { Definition } from '../components/Definition/Definition';
 import { DefinitionData } from '../components/Definition/data';
+import { Definition } from '../components/Definition/Definition';
+import { Footer } from '../components/Footer/Footer';
+import { Header } from '../components/Header/Header';
+import { Main } from '../components/Main/Main';
 import { Navigation } from '../components/Navigation/Navigation';
+import { Section } from '../components/Section/Section';
 import { navItems } from '../data/navigation';
 
 const meta = {
