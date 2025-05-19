@@ -10,77 +10,31 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
-    'plugin:jsx-a11y/recommended',
-    'plugin:import/recommended',
-    'plugin:import/typescript',
+    'plugin:storybook/recommended',
     'prettier',
   ],
-  overrides: [
-    {
-      files: ['*.ts', '*.tsx'],
-      excludedFiles: ['vite.config.ts'],
-      parser: '@typescript-eslint/parser',
-      parserOptions: {
-        project: './tsconfig.json',
-        ecmaVersion: 2021,
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
     },
-    {
-      files: ['*.js', '*.jsx'],
-      parser: '@babel/eslint-parser',
-      parserOptions: {
-        requireConfigFile: false,
-        ecmaVersion: 2021,
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-    },
-  ],
-  plugins: ['react', 'jsx-a11y', 'import', '@typescript-eslint'],
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+  },
+  plugins: ['react', 'react-hooks', 'react-refresh', '@typescript-eslint', 'prettier'],
   settings: {
     react: {
       version: 'detect',
     },
-    'import/resolver': {
-      typescript: {
-        alwaysTryTypes: true,
-        project: './tsconfig.json',
-      },
-      node: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
-      },
-    },
   },
   rules: {
-    'import/no-unresolved': 'error',
-    'import/no-duplicates': 'warn',
-    'import/default': 'off',
-    'import/export': 'off',
-    'import/order': [
-      'error',
-      {
-        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
-        'newlines-between': 'always',
-        alphabetize: {
-          order: 'asc',
-          caseInsensitive: true,
-        },
-      },
-    ],
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': 'error',
+    'no-undef': 'error',
+    '@typescript-eslint/no-explicit-any': 'error',
+    'prettier/prettier': 'error',
+    'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
     'react/react-in-jsx-scope': 'off',
-    'react/prop-types': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/no-explicit-any': 'warn',
-    '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
-    '@typescript-eslint/no-empty-object-type': 'off',
-    'jsx-a11y/click-events-have-key-events': 'off',
-    'jsx-a11y/interactive-supports-focus': 'off',
-    'jsx-a11y/anchor-is-valid': 'off',
   },
+  ignorePatterns: ['dist/**', 'node_modules/**', 'public/**'],
 };

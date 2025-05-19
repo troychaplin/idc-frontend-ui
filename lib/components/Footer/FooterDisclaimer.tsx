@@ -11,7 +11,8 @@ export const FooterDisclaimer = () => {
               href="https://www.bbb.org/ca/on/ottawa/profile/legal-information-services/international-documents-canada-0117-50321#sealclick"
               title="Click for the Business Review of International Documents Canada, a Legal Information Services in Ottawa ON"
               className="mx-auto grow-0 shrink-0 md:mx-0"
-              target="_blank" rel="noreferrer"
+              target="_blank"
+              rel="noreferrer"
             >
               <img
                 src={`${BASE_PATH}/assets/logos/bbb-logo.png`}

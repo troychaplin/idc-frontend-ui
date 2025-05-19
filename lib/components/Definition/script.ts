@@ -1,3 +1,5 @@
+import React from 'react';
+
 export const toggleAccordion = (event: React.MouseEvent<HTMLElement>) => {
   const target = event.currentTarget,
     icon = target.querySelector('.idc-accordion-icon'),

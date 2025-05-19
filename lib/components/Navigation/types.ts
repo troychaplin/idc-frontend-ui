@@ -25,5 +25,3 @@ export interface NavigationMobileProps {
 export interface NavigationDesktopProps {
   children?: ReactNode;
 }
-
-export interface NavigationAsideProps {}

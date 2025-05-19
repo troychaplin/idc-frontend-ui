@@ -1,3 +1,5 @@
+import React from 'react';
+
 export interface CardContentProps {
   children?: React.ReactNode;
   text?: string;

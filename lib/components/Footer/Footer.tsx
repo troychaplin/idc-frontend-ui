@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { FooterContact } from './FooterContact';
 import { FooterDisclaimer } from './FooterDisclaimer';
 

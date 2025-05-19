@@ -1,3 +1,10 @@
-export * from './Navigation';
-export * from './types';
-export type { NavigationProps } from './Navigation';
+export { Navigation } from './Navigation';
+
+export type {
+  NavigationProps,
+  NavigationLogoProps,
+  NavigationItem,
+  NavigationMenuProps,
+  NavigationMobileProps,
+  NavigationDesktopProps,
+} from './types';

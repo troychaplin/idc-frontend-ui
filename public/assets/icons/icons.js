@@ -51,4 +51,4 @@ export const iconNames = [
   { value: 'users-solid', label: 'Users solid' },
   { value: 'video-solid', label: 'Video solid' },
   { value: 'youtube-brands-solid', label: 'Youtube brands solid' },
-]
+];
