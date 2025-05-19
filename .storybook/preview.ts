@@ -47,8 +47,8 @@ const preview: Preview = {
         order: [
           'Get Started',
           ['Introduction', 'How to Use', 'Changelog'],
-          'Templates',
-          ['Homepage', 'Article', 'Landing Page'],
+          //   'Templates',
+          //   ['Homepage', 'Article', 'Landing Page'],
           'Components',
           'Layouts',
           ['Body', 'Main', 'Section', 'Article', 'Column', 'Aside'],
