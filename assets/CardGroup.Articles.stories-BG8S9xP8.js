@@ -1,0 +1,24 @@
+import{j as r}from"./jsx-runtime-BYYWji4R.js";import{C as s}from"./CardGroup-DawLOYIR.js";import{C as e}from"./Card-B8GaS4CV.js";import{M as u}from"./Main-CKtuN2O-.js";import{S as g}from"./Section-DCsvNflC.js";import{C as h}from"./data-B_JeHtaU.js";import"./index-ClcD9ViR.js";import"./_commonjsHelpers-Cpj98o6Y.js";import"./propClasses-BlA50HdU.js";import"./Icon-D2-D9bWN.js";const w={title:"Components/Card Group/Article Cards",component:s,tags:["autodocs"]},a={args:{},render:d=>r.jsx(u,{children:r.jsx(g,{children:r.jsx(s,{...d,children:h.slice(0,3).map(({id:o,link:m,title:p,excerpt:c,image:l,alt:x,date:C})=>r.jsxs(e,{addFlex:!0,children:[r.jsx(e.Figure,{children:r.jsx("img",{className:"rounded-md",src:l,alt:x,width:"400",height:"300"})}),r.jsx(e.Header,{title:p,date:C}),r.jsx(e.Content,{text:c,link:m,isExcerpt:!0})]},o))})})})};var t,n,i;a.parameters={...a.parameters,docs:{...(t=a.parameters)==null?void 0:t.docs,source:{originalSource:`{
+  args: {} as CardGroupProps,
+  render: args => <Main>
+      <Section>
+        <CardGroup {...args}>
+          {data.slice(0, 3).map(({
+          id,
+          link,
+          title,
+          excerpt,
+          image,
+          alt,
+          date
+        }) => <Card key={id} addFlex>
+              <Card.Figure>
+                <img className="rounded-md" src={image} alt={alt} width="400" height="300" />
+              </Card.Figure>
+              <Card.Header title={title} date={date} />
+              <Card.Content text={excerpt} link={link} isExcerpt />
+            </Card>)}
+        </CardGroup>
+      </Section>
+    </Main>
+}`,...(i=(n=a.parameters)==null?void 0:n.docs)==null?void 0:i.source}}};const H=["Primary"];export{a as Primary,H as __namedExportsOrder,w as default};
