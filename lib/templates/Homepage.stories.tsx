@@ -203,11 +203,7 @@ const HomepageWithModal = () => {
       </Footer>
 
       <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)} title="Search">
-        <p>
-          We take the anxiety and uncertainty out of the document apostille process in these three
-          simple steps! We take the anxiety and uncertainty out of the document apostille process in
-          these three simple steps!
-        </p>
+        Search
       </Modal>
     </>
   );

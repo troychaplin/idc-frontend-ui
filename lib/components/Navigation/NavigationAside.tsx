@@ -1,9 +1,6 @@
 import React from 'react';
 import { useNavigation } from './context';
-
-interface NavigationAsideProps {
-  onSearchClick?: () => void;
-}
+import type { NavigationAsideProps } from './types';
 
 export const NavigationAside: React.FC<NavigationAsideProps> = ({ onSearchClick }) => {
   const { isOpen, setIsOpen } = useNavigation();
@@ -44,7 +41,7 @@ export const NavigationAside: React.FC<NavigationAsideProps> = ({ onSearchClick 
         )}
       </button>
 
-      <button className="hidden 4xl:block" type="button" onClick={onSearchClick}>
+      <button className="block" type="button" onClick={onSearchClick}>
         <svg
           className="fill-idc-black-300 hover:fill-idc-orange-500 w-[16px] h-[16px] md:w-[20px] md:h-[20px]"
           xmlns="http://www.w3.org/2000/svg"

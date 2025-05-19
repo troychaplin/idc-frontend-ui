@@ -6,7 +6,7 @@ import { NavigationDesktop } from './NavigationDesktop';
 import { NavigationLogo } from './NavigationLogo';
 import { NavigationMenu } from './NavigationMenu';
 import { NavigationMobile } from './NavigationMobile';
-import type { NavigationProps } from './types';
+import type { NavigationProps, NavigationAsideProps } from './types';
 
 const NavigationContainer = ({ children }: NavigationProps) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,4 +54,4 @@ export const Navigation = Object.assign(NavigationContainer, {
   Aside: NavigationAside,
 });
 
-export type { NavigationProps };
+export type { NavigationProps, NavigationAsideProps };
