@@ -13,6 +13,7 @@ import { Hero } from '../components/Hero/Hero';
 import { Header } from '../components/Header/Header';
 import { LeadIn } from '../components/LeadIn/LeadIn';
 import { Navigation } from '../components/Navigation/Navigation';
+import { Modal } from '../components/Modal/Modal';
 import { CardData } from '../components/Card/data';
 import { DefinitionData } from '../components/Definition/data';
 import { navItems } from '../data/navigation';
@@ -27,14 +28,20 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Homepage: Story = {
-  render: () => (
+const HomepageWithModal = () => {
+  const [modalOpen, setModalOpen] = React.useState(false);
+
+  const handleSearchClick = () => {
+    setModalOpen(true);
+  };
+
+  return (
     <>
       <Navigation>
         <Navigation.Desktop>
           <Navigation.Logo siteUrl="/" />
           <Navigation.Menu items={navItems} />
-          <Navigation.Aside />
+          <Navigation.Aside onSearchClick={handleSearchClick} />
         </Navigation.Desktop>
         <Navigation.Mobile items={navItems} />
       </Navigation>
@@ -191,6 +198,18 @@ export const Homepage: Story = {
       </Main>
 
       <Footer />
+
+      <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)} title="Search">
+        <p>
+          We take the anxiety and uncertainty out of the document apostille process in these three
+          simple steps! We take the anxiety and uncertainty out of the document apostille process in
+          these three simple steps!
+        </p>
+      </Modal>
     </>
-  ),
+  );
+};
+
+export const Homepage: Story = {
+  render: () => <HomepageWithModal />,
 };

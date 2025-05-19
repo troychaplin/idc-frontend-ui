@@ -15,13 +15,13 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const ModalWithState = (args: ModalProps) => {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [modalOpen, setModalOpen] = React.useState(false);
 
   return (
     <div style={{ padding: '2rem' }}>
       <button
         type="button"
-        onClick={() => setIsOpen(true)}
+        onClick={() => setModalOpen(true)}
         style={{
           padding: '8px 16px',
           cursor: 'pointer',
@@ -30,7 +30,7 @@ const ModalWithState = (args: ModalProps) => {
       >
         Open Modal
       </button>
-      <Modal {...args} isOpen={isOpen} onClose={() => setIsOpen(false)} />
+      <Modal {...args} isOpen={modalOpen} onClose={() => setModalOpen(false)} />
     </div>
   );
 };

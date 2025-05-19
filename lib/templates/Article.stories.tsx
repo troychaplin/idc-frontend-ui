@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Columns } from '../components/Columns/Columns';
@@ -9,6 +9,7 @@ import { Header } from '../components/Header/Header';
 import { Main } from '../components/Main/Main';
 import { Navigation } from '../components/Navigation/Navigation';
 import { Section } from '../components/Section/Section';
+import { Modal } from '../components/Modal/Modal';
 import { navItems } from '../data/navigation';
 
 const meta = {
@@ -21,14 +22,20 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Article: Story = {
-  render: () => (
+const ArticleWithModal = () => {
+  const [modalOpen, setModalOpen] = React.useState(false);
+
+  const handleSearchClick = () => {
+    setModalOpen(true);
+  };
+
+  return (
     <>
       <Navigation>
         <Navigation.Desktop>
           <Navigation.Logo siteUrl="/" />
           <Navigation.Menu items={navItems} />
-          <Navigation.Aside />
+          <Navigation.Aside onSearchClick={handleSearchClick} />
         </Navigation.Desktop>
         <Navigation.Mobile items={navItems} />
       </Navigation>
@@ -282,17 +289,6 @@ export const Article: Story = {
           orci, id ultricies felis dapibus eu.
         </p>
 
-        {/* <figure className="ui-figure alignleft size-medium">
-            <img
-              className=""
-              src="https://picsum.photos/id/20/300/225"
-              alt="Images require alt text"
-              width={300}
-              height={225}
-              decoding="async"
-            />
-          </figure> */}
-
         <p>
           Quisque erat diam, porta quis libero eget, ultrices ornare nisi. Vestibulum accumsan
           mauris sed elit maximus dignissim. Suspendisse ac facilisis felis. Mauris rhoncus mauris
@@ -311,17 +307,6 @@ export const Article: Story = {
           nibh fringilla lacinia. Quisque tellus diam, imperdiet ut auctor sit amet, maximus ac
           ligula. Pellentesque posuere orci at risus pellentesque, et ultrices urna iaculis.
         </p>
-
-        {/* <figure className="ui-figure size-full">
-            <img
-              className=""
-              src="https://picsum.photos/id/20/904/678"
-              alt="Images require alt text"
-              width={904}
-              height={678}
-              decoding="async"
-            />
-          </figure> */}
 
         <p>
           Quisque sagittis interdum felis, ut sollicitudin sem dapibus gravida. Proin in aliquam
@@ -343,6 +328,18 @@ export const Article: Story = {
       </Main>
 
       <Footer />
+
+      <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)} title="Search">
+        <p>
+          We take the anxiety and uncertainty out of the document apostille process in these three
+          simple steps! We take the anxiety and uncertainty out of the document apostille process in
+          these three simple steps!
+        </p>
+      </Modal>
     </>
-  ),
+  );
+};
+
+export const Article: Story = {
+  render: () => <ArticleWithModal />,
 };
