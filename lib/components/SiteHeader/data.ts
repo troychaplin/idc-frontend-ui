@@ -4,4 +4,4 @@ export const NavItems = [
   { label: 'Documents', href: '#' },
   { label: 'Embassies', href: '#' },
   { label: 'Resources', href: '#' },
-]
+];

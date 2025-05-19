@@ -12,7 +12,7 @@ export const uiMaxWidth = {
   '7xl': 'max-w-7xl',
   max: 'max-w-screen-2xl',
   full: 'max-w-full',
-}
+};
 
 export const uiGridColumns = {
   1: '',
@@ -23,26 +23,26 @@ export const uiGridColumns = {
   '1/3': 'lg:grid-cols-3 lg:[&>*:last-child]:col-span-2',
   '2/3': 'lg:grid-cols-3 lg:[&>*:first-child]:col-span-2',
   '60/40': 'md:grid-cols-2 lg:grid-cols-60-40',
-}
+};
 
 export const uiColumns = {
   1: 'columns-1',
   2: 'columns-1 md:columns-2',
   3: 'columns-1 sm:columns-2 md:columns-3',
   4: 'columns-1 md:columns-2 lg:columns-4',
-}
+};
 
 export const uiFlexRow = {
   sm: 'sm:flex-row',
   md: 'md:flex-row',
   lg: 'lg:flex-row',
-}
+};
 
 export const uiFlexCol = {
   sm: 'sm:flex-col',
   md: 'md:flex-col',
   lg: 'lg:flex-col',
-}
+};
 
 export const uiBgTypes = {
   none: '',
@@ -50,7 +50,7 @@ export const uiBgTypes = {
   blue: 'bg-idc-blue-100 py-8 md:py-16',
   gradient: 'bg-gradient-to-t from-idc-blue-100 to-white py-8 md:py-16',
   edge: 'bg-white-blue-edge py-8 md:py-16',
-}
+};
 
 export const uiRoundedCorners = {
   none: 'rounded-none',
@@ -61,7 +61,7 @@ export const uiRoundedCorners = {
   xl: 'rounded-xl',
   '2xl': 'rounded-2xl',
   full: 'rounded-full',
-}
+};
 
 export const uiDropShadow = {
   none: 'shadow-none',
@@ -70,18 +70,18 @@ export const uiDropShadow = {
   lg: 'shadow-lg',
   xl: 'shadow-xl',
   '2xl': 'shadow-2xl',
-}
+};
 
 export const headerSizeClasses = {
   sm: `text-lg md:text-xl lg:text-2xl lg:leading-[2rem]`,
   md: `text-xl md:text-2xl lg:text-3xl lg:leading-[2.5rem]`,
   lg: `text-2xl md:text-3xl lg:text-4xl lg:leading-[3rem]`,
   xl: `text-2xl md:text-3xl lg:text-4xl xl:text-5xl xl:leading-[3.5rem]`,
-}
+};
 
 export const fontWeightClasses = {
   light: `font-light`,
   normal: `font-normal`,
   semibold: `font-semibold`,
   bold: `font-bold`,
-}
+};

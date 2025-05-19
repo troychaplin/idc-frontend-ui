@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export interface CardCiteProps {
   children?: React.ReactNode;
@@ -14,4 +14,4 @@ export const CardCite = ({ children, cite }: CardCiteProps) => {
   );
 };
 
-CardCite.displayName = "Card.Cite";
+CardCite.displayName = 'Card.Cite';

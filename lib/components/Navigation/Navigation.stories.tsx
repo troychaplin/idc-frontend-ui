@@ -1,7 +1,7 @@
-import React from 'react'
-import type { Meta, StoryObj } from '@storybook/react'
-import { Navigation } from './Navigation'
-import { navItems } from '../../data/navigation'
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { Navigation } from './Navigation';
+import { navItems } from '../../data/navigation';
 
 const meta: Meta<typeof Navigation> = {
   title: 'Components/Navigation',
@@ -11,10 +11,10 @@ const meta: Meta<typeof Navigation> = {
   },
   args: {},
   tags: ['autodocs'],
-}
+};
 
-export default meta
-type Story = StoryObj<typeof Navigation>
+export default meta;
+type Story = StoryObj<typeof Navigation>;
 
 export const Primary: Story = {
   args: {},
@@ -28,4 +28,4 @@ export const Primary: Story = {
       <Navigation.Mobile items={navItems} />
     </Navigation>
   ),
-}
+};

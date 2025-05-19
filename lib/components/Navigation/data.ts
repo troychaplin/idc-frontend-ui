@@ -4,4 +4,4 @@ const navItems = [
   { id: 3, label: 'Documents', href: '#' },
   { id: 4, label: 'Embassies', href: '#' },
   { id: 5, label: 'Resources', href: '#' },
-]
+];

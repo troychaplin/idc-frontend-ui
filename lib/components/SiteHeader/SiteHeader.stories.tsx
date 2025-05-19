@@ -1,7 +1,7 @@
-import React from 'react'
-import type { Meta, StoryObj } from '@storybook/react'
-import { SiteHeader, SiteHeaderProps } from './SiteHeader'
-import { NavItems } from './data'
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { SiteHeader, SiteHeaderProps } from './SiteHeader';
+import { NavItems } from './data';
 
 const meta: Meta<typeof SiteHeader> = {
   title: 'Components/Site Header',
@@ -10,10 +10,10 @@ const meta: Meta<typeof SiteHeader> = {
   parameters: {
     layout: 'fullscreen',
   },
-}
+};
 
-export default meta
-type Story = StoryObj<typeof meta>
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {} as SiteHeaderProps,
@@ -32,4 +32,4 @@ export const Primary: Story = {
       <SiteHeader.Aside />
     </SiteHeader>
   ),
-}
+};

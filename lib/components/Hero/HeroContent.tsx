@@ -1,12 +1,12 @@
-import React from "react";
-import { Header } from "../Header/Header";
+import React from 'react';
+import { Header } from '../Header/Header';
 
 export interface HeroContentProps {
   children: React.ReactNode;
   title: string;
   date?: string;
   datePrefix?: string;
-  headerType?: "h1" | "h2" | "h3";
+  headerType?: 'h1' | 'h2' | 'h3';
   width?: number;
   isCenter?: boolean;
   isItalic?: boolean;
@@ -18,23 +18,23 @@ export const HeroContent = ({
   date,
   datePrefix,
   width = 50,
-  headerType = "h2",
+  headerType = 'h2',
   isCenter,
   isItalic,
 }: HeroContentProps) => {
-  let headerSize: "sm" | "md" | "lg" | "xl";
+  let headerSize: 'sm' | 'md' | 'lg' | 'xl';
   switch (headerType) {
-    case "h1":
-      headerSize = "xl";
+    case 'h1':
+      headerSize = 'xl';
       break;
-    case "h2":
-      headerSize = "lg";
+    case 'h2':
+      headerSize = 'lg';
       break;
-    case "h3":
-      headerSize = "md";
+    case 'h3':
+      headerSize = 'md';
       break;
     default:
-      headerSize = "sm";
+      headerSize = 'sm';
       break;
   }
 
@@ -57,4 +57,4 @@ export const HeroContent = ({
   );
 };
 
-HeroContent.displayName = "Hero.Content";
+HeroContent.displayName = 'Hero.Content';

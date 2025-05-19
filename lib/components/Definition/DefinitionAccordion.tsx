@@ -1,14 +1,16 @@
-import React from 'react'
-import { toggleAccordion } from './script'
+import React from 'react';
+import { toggleAccordion } from './script';
 
 export interface DefinitionAccordionProps {
-  children: React.ReactNode
-  title: string
+  children: React.ReactNode;
+  title: string;
 }
 
 export const DefinitionAccordion = ({ title, children }: DefinitionAccordionProps) => {
   const titleLabel =
-    title && typeof title === 'string' ? 'idc-accordion-' + title.toLowerCase().replace(/ +/g, '-') : ''
+    title && typeof title === 'string'
+      ? 'idc-accordion-' + title.toLowerCase().replace(/ +/g, '-')
+      : '';
 
   return (
     <div className="grid px-2 py-4 border-b idc-accordion border-idc-black-100 first:border-t">
@@ -39,7 +41,7 @@ export const DefinitionAccordion = ({ title, children }: DefinitionAccordionProp
         {children}
       </dd>
     </div>
-  )
-}
+  );
+};
 
-DefinitionAccordion.displayName = 'Description.Accordion'
+DefinitionAccordion.displayName = 'Description.Accordion';

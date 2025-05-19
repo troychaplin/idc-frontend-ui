@@ -1,5 +1,5 @@
 // Create a config file or environment variable
-const BASE_PATH = process.env.NODE_ENV === 'production' ? '/idc-frontend-ui' : ''
+const BASE_PATH = process.env.NODE_ENV === 'production' ? '/idc-frontend-ui' : '';
 
 export const FooterDisclaimer = () => {
   return (
@@ -42,5 +42,5 @@ export const FooterDisclaimer = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};

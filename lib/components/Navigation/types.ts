@@ -1,29 +1,29 @@
-import { ReactNode } from 'react'
+import { ReactNode } from 'react';
 
 export interface NavigationProps {
-  children?: ReactNode
+  children?: ReactNode;
 }
 
 export interface NavigationLogoProps {
-  siteUrl?: string
+  siteUrl?: string;
 }
 
 export interface NavigationItem {
-  id: number
-  label: string
-  href: string
+  id: number;
+  label: string;
+  href: string;
 }
 
 export interface NavigationMenuProps {
-  items: NavigationItem[]
+  items: NavigationItem[];
 }
 
 export interface NavigationMobileProps {
-  items: NavigationItem[]
+  items: NavigationItem[];
 }
 
 export interface NavigationDesktopProps {
-  children?: ReactNode
+  children?: ReactNode;
 }
 
-export interface NavigationAsideProps {} 
+export interface NavigationAsideProps {}
