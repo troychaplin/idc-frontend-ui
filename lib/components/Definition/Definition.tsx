@@ -1,5 +1,6 @@
-import React from 'react'
-import { DefinitionAccordion } from "./DefinitionAccordion";
+import React from 'react';
+
+import { DefinitionAccordion } from './DefinitionAccordion';
 
 export interface DefinitionProps {
   children: React.ReactNode;
@@ -13,4 +14,4 @@ export const Definition = Object.assign(DefinitionWrapper, {
   Accordion: DefinitionAccordion,
 });
 
-DefinitionWrapper.displayName = "Definition";
+DefinitionWrapper.displayName = 'Definition';

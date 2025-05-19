@@ -1,33 +1,34 @@
-'use client'
-import React, { useState, useEffect, useCallback } from 'react'
-import { SiteLogo } from './SiteHeaderLogo'
-import { Navigation } from './SiteHeaderNav'
-import { Aside } from './SiteHeaderAside'
+'use client';
+import React, { useState, useEffect, useCallback } from 'react';
+
+import { Aside } from './SiteHeaderAside';
+import { SiteLogo } from './SiteHeaderLogo';
+import { Navigation } from './SiteHeaderNav';
 
 export interface SiteHeaderProps {
-  children?: React.ReactNode
+  children?: React.ReactNode;
 }
 
 const SiteHeaderContainer = ({ children }: SiteHeaderProps) => {
-  const [visible, setVisible] = useState(true)
-  const [lastScrollY, setLastScrollY] = useState(0)
+  const [visible, setVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const handleScroll = useCallback(() => {
-    const currentScrollY = window.scrollY
+    const currentScrollY = window.scrollY;
     if (currentScrollY > lastScrollY && currentScrollY > 100) {
-      setVisible(false)
+      setVisible(false);
     } else {
-      setVisible(true)
+      setVisible(true);
     }
-    setLastScrollY(currentScrollY)
-  }, [lastScrollY])
+    setLastScrollY(currentScrollY);
+  }, [lastScrollY]);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [handleScroll])
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [handleScroll]);
 
   return (
     <header
@@ -37,11 +38,11 @@ const SiteHeaderContainer = ({ children }: SiteHeaderProps) => {
     >
       <div className="flex justify-between gap-2">{children}</div>
     </header>
-  )
-}
+  );
+};
 
 export const SiteHeader = Object.assign(SiteHeaderContainer, {
   SiteLogo,
   Navigation,
   Aside,
-})
+});

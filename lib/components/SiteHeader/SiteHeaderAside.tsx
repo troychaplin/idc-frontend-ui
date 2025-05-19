@@ -17,5 +17,5 @@ export const Aside = () => {
         FR
       </button>
     </div>
-  )
-}
+  );
+};

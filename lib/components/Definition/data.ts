@@ -97,7 +97,8 @@ export const DefinitionData = [
   {
     id: 17,
     title: 'Try player attention father clearly must.',
-    content: 'Herself weight try must room test. Degree line more keep though as. Field doctor part arm language.',
+    content:
+      'Herself weight try must room test. Degree line more keep though as. Field doctor part arm language.',
   },
   {
     id: 18,
@@ -117,4 +118,4 @@ export const DefinitionData = [
     content:
       'Nor house face side despite budget concern. Officer candidate enter. Build value piece your quality fact if. Law skill war scientist. Truth would themselves resource center board.',
   },
-]
+];

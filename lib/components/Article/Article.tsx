@@ -1,10 +1,12 @@
-import React from 'react'
+import React from 'react';
 
 export interface ArticleProps {
-  children?: React.ReactNode
-  content?: string
+  children?: React.ReactNode;
+  content?: string;
 }
 
 export const Article = ({ children, content }: ArticleProps) => {
-  return <article>{content ? <div dangerouslySetInnerHTML={{ __html: content }} /> : children}</article>
-}
+  return (
+    <article>{content ? <div dangerouslySetInnerHTML={{ __html: content }} /> : children}</article>
+  );
+};

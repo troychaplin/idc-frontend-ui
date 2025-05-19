@@ -439,7 +439,8 @@ export const CardData = [
     id: 17,
     title: 'Try player attention father clearly must.',
     date: '2020-07-08 10:11:26',
-    excerpt: 'Herself weight try must room test. Degree line more keep though as. Field doctor part arm language.',
+    excerpt:
+      'Herself weight try must room test. Degree line more keep though as. Field doctor part arm language.',
     link: '#',
     image: 'https://picsum.photos/id/65/600/400',
     alt: 'Side real onto owner sure.',
@@ -542,4 +543,4 @@ export const CardData = [
     author: 'Steven Hall',
     quote: 'A strong and informative read on modern scientific advancements.',
   },
-]
+];

@@ -1,15 +1,15 @@
-import React from 'react'
-import type { Meta, StoryObj } from '@storybook/react'
-import { Section, SectionProps } from './Section'
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { Section, SectionProps } from './Section';
 
 const meta: Meta<typeof Section> = {
   title: 'Layouts/Section',
   component: Section,
   tags: ['autodocs'],
-} satisfies Meta<typeof Section>
+} satisfies Meta<typeof Section>;
 
-export default meta
-type Story = StoryObj<typeof meta>
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
@@ -18,5 +18,5 @@ export const Primary: Story = {
     isBlue: false,
     maxWidth: '5xl',
   } as SectionProps,
-  render: (args) => <Section {...args} />,
-}
+  render: args => <Section {...args} />,
+};

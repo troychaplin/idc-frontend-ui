@@ -1,9 +1,9 @@
-import { uiMaxWidth } from '../../utils/propClasses'
-type maxWidthKeys = keyof typeof uiMaxWidth
+import { uiMaxWidth } from '../../utils/propClasses';
+type maxWidthKeys = keyof typeof uiMaxWidth;
 
 export interface PlaceholderProps {
-  name?: string
-  maxWidth?: maxWidthKeys
+  name?: string;
+  maxWidth?: maxWidthKeys;
 }
 
 export const Placeholder = ({ name = 'TBD', maxWidth = '5xl' }: PlaceholderProps) => {
@@ -13,5 +13,5 @@ export const Placeholder = ({ name = 'TBD', maxWidth = '5xl' }: PlaceholderProps
     >
       <p>{name}</p>
     </div>
-  )
-}
+  );
+};

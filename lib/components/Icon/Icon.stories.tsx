@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import { Icon } from './Icon'
+import type { Meta, StoryObj } from '@storybook/react';
+import { Icon } from './Icon';
 
 const meta = {
   title: 'Components/Icon',
@@ -8,37 +8,37 @@ const meta = {
   argTypes: {
     size: {
       control: 'select',
-      options: ['sm', 'md', 'lg', 'xl']
+      options: ['sm', 'md', 'lg', 'xl'],
     },
     color: {
-      control: 'color'
-    }
-  }
-} satisfies Meta<typeof Icon>
+      control: 'color',
+    },
+  },
+} satisfies Meta<typeof Icon>;
 
-export default meta
-type Story = StoryObj<typeof meta>
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
     name: 'phone-volume-solid',
     size: 'md',
-    color: 'currentColor'
-  }
-}
+    color: 'currentColor',
+  },
+};
 
 export const Large: Story = {
   args: {
     name: 'phone-volume-solid',
     size: 'xl',
-    color: 'rgb(40 98 161)'
-  }
-}
+    color: 'rgb(40 98 161)',
+  },
+};
 
 export const CustomColor: Story = {
   args: {
     name: 'phone-volume-solid',
     size: 'lg',
-    color: '#ff0000'
-  }
-} 
+    color: '#ff0000',
+  },
+};
