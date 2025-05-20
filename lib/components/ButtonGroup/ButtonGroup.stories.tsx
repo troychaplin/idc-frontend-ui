@@ -1,22 +1,22 @@
-import React from 'react'
-import type { Meta, StoryObj } from '@storybook/react'
-import { ButtonGroup, ButtonGroupProps } from './ButtonGroup'
-import { Button } from '../Button/Button'
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { ButtonGroup, ButtonGroupProps } from './ButtonGroup';
+import { Button } from '../Button/Button';
 
 const meta: Meta<typeof ButtonGroup> = {
   title: 'Components/Button Group',
   component: ButtonGroup,
   tags: ['autodocs'],
-}
+};
 
-export default meta
-type Story = StoryObj<typeof meta>
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
     isCenter: false,
   } as ButtonGroupProps,
-  render: (args) => (
+  render: args => (
     <ButtonGroup {...args}>
       <Button label="Button One" />
       <Button label="Button Two" color="dark-orange" isOutline />
@@ -24,4 +24,4 @@ export const Primary: Story = {
       <Button label="Button Four" color="dark-blue" isOutline noBg />
     </ButtonGroup>
   ),
-}
+};

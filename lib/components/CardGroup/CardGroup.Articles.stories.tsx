@@ -1,24 +1,24 @@
-import React from 'react'
-import type { Meta, StoryObj } from '@storybook/react'
-import { CardGroup, CardGroupProps } from './CardGroup'
-import { Card } from '../Card/Card'
-import { Main } from '../Main/Main'
-import { Section } from '../Section/Section'
-import { CardData as data } from '../Card/data'
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { CardGroup, CardGroupProps } from './CardGroup';
+import { Card } from '../Card/Card';
+import { Main } from '../Main/Main';
+import { Section } from '../Section/Section';
+import { CardData as data } from '../Card/data';
 
 const meta = {
   title: 'Components/Card Group/Article Cards',
   component: CardGroup,
   // subcomponents: { Card },
   tags: ['autodocs'],
-} satisfies Meta<typeof CardGroup>
+} satisfies Meta<typeof CardGroup>;
 
-export default meta
-type Story = StoryObj<typeof meta>
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {} as CardGroupProps,
-  render: (args) => (
+  render: args => (
     <Main>
       <Section>
         <CardGroup {...args}>
@@ -35,4 +35,4 @@ export const Primary: Story = {
       </Section>
     </Main>
   ),
-}
+};

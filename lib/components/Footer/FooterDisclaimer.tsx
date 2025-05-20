@@ -1,5 +1,5 @@
 // Create a config file or environment variable
-const BASE_PATH = process.env.NODE_ENV === 'production' ? '/idc-frontend-ui' : ''
+const BASE_PATH = process.env.NODE_ENV === 'production' ? '/idc-frontend-ui' : '';
 
 export const FooterDisclaimer = () => {
   return (
@@ -12,6 +12,7 @@ export const FooterDisclaimer = () => {
               title="Click for the Business Review of International Documents Canada, a Legal Information Services in Ottawa ON"
               className="mx-auto grow-0 shrink-0 md:mx-0"
               target="_blank"
+              rel="noreferrer"
             >
               <img
                 src={`${BASE_PATH}/assets/logos/bbb-logo.png`}
@@ -42,5 +43,5 @@ export const FooterDisclaimer = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};

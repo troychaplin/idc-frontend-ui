@@ -41,5 +41,5 @@ export const FooterContact = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};

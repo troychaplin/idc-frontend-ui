@@ -1,10 +1,12 @@
+import React from 'react';
+
 export interface CardContentProps {
-  children?: React.ReactNode
-  text?: string
-  link?: string
-  linkText?: string
-  isExcerpt?: boolean
-  hideMobile?: boolean
+  children?: React.ReactNode;
+  text?: string;
+  link?: string;
+  linkText?: string;
+  isExcerpt?: boolean;
+  hideMobile?: boolean;
 }
 
 export const CardContent = ({
@@ -15,7 +17,7 @@ export const CardContent = ({
   hideMobile = false,
   children,
 }: CardContentProps) => {
-  const hideMobileClass = hideMobile ? 'hidden md:block' : ''
+  const hideMobileClass = hideMobile ? 'hidden md:block' : '';
 
   return (
     <>
@@ -35,7 +37,7 @@ export const CardContent = ({
         </p>
       )}
     </>
-  )
-}
+  );
+};
 
-CardContent.displayName = 'Card.Content'
+CardContent.displayName = 'Card.Content';

@@ -1,25 +1,38 @@
-import React from 'react'
-import type { Meta, StoryObj } from '@storybook/react'
-import { Button, ButtonProps } from './Button'
+import type { Meta, StoryObj } from '@storybook/react';
+import { fn } from '@storybook/test';
+import { Button } from './Button';
 
 const meta = {
   title: 'Components/Button',
   component: Button,
   tags: ['autodocs'],
-} satisfies Meta<typeof Button>
+} satisfies Meta<typeof Button>;
 
-export default meta
-type Story = StoryObj<typeof meta>
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
     label: 'Button',
-    color: 'dark-blue',
+    onClick: fn(),
     type: 'button',
-    size: 'md',
-    isOutline: false,
-    noBg: false,
-    onClick: () => console.log('Button clicked'),
-  } as ButtonProps,
-  render: (args) => <Button {...args} />,
-}
+  },
+};
+
+export const Secondary: Story = {
+  args: {
+    label: 'Button',
+    color: 'light-blue',
+    onClick: fn(),
+    type: 'button',
+  },
+};
+
+export const Outline: Story = {
+  args: {
+    label: 'Button',
+    isOutline: true,
+    onClick: fn(),
+    type: 'button',
+  },
+};

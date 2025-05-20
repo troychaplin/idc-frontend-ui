@@ -1,19 +1,19 @@
 export interface CardHeaderProps {
-  title: string
-  as?: 'h2' | 'h3'
-  date?: string | Date
-  datePrefix?: string
+  title: string;
+  as?: 'h2' | 'h3';
+  date?: string | Date;
+  datePrefix?: string;
 }
 
 export const CardHeader = ({ title, as = 'h2', date, datePrefix }: CardHeaderProps) => {
-  const HeaderComponent = as
+  const HeaderComponent = as;
   const formattedDate = date
     ? new Date(date).toLocaleString('en-US', {
         month: 'long',
         day: '2-digit',
         year: 'numeric',
       })
-    : null
+    : null;
 
   return (
     <header>
@@ -26,7 +26,7 @@ export const CardHeader = ({ title, as = 'h2', date, datePrefix }: CardHeaderPro
         </time>
       )}
     </header>
-  )
-}
+  );
+};
 
-CardHeader.displayName = 'Card.Header'
+CardHeader.displayName = 'Card.Header';

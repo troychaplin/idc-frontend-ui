@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export interface CardQuoteProps {
   children?: React.ReactNode;
@@ -13,4 +13,4 @@ export const CardQuote = ({ children }: CardQuoteProps) => {
   );
 };
 
-CardQuote.displayName = "Card.Quote";
+CardQuote.displayName = 'Card.Quote';

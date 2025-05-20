@@ -1,15 +1,11 @@
-import React from 'react'
+import React from 'react';
 
 export interface CardFigureProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 export const CardFigure = ({ children }: CardFigureProps) => {
-  return (
-    <figure className="mb-4 idc-card-figure-img md:mb-6">
-      {children}
-    </figure>
-  )
-}
+  return <figure className="mb-4 idc-card-figure-img md:mb-6">{children}</figure>;
+};
 
-CardFigure.displayName = 'Card.Figure'
+CardFigure.displayName = 'Card.Figure';

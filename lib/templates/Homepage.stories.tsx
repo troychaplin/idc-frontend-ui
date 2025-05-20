@@ -1,40 +1,48 @@
-import React from 'react'
-import type { Meta, StoryObj } from '@storybook/react'
-import { Main } from '../components/Main/Main'
-import { Section } from '../components/Section/Section'
-import { BluePanel } from '../components/BluePanel/BluePanel'
-import { Button } from '../components/Button/Button'
-import { ButtonGroup } from '../components/ButtonGroup/ButtonGroup'
-import { Card } from '../components/Card/Card'
-import { CardGroup } from '../components/CardGroup/CardGroup'
-import { Definition } from '../components/Definition/Definition'
-import { Footer } from '../components/Footer/Footer'
-import { Hero } from '../components/Hero/Hero'
-import { Header } from '../components/Header/Header'
-import { LeadIn } from '../components/LeadIn/LeadIn'
-import { Navigation } from '../components/Navigation/Navigation'
-import { CardData } from '../components/Card/data'
-import { DefinitionData } from '../components/Definition/data'
-import { navItems } from '../data/navigation'
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { Main } from '../components/Main/Main';
+import { Section } from '../components/Section/Section';
+import { BluePanel } from '../components/BluePanel/BluePanel';
+import { Button } from '../components/Button/Button';
+import { ButtonGroup } from '../components/ButtonGroup/ButtonGroup';
+import { Card } from '../components/Card/Card';
+import { CardGroup } from '../components/CardGroup/CardGroup';
+import { Definition } from '../components/Definition/Definition';
+import { Footer } from '../components/Footer/Footer';
+import { Hero } from '../components/Hero/Hero';
+import { Header } from '../components/Header/Header';
+import { LeadIn } from '../components/LeadIn/LeadIn';
+import { SearchForm } from '../components/SearchForm/SearchForm';
+import { Navigation } from '../components/Navigation/Navigation';
+import { Modal } from '../components/Modal/Modal';
+import { CardData } from '../components/Card/data';
+import { DefinitionData } from '../components/Definition/data';
+import { navItems } from '../data/navigation';
 
-const meta: Meta = {
-  title: 'Page Templates/Homepage',
+const meta = {
+  title: 'Templates/Homepage',
   parameters: {
     layout: 'fullscreen',
   },
-}
+} satisfies Meta;
 
-export default meta
-type Story = StoryObj
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Homepage: Story = {
-  render: () => (
+const HomepageWithModal = () => {
+  const [modalOpen, setModalOpen] = React.useState(false);
+
+  const handleSearchClick = () => {
+    setModalOpen(true);
+  };
+
+  return (
     <>
       <Navigation>
         <Navigation.Desktop>
           <Navigation.Logo siteUrl="/" />
           <Navigation.Menu items={navItems} />
-          <Navigation.Aside />
+          <Navigation.Aside onSearchClick={handleSearchClick} />
         </Navigation.Desktop>
         <Navigation.Mobile items={navItems} />
       </Navigation>
@@ -42,18 +50,22 @@ export const Homepage: Story = {
       <Main>
         <Section maxWidth="6xl" bgType="blue">
           <Hero>
-            <Hero.Content title="The document apostille process made simple" headerType="h1" isItalic>
+            <Hero.Content
+              title="The document apostille process made simple"
+              headerType="h1"
+              isItalic
+            >
               <p>
-                We expertly manage all aspects of the document apostille &ndash; authentication & legalization &ndash;
-                attestation &ndash; process for our clients. If you need to present Canadian documents in a foreign
-                jurisdiction we can help!
+                We expertly manage all aspects of the document apostille &ndash; authentication &
+                legalization &ndash; attestation &ndash; process for our clients. If you need to
+                present Canadian documents in a foreign jurisdiction we can help!
               </p>
               <ButtonGroup>
                 <Button
                   label="Get Started Now"
-                  color="dark-blue"
+                  color="dark-orange"
                   onClick={() => {
-                    window.location.href = 'https://www.idocscanada.ca'
+                    window.location.href = 'https://www.idocscanada.ca';
                   }}
                 />
               </ButtonGroup>
@@ -93,10 +105,11 @@ export const Homepage: Story = {
                 isItalic
               />
               <p>
-                From apostilles to attestations, our specialized services ensure global recognition for your documents.
-                We're your trusted partner in Canadian document apostille, handling everything from authentication to
-                legalization, translation, and notarization. Whatever term you've heard &ndash; legalization,
-                ratification, and more &ndash; we bring clarity and expertise to each step, so your documents make the
+                From apostilles to attestations, our specialized services ensure global recognition
+                for your documents. We're your trusted partner in Canadian document apostille,
+                handling everything from authentication to legalization, translation, and
+                notarization. Whatever term you've heard &ndash; legalization, ratification, and
+                more &ndash; we bring clarity and expertise to each step, so your documents make the
                 impact they deserve anywhere in the world.
               </p>
               <p>
@@ -112,8 +125,8 @@ export const Homepage: Story = {
         <Section bgType="blue">
           <Header title="What our Clients are Saying" size="md" weight="bold" isItalic isCenter>
             <p>
-              Discover why clients trust us for their document needs. Here's what they have to say about our expertise,
-              efficiency, and commitment to seamless service.
+              Discover why clients trust us for their document needs. Here's what they have to say
+              about our expertise, efficiency, and commitment to seamless service.
             </p>
           </Header>
 
@@ -135,9 +148,10 @@ export const Homepage: Story = {
         <Section maxWidth="3xl" bgType="white">
           <Header title="Got questions? Let us help you!" size="md" weight="bold" isItalic isCenter>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat urna sed euismod lobortis. Aenean
-              iaculis, elit non ornare maximus, ligula mauris ultricies felis, sed vestibulum arcu ipsum vitae elit.
-              Nullam sit amet interdum massa reprehenderit ducimus.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat urna sed euismod
+              lobortis. Aenean iaculis, elit non ornare maximus, ligula mauris ultricies felis, sed
+              vestibulum arcu ipsum vitae elit. Nullam sit amet interdum massa reprehenderit
+              ducimus.
             </p>
           </Header>
 
@@ -153,9 +167,9 @@ export const Homepage: Story = {
         <Section bgType="white">
           <Header title="Stay Informed, Stay Empowered" size="md" weight="bold" isItalic isCenter>
             <p>
-              Dive into our articles to uncover everything you need to know about the apostille process—also called
-              authentication, legalization, or attestation. Get clear insights and expert advice to make your document
-              journey smooth and stress-free!
+              Dive into our articles to uncover everything you need to know about the apostille
+              process—also called authentication, legalization, or attestation. Get clear insights
+              and expert advice to make your document journey smooth and stress-free!
             </p>
           </Header>
 
@@ -177,14 +191,25 @@ export const Homepage: Story = {
               color="dark-blue"
               size="sm"
               onClick={() => {
-                window.location.href = 'https://www.idocscanada.ca'
+                window.location.href = 'https://www.idocscanada.ca';
               }}
             />
           </ButtonGroup>
         </Section>
       </Main>
 
-      <Footer />
+      <Footer>
+        <Footer.Contact />
+        <Footer.Disclaimer />
+      </Footer>
+
+      <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)}>
+        <SearchForm />
+      </Modal>
     </>
-  ),
-}
+  );
+};
+
+export const Homepage: Story = {
+  render: () => <HomepageWithModal />,
+};

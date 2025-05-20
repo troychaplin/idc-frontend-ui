@@ -1,0 +1,11 @@
+.idc-modal-header,
+.idc-modal-content,
+.idc-modal-footer {
+  @apply px-5 py-4 md:px-6 md:py-5;
+}
+
+.idc-modal-header + .idc-modal-content,
+.idc-modal-header + .idc-modal-footer,
+.idc-modal-content + .idc-modal-footer {
+  @apply pt-0;
+}

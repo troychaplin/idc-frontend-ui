@@ -10,7 +10,7 @@ export const idcBlueBg = {
   800: 'bg-idc-blue-800',
   900: 'bg-idc-blue-900',
   950: 'bg-idc-blue-950',
-}
+};
 
 export const idcOrangeBg = {
   50: 'bg-idc-orange-50',
@@ -24,7 +24,7 @@ export const idcOrangeBg = {
   800: 'bg-idc-orange-800',
   900: 'bg-idc-orange-900',
   950: 'bg-idc-orange-950',
-}
+};
 
 export const idcBlueBorder = {
   50: 'border-idc-blue-50',
@@ -38,7 +38,7 @@ export const idcBlueBorder = {
   800: 'border-idc-blue-800',
   900: 'border-idc-blue-900',
   950: 'border-idc-blue-950',
-}
+};
 
 export const idcOrangeBorder = {
   50: 'border-idc-orange-50',
@@ -52,4 +52,4 @@ export const idcOrangeBorder = {
   800: 'border-idc-orange-800',
   900: 'border-idc-orange-900',
   950: 'border-idc-orange-950',
-}
+};

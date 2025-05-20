@@ -1,23 +1,23 @@
-import React from 'react'
-import type { Meta, StoryObj } from '@storybook/react'
-import { Card, CardProps } from './Card'
-import { CardData as data } from './data'
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { Card, CardProps } from './Card';
+import { CardData as data } from './data';
 
 const meta = {
   title: 'Components/Card/Article Card',
   component: Card,
   tags: ['autodocs'],
-} satisfies Meta<typeof Card>
+} satisfies Meta<typeof Card>;
 
-export default meta
-type Story = StoryObj<typeof meta>
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
     maxWidth: 'md',
     addFlex: true,
   } as CardProps,
-  render: (args) => (
+  render: args => (
     <Card {...args}>
       <Card.Figure>
         <img className="rounded-md" src={data[0].image} alt={data[0].alt} />
@@ -26,4 +26,4 @@ export const Primary: Story = {
       <Card.Content text={data[0].excerpt} link={data[0].link} isExcerpt />
     </Card>
   ),
-}
+};

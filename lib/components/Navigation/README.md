@@ -5,8 +5,8 @@ A responsive navigation component that can be used in both React and vanilla Jav
 ## React Usage
 
 ```jsx
-import { Navigation } from '@idc/components'
-import { navItems } from '@idc/data/navigation'
+import { Navigation } from '@idc/components';
+import { navItems } from '@idc/data/navigation';
 
 export const Header = () => (
   <Navigation>
@@ -17,7 +17,7 @@ export const Header = () => (
     </Navigation.Desktop>
     <Navigation.Mobile items={navItems} />
   </Navigation>
-)
+);
 ```
 
 ## Vanilla JavaScript Usage
@@ -71,9 +71,9 @@ export const Header = () => (
 ### 3. Initialize Navigation
 
 ```javascript
-document.addEventListener('DOMContentLoaded', function() {
-  const nav = new IDC.Navigation('[data-nav]')
-})
+document.addEventListener('DOMContentLoaded', function () {
+  const nav = new IDC.Navigation('[data-nav]');
+});
 ```
 
 ### 4. Required CSS Classes
@@ -85,7 +85,9 @@ document.addEventListener('DOMContentLoaded', function() {
   z-index: 50;
   width: 100%;
   background: white;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition:
+    transform 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
 }
 
 .nav-hidden {
