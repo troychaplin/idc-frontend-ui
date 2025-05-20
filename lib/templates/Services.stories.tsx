@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { BluePanel } from '../components/BluePanel/BluePanel';
@@ -13,8 +13,10 @@ import { Footer } from '../components/Footer/Footer';
 import { Header } from '../components/Header/Header';
 import { Hero } from '../components/Hero/Hero';
 import { Main } from '../components/Main/Main';
+import { SearchForm } from '../components/SearchForm/SearchForm';
 import { Navigation } from '../components/Navigation/Navigation';
 import { Section } from '../components/Section/Section';
+import { Modal } from '../components/Modal/Modal';
 import { navItems } from '../data/navigation';
 
 const meta = {
@@ -27,14 +29,20 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Services: Story = {
-  render: () => (
+const ServicesWithModal = () => {
+  const [modalOpen, setModalOpen] = React.useState(false);
+
+  const handleSearchClick = () => {
+    setModalOpen(true);
+  };
+
+  return (
     <>
       <Navigation>
         <Navigation.Desktop>
           <Navigation.Logo siteUrl="/" />
           <Navigation.Menu items={navItems} />
-          <Navigation.Aside />
+          <Navigation.Aside onSearchClick={handleSearchClick} />
         </Navigation.Desktop>
         <Navigation.Mobile items={navItems} />
       </Navigation>
@@ -166,7 +174,18 @@ export const Services: Story = {
         </Section>
       </Main>
 
-      <Footer />
+      <Footer>
+        <Footer.Contact />
+        <Footer.Disclaimer />
+      </Footer>
+
+      <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)}>
+        <SearchForm />
+      </Modal>
     </>
-  ),
+  );
+};
+
+export const Services: Story = {
+  render: () => <ServicesWithModal />,
 };

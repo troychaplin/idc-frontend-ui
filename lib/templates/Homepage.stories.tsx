@@ -12,7 +12,9 @@ import { Footer } from '../components/Footer/Footer';
 import { Hero } from '../components/Hero/Hero';
 import { Header } from '../components/Header/Header';
 import { LeadIn } from '../components/LeadIn/LeadIn';
+import { SearchForm } from '../components/SearchForm/SearchForm';
 import { Navigation } from '../components/Navigation/Navigation';
+import { Modal } from '../components/Modal/Modal';
 import { CardData } from '../components/Card/data';
 import { DefinitionData } from '../components/Definition/data';
 import { navItems } from '../data/navigation';
@@ -27,14 +29,20 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Homepage: Story = {
-  render: () => (
+const HomepageWithModal = () => {
+  const [modalOpen, setModalOpen] = React.useState(false);
+
+  const handleSearchClick = () => {
+    setModalOpen(true);
+  };
+
+  return (
     <>
       <Navigation>
         <Navigation.Desktop>
           <Navigation.Logo siteUrl="/" />
           <Navigation.Menu items={navItems} />
-          <Navigation.Aside />
+          <Navigation.Aside onSearchClick={handleSearchClick} />
         </Navigation.Desktop>
         <Navigation.Mobile items={navItems} />
       </Navigation>
@@ -55,7 +63,7 @@ export const Homepage: Story = {
               <ButtonGroup>
                 <Button
                   label="Get Started Now"
-                  color="dark-blue"
+                  color="dark-orange"
                   onClick={() => {
                     window.location.href = 'https://www.idocscanada.ca';
                   }}
@@ -190,7 +198,18 @@ export const Homepage: Story = {
         </Section>
       </Main>
 
-      <Footer />
+      <Footer>
+        <Footer.Contact />
+        <Footer.Disclaimer />
+      </Footer>
+
+      <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)}>
+        <SearchForm />
+      </Modal>
     </>
-  ),
+  );
+};
+
+export const Homepage: Story = {
+  render: () => <HomepageWithModal />,
 };

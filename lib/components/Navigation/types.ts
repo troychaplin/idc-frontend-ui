@@ -1,7 +1,7 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 
 export interface NavigationProps {
-  children?: ReactNode;
+  children: React.ReactNode;
 }
 
 export interface NavigationLogoProps {
@@ -24,4 +24,8 @@ export interface NavigationMobileProps {
 
 export interface NavigationDesktopProps {
   children?: ReactNode;
+}
+
+export interface NavigationAsideProps {
+  onSearchClick?: () => void;
 }

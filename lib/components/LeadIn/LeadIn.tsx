@@ -1,10 +1,13 @@
 export interface LeadInProps {
   headerTop?: string;
   headerBottom?: string;
+  color?: 'blue' | 'orange';
   text?: string;
 }
 
-export const LeadIn = ({ headerTop, headerBottom, text }: LeadInProps) => {
+export const LeadIn = ({ headerTop, headerBottom, color = 'orange', text }: LeadInProps) => {
+  const textColor = color === 'orange' ? 'text-idc-orange-600' : 'text-idc-blue-600';
+
   return (
     <div className="grid items-center gap-4 not-prose idc-leadin idc-component md:grid-cols-3 md:gap-10">
       <div>
@@ -14,7 +17,7 @@ export const LeadIn = ({ headerTop, headerBottom, text }: LeadInProps) => {
           </h2>
         )}
         {headerBottom && (
-          <h3 className="block text-2xl italic font-medium not-prose md:text-3xl text-idc-orange-600">
+          <h3 className={`block text-2xl italic font-medium not-prose md:text-3xl ${textColor}`}>
             {headerBottom}
           </h3>
         )}
