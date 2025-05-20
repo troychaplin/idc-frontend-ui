@@ -48,18 +48,18 @@ export const ModalContainer = ({
   return (
     <dialog
       ref={modalRef}
-      className={`idc-modal ${isOpen ? 'opened' : ''}`}
+      className={`idc-modal fixed top-0 bottom-0 left-0 right-0 z-50 hidden ${isOpen ? 'opened justify-center block md:flex md:items-start md:pt-24' : ''} w-full h-full bg-idc-black/90`}
       role="dialog"
       aria-modal="true"
       aria-labelledby="modal-title"
       onKeyDown={handleKeyDown}
       tabIndex={-1}
     >
-      <div className="idc-modal-container">
+      <div className="relative top-12 z-50 max-w-[90%] md:max-w-lg w-full mx-auto bg-white rounded">
         {showCloseButton && (
           <button
             type="button"
-            className="p-1.5 rounded idc-modal-close bg-idc-orange-700"
+            className="idc-modal-close p-1.5 rounded bg-idc-blue-700 absolute right-0 z-50 -top-8 text-idc-black-400 hover:bg-idc-orange-700"
             onClick={handleClose}
             aria-label="Close modal"
           >

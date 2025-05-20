@@ -1,22 +1,3 @@
-.idc-modal {
-  @apply fixed top-0 bottom-0 left-0 right-0 z-50 hidden w-full h-full;
-  background: rgba(0, 0, 0, 0.9);
-}
-
-.idc-modal.opened {
-  @apply justify-center block md:flex md:items-center;
-}
-
-.idc-modal .idc-modal-container {
-  @apply relative top-12 z-50 max-w-[90%] md:max-w-lg w-full mx-auto bg-white rounded;
-}
-
-.idc-modal .idc-modal-close {
-  @apply absolute right-0 z-50 -top-8 text-idc-black-400 hover:text-idc-orange-700;
-}
-
-/* Subcomponents */
-
 .idc-modal-header,
 .idc-modal-content,
 .idc-modal-footer {

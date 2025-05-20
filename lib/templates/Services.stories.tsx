@@ -13,6 +13,7 @@ import { Footer } from '../components/Footer/Footer';
 import { Header } from '../components/Header/Header';
 import { Hero } from '../components/Hero/Hero';
 import { Main } from '../components/Main/Main';
+import { SearchForm } from '../components/SearchForm/SearchForm';
 import { Navigation } from '../components/Navigation/Navigation';
 import { Section } from '../components/Section/Section';
 import { Modal } from '../components/Modal/Modal';
@@ -178,12 +179,8 @@ const ServicesWithModal = () => {
         <Footer.Disclaimer />
       </Footer>
 
-      <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)} title="Search">
-        <p>
-          We take the anxiety and uncertainty out of the document apostille process in these three
-          simple steps! We take the anxiety and uncertainty out of the document apostille process in
-          these three simple steps!
-        </p>
+      <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)}>
+        <SearchForm />
       </Modal>
     </>
   );

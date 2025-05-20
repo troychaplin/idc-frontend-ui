@@ -12,6 +12,7 @@ import { Footer } from '../components/Footer/Footer';
 import { Hero } from '../components/Hero/Hero';
 import { Header } from '../components/Header/Header';
 import { LeadIn } from '../components/LeadIn/LeadIn';
+import { SearchForm } from '../components/SearchForm/SearchForm';
 import { Navigation } from '../components/Navigation/Navigation';
 import { Modal } from '../components/Modal/Modal';
 import { CardData } from '../components/Card/data';
@@ -202,8 +203,8 @@ const HomepageWithModal = () => {
         <Footer.Disclaimer />
       </Footer>
 
-      <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)} title="Search">
-        Search
+      <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)}>
+        <SearchForm />
       </Modal>
     </>
   );

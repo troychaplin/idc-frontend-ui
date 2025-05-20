@@ -10,6 +10,7 @@ import { Main } from '../components/Main/Main';
 import { Navigation } from '../components/Navigation/Navigation';
 import { Section } from '../components/Section/Section';
 import { Modal } from '../components/Modal/Modal';
+import { SearchForm } from '../components/SearchForm/SearchForm';
 import { navItems } from '../data/navigation';
 
 const meta = {
@@ -332,12 +333,8 @@ const ArticleWithModal = () => {
         <Footer.Disclaimer />
       </Footer>
 
-      <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)} title="Search">
-        <p>
-          We take the anxiety and uncertainty out of the document apostille process in these three
-          simple steps! We take the anxiety and uncertainty out of the document apostille process in
-          these three simple steps!
-        </p>
+      <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)}>
+        <SearchForm />
       </Modal>
     </>
   );
