@@ -1,4 +1,3 @@
-import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Main } from '../Main/Main';
 import { Section } from '../Section/Section';
@@ -23,6 +22,16 @@ export const Primary: Story = {
         <Definition {...args}>
           {data.slice(0, 8).map(({ id, title, content }) => (
             <Definition.Accordion key={id} title={title}>
+              <p>{content}</p>
+              <p>{content}</p>
+            </Definition.Accordion>
+          ))}
+        </Definition>
+      </Section>
+      <Section bgType="blue">
+        <Definition {...args}>
+          {data.slice(0, 8).map(({ id, title, content }) => (
+            <Definition.Accordion key={id} title={title} divider="dark">
               <p>{content}</p>
               <p>{content}</p>
             </Definition.Accordion>

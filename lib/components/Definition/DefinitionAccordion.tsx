@@ -5,16 +5,33 @@ import { toggleAccordion } from './script';
 export interface DefinitionAccordionProps {
   children: React.ReactNode;
   title: string;
+  divider?: 'light' | 'white' | 'dark';
 }
 
-export const DefinitionAccordion = ({ title, children }: DefinitionAccordionProps) => {
+export const DefinitionAccordion = ({
+  title,
+  children,
+  divider = 'light',
+}: DefinitionAccordionProps) => {
   const titleLabel =
     title && typeof title === 'string'
       ? 'idc-accordion-' + title.toLowerCase().replace(/ +/g, '-')
       : '';
 
+  const borderColor = (() => {
+    switch (divider) {
+      case 'dark':
+        return 'border-idc-black-200';
+      case 'white':
+        return 'border-white';
+      case 'light':
+      default:
+        return 'border-idc-black-100';
+    }
+  })();
+
   return (
-    <div className="grid px-2 py-4 border-b idc-accordion border-idc-black-100 first:border-t">
+    <div className={`grid px-2 py-4 border-b idc-accordion ${borderColor} first:border-t`}>
       <dt className="mt-0 mb-0 font-semibold md:mt-0">
         <div
           className="flex items-center w-full idc-accordion-button"
