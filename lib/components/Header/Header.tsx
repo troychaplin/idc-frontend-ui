@@ -9,6 +9,7 @@ export interface HeaderProps {
   children?: React.ReactNode;
   as?: 'h1' | 'h2' | 'h3';
   title: string;
+  preTitle?: string;
   date?: string | Date;
   datePrefix?: string;
   size?: headerSizeKeys;
@@ -21,6 +22,7 @@ export const Header = ({
   children,
   as = 'h2',
   title,
+  preTitle,
   date,
   datePrefix,
   size = 'lg',
@@ -73,6 +75,7 @@ export const Header = ({
       <HeaderComponent
         className={`not-prose text-idc-blue-800 ${headerSizeClasses[size]} ${fontWeightClasses[weight]} ${italicContent} ${headerPadding} last:pb-0`}
       >
+        {preTitle && <span className="block mb-2 font-light">{preTitle}</span>}
         {title}
       </HeaderComponent>
 
