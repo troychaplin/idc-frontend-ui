@@ -4,6 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { BluePanel } from '../components/BluePanel/BluePanel';
 import { Button } from '../components/Button/Button';
 import { ButtonGroup } from '../components/ButtonGroup/ButtonGroup';
+import { Columns } from '../components/Columns/Columns';
 import { Card } from '../components/Card/Card';
 import { CardData } from '../components/Card/data';
 import { CardGroup } from '../components/CardGroup/CardGroup';
@@ -47,50 +48,57 @@ const ServicesWithModal = () => {
         <Navigation.Mobile items={navItems} />
       </Navigation>
 
-      <Main>
+      <Main maxWidth="5xl">
         <Section maxWidth="5xl" bgType="blue">
           <Hero>
-            <Hero.Content title="Canadian Document Apostille" headerType="h1" width={100} isItalic>
+            <Hero.Content
+              preTitle="Our Services"
+              title="Document Authentication and Legalization"
+              headerType="h1"
+              width={100}
+              isItalic
+            >
               <p>
-                Canadian document apostille, also known as document authentication and legalization,
-                is a specific process used to ensure your documents will be recognized abroad. If
-                your documents will be used in another country that is an apostille signatory
-                country, you will need an apostille on your document. Click on each topic below for
-                more information.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu mauris ut urna
+                vestibulum tincidunt ut mollis velit. Cras at vestibulum sapien. Etiam bibendum
+                varius nisi non molestie. In at turpis cursus, laoreet lectus vitae, consectetur
+                risus. Morbi imperdiet condimentum fringilla. Sed tristique quam urna, eget
+                vulputate condimentum vitae.
               </p>
             </Hero.Content>
           </Hero>
         </Section>
 
+        <Header as="h2" isItalic size="md" title="About the Service" weight="semibold" />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida orci elit, at
+          consectetur lectus iaculis vel. Cras non fringilla velit, a posuere felis. Mauris faucibus
+          dui ultricies ultrices luctus. Aliquam erat volutpat. Vestibulum imperdiet, enim non
+          elementum pulvinar, lacus quam vestibulum eros, ut eleifend sem dui ut quam.
+        </p>
+
         <Section bgType="white">
-          <CardGroup cols={3}>
-            {CardData.slice(0, 3).map(({ id, link, title, excerpt, iconName }) => (
-              <Card key={id}>
-                <Card.Icon iconName={iconName} />
-                <Card.Header title={title} />
-                <Card.Content text={excerpt} link={link} />
-              </Card>
-            ))}
-          </CardGroup>
-        </Section>
-
-        <Section maxWidth="3xl" bgType="white">
-          <Header title="Got questions? Let us help you!" size="md" weight="bold" isItalic isCenter>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat urna sed euismod
-              lobortis. Aenean iaculis, elit non ornare maximus, ligula mauris ultricies felis, sed
-              vestibulum arcu ipsum vitae elit. Nullam sit amet interdum massa reprehenderit
-              ducimus.
-            </p>
-          </Header>
-
-          <Definition>
-            {DefinitionData.slice(0, 5).map(({ id, title, content }) => (
-              <Definition.Accordion key={id} title={title}>
-                <p>{content}</p>
-              </Definition.Accordion>
-            ))}
-          </Definition>
+          <Columns cols={2} maxWidth="5xl">
+            <Columns.Content>
+              <Header as="h2" isItalic size="md" title="More Information" weight="semibold" />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida orci elit,
+                at consectetur lectus iaculis vel. Cras non fringilla velit, a posuere felis. Mauris
+                faucibus dui ultricies ultrices luctus. Aliquam erat volutpat. Vestibulum imperdiet,
+                enim non elementum pulvinar, lacus quam vestibulum eros, ut eleifend sem dui ut
+                quam.
+              </p>
+            </Columns.Content>
+            <Columns.Content>
+              <Header as="h2" isItalic size="md" title="More Information" weight="semibold" />
+              <p>
+                Nam facilisis pulvinar ligula nec cursus. Mauris ut tempor enim. Nullam sodales eros
+                ut velit ullamcorper fringilla. Fusce a sem est. Vivamus eleifend accumsan
+                pellentesque. Pellentesque in ante urna. Nullam finibus sed nunc ac volutpat.
+                Maecenas lacinia justo a arcu tempor, ac tempor magna faucibus.
+              </p>
+            </Columns.Content>
+          </Columns>
         </Section>
 
         <Section maxWidth="6xl" bgType="edge">
@@ -121,7 +129,33 @@ const ServicesWithModal = () => {
           </BluePanel>
         </Section>
 
-        <Section maxWidth="3xl" bgType="white">
+        <Section bgType="white">
+          <Header
+            as="h2"
+            isItalic
+            size="md"
+            title="Column Content with Icons"
+            weight="semibold"
+            isCenter
+          >
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida orci elit, at
+              consectetur lectus iaculis vel. Cras non fringilla velit, a posuere felis. Mauris
+              faucibus dui ultricies luctus.
+            </p>
+          </Header>
+          <CardGroup cols={3}>
+            {CardData.slice(0, 3).map(({ id, link, title, excerpt, iconName }) => (
+              <Card key={id}>
+                <Card.Icon iconName={iconName} />
+                <Card.Header title={title} />
+                <Card.Content text={excerpt} link={link} />
+              </Card>
+            ))}
+          </CardGroup>
+        </Section>
+
+        <Section maxWidth="3xl" bgType="blue">
           <Header title="Got questions? Let us help you!" size="md" weight="bold" isItalic isCenter>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat urna sed euismod
@@ -133,7 +167,7 @@ const ServicesWithModal = () => {
 
           <Definition>
             {DefinitionData.slice(0, 5).map(({ id, title, content }) => (
-              <Definition.Accordion key={id} title={title}>
+              <Definition.Accordion key={id} title={title} divider="dark">
                 <p>{content}</p>
               </Definition.Accordion>
             ))}
@@ -141,36 +175,76 @@ const ServicesWithModal = () => {
         </Section>
 
         <Section bgType="white">
-          <Header title="Stay Informed, Stay Empowered" size="md" weight="bold" isItalic isCenter>
+          <Columns cols={2} maxWidth="5xl">
+            <Columns.Content>
+              <Header as="h2" isItalic size="md" title="More Information" weight="semibold" />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida orci elit,
+                at consectetur lectus iaculis vel. Cras non fringilla velit, a posuere felis. Mauris
+                faucibus dui ultricies ultrices luctus. Aliquam erat volutpat. Vestibulum imperdiet,
+                enim non elementum pulvinar, lacus quam vestibulum eros, ut eleifend sem dui ut
+                quam.
+              </p>
+            </Columns.Content>
+            <Columns.Content>
+              <Header as="h2" isItalic size="md" title="More Information" weight="semibold" />
+              <p>
+                Nam facilisis pulvinar ligula nec cursus. Mauris ut tempor enim. Nullam sodales eros
+                ut velit ullamcorper fringilla. Fusce a sem est. Vivamus eleifend accumsan
+                pellentesque. Pellentesque in ante urna. Nullam finibus sed nunc ac volutpat.
+                Maecenas lacinia justo a arcu tempor, ac tempor magna faucibus.
+              </p>
+            </Columns.Content>
+          </Columns>
+        </Section>
+
+        <Section bgType="blue">
+          <Header title="What our Clients are Saying" size="md" weight="bold" isItalic isCenter>
             <p>
-              Dive into our articles to uncover everything you need to know about the apostille
-              process—also called authentication, legalization, or attestation. Get clear insights
-              and expert advice to make your document journey smooth and stress-free!
+              Discover why clients trust us for their document needs. Here's what they have to say
+              about our expertise, efficiency, and commitment to seamless service.
             </p>
           </Header>
 
-          <CardGroup cols={3}>
-            {CardData.slice(0, 3).map(({ id, link, title, excerpt, image, alt, date }) => (
+          <CardGroup cols={3} layout="masonry">
+            {CardData.slice(0, 9).map(({ id, quote, author, image }) => (
               <Card key={id}>
-                <Card.Figure>
-                  <img className="rounded-md" src={image} alt={alt} width="400" height="300" />
-                </Card.Figure>
-                <Card.Header title={title} date={date} />
-                <Card.Content text={excerpt} link={link} isExcerpt />
+                <Card.Quote cite={author}>
+                  {quote}
+                  <Card.Cite>
+                    <img src={image} alt="Person's Name" />
+                    {author}
+                  </Card.Cite>
+                </Card.Quote>
               </Card>
             ))}
           </CardGroup>
+        </Section>
 
-          <ButtonGroup isCenter>
-            <Button
-              label="View More News"
-              color="dark-blue"
-              size="sm"
-              onClick={() => {
-                window.location.href = 'https://www.idocscanada.ca';
-              }}
-            />
-          </ButtonGroup>
+        <Section bgType="white">
+          <Header
+            as="h2"
+            isItalic
+            size="md"
+            title="Column Content with Icons"
+            weight="semibold"
+            isCenter
+          >
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida orci elit, at
+              consectetur lectus iaculis vel. Cras non fringilla velit, a posuere felis. Mauris
+              faucibus dui ultricies luctus.
+            </p>
+          </Header>
+          <CardGroup cols={3}>
+            {CardData.slice(0, 3).map(({ id, link, title, excerpt, iconName }) => (
+              <Card key={id}>
+                <Card.Icon iconName={iconName} />
+                <Card.Header title={title} />
+                <Card.Content text={excerpt} link={link} />
+              </Card>
+            ))}
+          </CardGroup>
         </Section>
       </Main>
 

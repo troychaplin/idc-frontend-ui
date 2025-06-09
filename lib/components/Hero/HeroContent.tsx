@@ -5,6 +5,7 @@ import { Header } from '../Header/Header';
 export interface HeroContentProps {
   children: React.ReactNode;
   title: string;
+  preTitle?: string;
   date?: string;
   datePrefix?: string;
   headerType?: 'h1' | 'h2' | 'h3';
@@ -16,6 +17,7 @@ export interface HeroContentProps {
 export const HeroContent = ({
   children,
   title,
+  preTitle,
   date,
   datePrefix,
   width = 50,
@@ -46,6 +48,7 @@ export const HeroContent = ({
     <div style={{ flex: `0 0 ${width}%` }}>
       <Header
         as={headerType}
+        preTitle={preTitle}
         title={title}
         date={date}
         datePrefix={datePrefix}
