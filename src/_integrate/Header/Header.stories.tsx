@@ -5,7 +5,7 @@ import { Section } from '../Section/Section';
 import { Button } from '../Button/Button';
 import { ButtonGroup } from '../ButtonGroup/ButtonGroup';
 import { Header, HeaderProps } from './Header';
-import { fn } from '@storybook/test';
+import { fn } from 'storybook/test';
 
 const meta = {
   title: 'Components/Header',

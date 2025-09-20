@@ -5,10 +5,10 @@ import { Section } from '../Section/Section';
 import { Button } from '../Button/Button';
 import { ButtonGroup } from '../ButtonGroup/ButtonGroup';
 import { Hero, HeroProps } from './Hero';
-import { fn } from '@storybook/test';
+import { fn } from 'storybook/test';
 
 const meta = {
-  title: 'Components/Hero',
+  title: 'Components/Hero/Homepage',
   component: Hero,
   tags: ['autodocs'],
   parameters: {
@@ -20,15 +20,10 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  args: {
-    maxWidth: '7xl',
-    cols: 2,
-    bgType: 'none',
-  } as HeroProps,
-  render: args => (
+  render: () => (
     <Main>
       <Section bgType="blue">
-        <Hero {...args}>
+        <Hero>
           <Hero.Content title="The document apostille process made simple" headerType="h1">
             <p>
               We expertly manage all aspects of the document apostille &ndash; authentication &
@@ -38,17 +33,14 @@ export const Primary: Story = {
             <ButtonGroup>
               <Button
                 label="Get Started Now"
-                color="dark-orange"
+                color="dark-blue"
                 onClick={() => {
                   window.location.href = 'https://www.idocscanada.ca';
                 }}
               />
             </ButtonGroup>
           </Hero.Content>
-          <Hero.Media
-            imageUrl="https://picsum.photos/seed/picsum/1280/800"
-            imageShape="radial-fade"
-          />
+          <Hero.Media imageUrl="https://picsum.photos/seed/picsum/1280/800" />
         </Hero>
       </Section>
     </Main>
@@ -56,7 +48,5 @@ export const Primary: Story = {
 };
 
 export const Default: Story = {
-  args: {
-    onClick: fn(),
-  },
+  args: {},
 };

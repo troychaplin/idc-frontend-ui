@@ -3,7 +3,6 @@ import path from 'node:path';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { visualizer } from 'rollup-plugin-visualizer';
-import tailwindcss from 'tailwindcss';
 import type { PluginOption } from 'vite';
 import dts from 'vite-plugin-dts';
 import { storybookTest } from '@storybook/addon-vitest/vitest-plugin';
@@ -43,9 +42,7 @@ if (process.env.ANALYZE === 'true') {
 export default defineConfig({
   plugins,
   css: {
-    postcss: {
-      plugins: [tailwindcss],
-    },
+    postcss: {},
   },
   optimizeDeps: {
     esbuildOptions: {
