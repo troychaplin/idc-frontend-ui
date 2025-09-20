@@ -26,7 +26,8 @@
             "import": "./dist/idc.es.js",
             "require": "./dist/idc.umd.js"
         },
-        "./dist/style.css": "./dist/style.css"
+        "./dist/style.css": "./dist/style.css",
+        "./dist/theme.css": "./dist/theme.css"
     },
     "files": [
         "dist"
@@ -64,8 +65,10 @@
         "release:major": "standard-version --release-as major --skip-git"
     },
     "dependencies": {
+        "@tailwindcss/vite": "^4.1.13",
         "react": "^19.1.1",
-        "react-dom": "^19.1.1"
+        "react-dom": "^19.1.1",
+        "tailwindcss": "^4.1.13"
     },
     "peerDependencies": {
         "react": "^19.1.1",
@@ -79,7 +82,7 @@
         "@storybook/addon-docs": "^9.1.7",
         "@storybook/addon-vitest": "^9.1.7",
         "@storybook/react-vite": "^9.1.7",
-        "@troychaplin79/idc-tailwind-theme": "1.0.4",
+        "@troychaplin79/idc-tailwind-theme": "^1.0.4",
         "@types/react": "^19.1.13",
         "@types/react-dom": "^19.1.9",
         "@vitejs/plugin-react": "^5.0.2",

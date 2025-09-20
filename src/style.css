@@ -1,18 +1,91 @@
 /* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-/* Basic CSS Reset */
-* {
-  box-sizing: border-box;
+/* Tailwind CSS */
+@import "tailwindcss";
+
+/* Import theme variables for internal use */
+@import './styles/theme-vars.css';
+
+/* IDC Theme Configuration for Tailwind v4 */
+@theme {
+  /* Font Family */
+  --font-family-open: var(--font-open);
+
+  /* Custom Screens */
+  --breakpoint-4xl: var(--breakpoint-4xl);
+
+  /* IDC Black Colors */
+  --color-idc-black: var(--idc-black);
+  --color-idc-black-50: var(--idc-black-50);
+  --color-idc-black-100: var(--idc-black-100);
+  --color-idc-black-200: var(--idc-black-200);
+  --color-idc-black-300: var(--idc-black-300);
+  --color-idc-black-400: var(--idc-black-400);
+  --color-idc-black-500: var(--idc-black-500);
+  --color-idc-black-600: var(--idc-black-600);
+  --color-idc-black-700: var(--idc-black-700);
+  --color-idc-black-800: var(--idc-black-800);
+  --color-idc-black-900: var(--idc-black-900);
+  --color-idc-black-950: var(--idc-black-950);
+
+  /* IDC Blue Colors */
+  --color-idc-blue: var(--idc-blue);
+  --color-idc-blue-50: var(--idc-blue-50);
+  --color-idc-blue-100: var(--idc-blue-100);
+  --color-idc-blue-200: var(--idc-blue-200);
+  --color-idc-blue-300: var(--idc-blue-300);
+  --color-idc-blue-400: var(--idc-blue-400);
+  --color-idc-blue-500: var(--idc-blue-500);
+  --color-idc-blue-600: var(--idc-blue-600);
+  --color-idc-blue-700: var(--idc-blue-700);
+  --color-idc-blue-800: var(--idc-blue-800);
+  --color-idc-blue-900: var(--idc-blue-900);
+  --color-idc-blue-950: var(--idc-blue-950);
+
+  /* IDC Orange Colors */
+  --color-idc-orange: var(--idc-orange);
+  --color-idc-orange-50: var(--idc-orange-50);
+  --color-idc-orange-100: var(--idc-orange-100);
+  --color-idc-orange-200: var(--idc-orange-200);
+  --color-idc-orange-300: var(--idc-orange-300);
+  --color-idc-orange-400: var(--idc-orange-400);
+  --color-idc-orange-500: var(--idc-orange-500);
+  --color-idc-orange-600: var(--idc-orange-600);
+  --color-idc-orange-700: var(--idc-orange-700);
+  --color-idc-orange-800: var(--idc-orange-800);
+  --color-idc-orange-900: var(--idc-orange-900);
+  --color-idc-orange-950: var(--idc-orange-950);
+
+  /* Grid Template Columns */
+  --grid-template-columns-60-40: var(--grid-cols-60-40);
+
+  /* Custom Margin */
+  --margin-offset-center: var(--margin-offset-center);
+
+  /* Background Images */
+  --background-image-white-blue-edge: var(--bg-white-blue-edge);
 }
 
-body {
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
+/* Custom Utilities (equivalent to the plugin utilities) */
+@utility columns-1 {
+  column-count: 1;
+}
+
+@utility columns-2 {
+  column-count: 2;
+}
+
+@utility columns-3 {
+  column-count: 3;
+}
+
+@utility columns-4 {
+  column-count: 4;
 }
 
 /* Component Styles */
-/* @import './components/Button/styles.css'; */
+@import './components/Button/styles.css';
 /* @import './components/Card/styles.css';
 @import './components/CardGroup/styles.css';
 @import './components/Header/styles.css';
@@ -20,8 +93,8 @@ body {
 @import './components/SiteHeader/styles.css'; */
 
 /* Other Styles */
-/* @import './styles/images.css';
+@import './styles/images.css';
 @import './styles/max-width.css';
 @import './styles/max-width-child.css';
 @import './styles/spacing.css';
-@import './styles/typography.css'; */
+@import './styles/typography.css';
