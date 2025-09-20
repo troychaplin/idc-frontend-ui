@@ -41,7 +41,7 @@ if (process.env.ANALYZE === 'true') {
 }
 
 export default defineConfig({
-    plugins: [    tailwindcss(), ...plugins],
+    plugins: [tailwindcss(), ...plugins],
     css: {
         postcss: {},
     },
@@ -61,7 +61,7 @@ export default defineConfig({
         },
         sourcemap: true,
         lib: {
-        entry: path.resolve(__dirname, 'src/main.ts'), // Changed from 'lib/main.ts' to 'src/main.ts'
+        entry: path.resolve(__dirname, 'src/main.ts'),
         name: 'idc',
         formats: ['es', 'cjs', 'umd'],
         fileName: format => `idc.${format}.js`,

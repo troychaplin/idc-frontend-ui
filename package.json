@@ -26,8 +26,8 @@
             "import": "./dist/idc.es.js",
             "require": "./dist/idc.umd.js"
         },
-        "./dist/style.css": "./dist/style.css",
-        "./dist/theme.css": "./dist/theme.css"
+        "./dist/style.css": "./dist/idc.css",
+        "./dist/theme.css": "./dist/idc-theme.css"
     },
     "files": [
         "dist"
@@ -44,7 +44,8 @@
     ],
     "scripts": {
         "storybook": "storybook dev -p 6006",
-        "build": "tsc -b && vite build",
+        "build": "tsc -b && vite build && npm run copy-theme",
+        "copy-theme": "cp src/styles/theme-vars.css dist/idc-theme.css",
         "build-old": "tsc -b && npm run icon-list && vite build",
         "build-storybook": "storybook build",
         "icon-list": "node ./lib/helpers/createIconArray.mjs",

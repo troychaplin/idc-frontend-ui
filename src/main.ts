@@ -1,4 +1,4 @@
-// import './style.css';
+import './style.css';
 
 // export { Article } from './components/Article';
 // export { BluePanel } from './components/BluePanel';
