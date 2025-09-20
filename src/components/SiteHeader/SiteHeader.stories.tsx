@@ -1,6 +1,5 @@
-import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { SiteHeader, SiteHeaderProps } from './SiteHeader';
+import { SiteHeader, type SiteHeaderProps } from './SiteHeader';
 import { NavItems } from './data';
 
 const meta: Meta<typeof SiteHeader> = {

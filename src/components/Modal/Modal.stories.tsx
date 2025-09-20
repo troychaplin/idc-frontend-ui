@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Modal, ModalProps } from './Modal';
+import { Modal, type ModalProps } from './Modal';
 import { Button } from '../Button';
 import { ButtonGroup } from '../ButtonGroup';
 

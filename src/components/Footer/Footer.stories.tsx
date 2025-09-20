@@ -1,7 +1,5 @@
-import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Footer } from './Footer';
-import { FooterDisclaimer } from './FooterDisclaimer';
 
 const meta = {
   title: 'Components/Footer',
