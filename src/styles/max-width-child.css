@@ -1,0 +1,51 @@
+.ui-max-w-child-xs > :not(.ui-no-max-w-children) {
+  @apply max-w-xs mx-auto;
+}
+
+.ui-max-w-child-sm > :not(.ui-no-max-w-children) {
+  @apply max-w-sm mx-auto;
+}
+
+.ui-max-w-child-md > :not(.ui-no-max-w-children) {
+  @apply max-w-md mx-auto;
+}
+
+.ui-max-w-child-lg > :not(.ui-no-max-w-children) {
+  @apply max-w-lg mx-auto;
+}
+
+.ui-max-w-child-xl > :not(.ui-no-max-w-children) {
+  @apply max-w-xl mx-auto;
+}
+
+.ui-max-w-child-2xl > :not(.ui-no-max-w-children) {
+  @apply max-w-2xl mx-auto;
+}
+
+.ui-max-w-child-3xl > :not(.ui-no-max-w-children) {
+  @apply max-w-3xl mx-auto;
+}
+
+.ui-max-w-child-4xl > :not(.ui-no-max-w-children) {
+  @apply max-w-4xl mx-auto;
+}
+
+.ui-max-w-child-5xl > :not(.ui-no-max-w-children) {
+  @apply max-w-5xl mx-auto;
+}
+
+.ui-max-w-child-6xl > :not(.ui-no-max-w-children) {
+  @apply max-w-6xl mx-auto;
+}
+
+.ui-max-w-child-7xl > :not(.ui-no-max-w-children) {
+  @apply mx-auto max-w-7xl;
+}
+
+.ui-max-w-child-max > :not(.ui-no-max-w-children) {
+  @apply mx-auto max-w-max;
+}
+
+.ui-max-w-child-full > :not(.ui-no-max-w-children) {
+  @apply max-w-full mx-auto;
+}

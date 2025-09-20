@@ -1,0 +1,104 @@
+/*
+** Main Component
+*/
+
+.ui-main {
+  @apply py-8 md:px-8 md:py-8;
+}
+
+/* Remove top padding from Main tag when immediately following header */
+header + .ui-main {
+  @apply pt-0 md:pt-0;
+}
+
+/* Adjust spacing for sections */
+.ui-main > .ui-section > * {
+  @apply px-5 md:px-0;
+}
+
+/* When white section is first inside primary section wrapper */
+.ui-main > .ui-section--primary > .ui-section--white:first-child {
+  @apply mt-8 md:mt-16;
+}
+
+:not(.ui-section) + .ui-section,
+.ui-section + :not(.ui-section) {
+  @apply mt-6 md:mt-10;
+}
+
+.ui-section > .idc-component + .idc-component,
+.ui-section > div > .idc-component + .idc-component {
+  @apply mt-8 md:mt-12;
+}
+
+/*
+** White section spacing
+*/
+
+.ui-section--white + .ui-section--white {
+  @apply mt-8 md:mt-16;
+}
+
+.ui-section--white + .ui-section--blue {
+  @apply mt-8 md:mt-12;
+}
+
+.ui-section--white + .ui-section--gradient,
+.ui-section--white + .ui-section--edge {
+  @apply mt-0;
+}
+
+/*
+** Blue section spacing
+*/
+
+.ui-section--blue + .ui-section--white {
+  @apply mt-6 md:mt-10;
+}
+
+.ui-section--blue + .ui-section--blue {
+  @apply pt-0 mt-0;
+}
+
+/*
+** Gradient section spacing
+*/
+
+:not(.ui-section) + .ui-section--gradient,
+.ui-section--gradient + .ui-section--blue {
+  @apply pt-0;
+}
+
+.ui-section--gradient + .ui-section--white {
+  @apply mt-8 md:mt-12;
+}
+
+/*
+** Edge section spacing
+*/
+
+:not(.ui-section) + .ui-section--edge {
+  @apply -mt-6 md:-mt-10;
+}
+
+.ui-section--edge + .ui-section--blue {
+  @apply pt-0;
+}
+
+.ui-section--edge + .ui-section--white {
+  @apply mt-8 md:mt-12;
+}
+
+/*
+** Prose Classes
+*/
+
+.ui-prose-first-last > *:first-child,
+.ui-zero-first-last > *:first-child {
+  @apply !mt-0;
+}
+
+.ui-prose-first-last > *:last-child,
+.ui-zero-first-last > *:last-child {
+  @apply !mb-0;
+}
