@@ -3,6 +3,7 @@
 
 /* Tailwind CSS */
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 /* Import theme variables for internal use */
 @import './styles/theme-vars.css';

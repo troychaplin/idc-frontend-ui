@@ -83,6 +83,7 @@
         "@storybook/addon-docs": "^9.1.7",
         "@storybook/addon-vitest": "^9.1.7",
         "@storybook/react-vite": "^9.1.7",
+        "@tailwindcss/typography": "^0.5.18",
         "@troychaplin79/idc-tailwind-theme": "^1.0.4",
         "@types/react": "^19.1.13",
         "@types/react-dom": "^19.1.9",
