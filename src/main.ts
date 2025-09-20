@@ -3,7 +3,7 @@ import './style.css';
 // export { Article } from './components/Article';
 // export { BluePanel } from './components/BluePanel';
 export { Button } from './components/Button';
-// export { ButtonGroup } from './components/ButtonGroup';
+export { ButtonGroup } from './components/ButtonGroup';
 // export { Card } from './components/Card';
 // export { CardGroup } from './components/CardGroup';
 // export { Columns } from './components/Columns';
