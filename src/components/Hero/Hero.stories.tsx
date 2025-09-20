@@ -1,14 +1,13 @@
-import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Main } from '../Main/Main';
 import { Section } from '../Section/Section';
 import { Button } from '../Button/Button';
 import { ButtonGroup } from '../ButtonGroup/ButtonGroup';
-import { Hero, HeroProps } from './Hero';
+import { Hero, type HeroProps } from './Hero';
 import { fn } from 'storybook/test';
 
 const meta = {
-  title: 'Components/Hero/Homepage',
+  title: 'Components/Hero',
   component: Hero,
   tags: ['autodocs'],
   parameters: {
@@ -20,10 +19,15 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  render: () => (
+  args: {
+    maxWidth: '7xl',
+    cols: 2,
+    bgType: 'none',
+  } as HeroProps,
+  render: args => (
     <Main>
       <Section bgType="blue">
-        <Hero>
+        <Hero {...args}>
           <Hero.Content title="The document apostille process made simple" headerType="h1">
             <p>
               We expertly manage all aspects of the document apostille &ndash; authentication &
@@ -33,14 +37,17 @@ export const Primary: Story = {
             <ButtonGroup>
               <Button
                 label="Get Started Now"
-                color="dark-blue"
+                color="dark-orange"
                 onClick={() => {
                   window.location.href = 'https://www.idocscanada.ca';
                 }}
               />
             </ButtonGroup>
           </Hero.Content>
-          <Hero.Media imageUrl="https://picsum.photos/seed/picsum/1280/800" />
+          <Hero.Media
+            imageUrl="https://picsum.photos/seed/picsum/1280/800"
+            imageShape="radial-fade"
+          />
         </Hero>
       </Section>
     </Main>
@@ -48,5 +55,7 @@ export const Primary: Story = {
 };
 
 export const Default: Story = {
-  args: {},
+  args: {
+    onClick: fn(),
+  },
 };
