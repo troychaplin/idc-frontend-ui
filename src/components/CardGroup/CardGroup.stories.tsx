@@ -1,6 +1,5 @@
-import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { CardGroup, CardGroupProps } from './CardGroup';
+import { CardGroup, type CardGroupProps } from './CardGroup';
 import { Card } from '../Card/Card';
 import { CardData as data } from '../Card/data';
 
@@ -21,7 +20,7 @@ export const Primary: Story = {
   render: args => (
     <CardGroup {...args}>
       {data.slice(0, 3).map(({ id }) => (
-        <Card key={id} addFlex>
+        <Card key={id}>
           <p>Card Item</p>
         </Card>
       ))}

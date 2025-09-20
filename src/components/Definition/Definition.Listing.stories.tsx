@@ -1,13 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Main } from '../Main/Main';
 import { Section } from '../Section/Section';
-import { Definition, DefinitionProps } from './Definition';
+import { Definition, type DefinitionProps } from './Definition';
 import { DefinitionData as data } from './data';
 
 const meta = {
   title: 'Components/Definition/Listing',
   component: Definition,
-  // subcomponents: { Definition },
   tags: ['autodocs'],
 } satisfies Meta<typeof Definition>;
 

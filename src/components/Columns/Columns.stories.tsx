@@ -1,6 +1,5 @@
-import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Columns, ColumnsProps } from './Columns';
+import { Columns, type ColumnsProps } from './Columns';
 import { Main } from '../Main/Main';
 
 const meta = {

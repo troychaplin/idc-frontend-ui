@@ -1,7 +1,6 @@
-import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Section } from '../Section/Section';
-import { CardGroup, CardGroupProps } from './CardGroup';
+import { CardGroup, type CardGroupProps } from './CardGroup';
 import { Card } from '../Card/Card';
 import { CardData as data } from '../Card/data';
 

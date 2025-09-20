@@ -1,12 +1,10 @@
-import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Main, MainProps } from './Main';
+import { Main, type MainProps } from './Main';
 import { Section } from '../Section/Section';
 
 const meta = {
   title: 'Layouts/Main',
   component: Main,
-  // subcomponents: { Button },
   tags: ['autodocs'],
 } satisfies Meta<typeof Main>;
 

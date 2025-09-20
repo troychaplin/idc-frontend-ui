@@ -1,6 +1,5 @@
-import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Placeholder, PlaceholderProps } from './Placeholder';
+import { Placeholder, type PlaceholderProps } from './Placeholder';
 
 const meta: Meta<typeof Placeholder> = {
   title: 'Layouts/Placeholder',

@@ -1,6 +1,5 @@
-import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Section, SectionProps } from './Section';
+import { Section, type SectionProps } from './Section';
 
 const meta: Meta<typeof Section> = {
   title: 'Layouts/Section',
