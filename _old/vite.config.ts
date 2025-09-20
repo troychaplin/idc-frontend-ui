@@ -1,17 +1,13 @@
-/// <reference types="vitest/config" />
 import path from 'node:path';
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+
+import react from '@vitejs/plugin-react-swc';
 import { visualizer } from 'rollup-plugin-visualizer';
 import tailwindcss from 'tailwindcss';
+import { defineConfig } from 'vite';
 import type { PluginOption } from 'vite';
 import dts from 'vite-plugin-dts';
-import { storybookTest } from '@storybook/addon-vitest/vitest-plugin';
-import { fileURLToPath } from 'node:url';
 
 import * as packageJson from './package.json';
-
-const dirname = typeof __dirname !== 'undefined' ? __dirname : path.dirname(fileURLToPath(import.meta.url));
 
 // Only include DTS plugin when building the library
 const plugins: PluginOption[] = [react()];
@@ -20,9 +16,9 @@ const plugins: PluginOption[] = [react()];
 if (process.env.STORYBOOK !== 'true') {
   plugins.push(
     dts({
-      include: ['src'],
-      exclude: ['src/**/*.stories.*', 'src/**/*.test.*'],
+      include: ['lib'],
       insertTypesEntry: true,
+      rollupTypes: true,
     })
   );
 }
@@ -63,7 +59,7 @@ export default defineConfig({
     },
     sourcemap: true,
     lib: {
-      entry: path.resolve(__dirname, 'src/main.ts'), // Changed from 'lib/main.ts' to 'src/main.ts'
+      entry: path.resolve(__dirname, 'lib/main.ts'),
       name: 'idc',
       formats: ['es', 'cjs', 'umd'],
       fileName: format => `idc.${format}.js`,
@@ -80,31 +76,9 @@ export default defineConfig({
         },
         assetFileNames: assetInfo => {
           if (assetInfo.name === 'style.css') return 'idc.css';
-          return assetInfo.name || 'asset';
+          return assetInfo.name;
         },
       },
     },
   },
-  test: {
-    projects: [{
-      extends: true,
-      plugins: [
-        storybookTest({
-          configDir: path.join(dirname, '.storybook')
-        })
-      ],
-      test: {
-        name: 'storybook',
-        browser: {
-          enabled: true,
-          headless: true,
-          provider: 'playwright',
-          instances: [{
-            browser: 'chromium'
-          }]
-        },
-        setupFiles: ['.storybook/vitest.setup.ts']
-      }
-    }]
-  }
 });

@@ -1,6 +1,3 @@
 dist/
 public/
 node_modules/
-*.config.js
-*.stories.tsx
-story-to-block/ 
