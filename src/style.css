@@ -11,7 +11,7 @@
 /* IDC Theme Configuration for Tailwind v4 */
 @theme {
   /* Font Family */
-  --font-family-open: var(--font-open);
+  --font-open: 'Open Sans', sans-serif;
 
   /* Custom Screens */
   --breakpoint-4xl: var(--breakpoint-4xl);
@@ -66,6 +66,94 @@
 
   /* Background Images */
   --background-image-white-blue-edge: var(--bg-white-blue-edge);
+}
+
+/* Typography Styles (equivalent to the typography plugin configuration) */
+.prose {
+    --tw-prose-body: theme(colors.idc-black.700);
+    --tw-prose-headings: theme(colors.idc-black.800);
+    --tw-prose-links: theme(colors.idc-orange.700);
+    --tw-prose-bullets: theme(colors.idc-black.700);
+}
+
+.prose a {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.prose a:hover {
+    text-decoration: none;
+}
+
+.prose h1 {
+    font-weight: 500;
+}
+
+.prose h2 {
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.prose h3 {
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+.prose h4 {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.prose h5,
+.prose h6 {
+    font-weight: 500;
+}
+
+.prose ul,
+.prose ol {
+    margin-left: 2rem;
+}
+
+.prose ul ul,
+.prose ol ol {
+    margin-left: 0;
+}
+
+.prose ol li li {
+    list-style-type: lower-alpha;
+}
+
+.prose ol li li li {
+    list-style-type: lower-roman;
+}
+
+/* Responsive typography */
+@media (min-width: 1024px) {
+    .prose h2 {
+    margin-bottom: 1.25rem;
+    }
+    
+    .prose h3 {
+    margin-bottom: 1rem;
+    }
+    
+    .prose h4 {
+    margin-bottom: 0.5rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .prose h2 {
+    margin-bottom: 1.25rem;
+    }
+    
+    .prose h3 {
+    margin-bottom: 1rem;
+    }
+    
+    .prose h4 {
+    margin-bottom: 0.5rem;
+    }
 }
 
 /* Custom Utilities (equivalent to the plugin utilities) */
